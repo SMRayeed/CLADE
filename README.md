@@ -1,147 +1,455 @@
-# CLADE
+<div align="center">
 
-**CLADE: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models**
-Code, data, results and paper for the NeusymBridge-27 / NeSy-FM workshop paper (AAAI 2027).
+# 🌳 CLADE
 
-Retrieval often hands a model a page that is true and relevant but names only
-the answer's family ("hyperlipidemia" when the answer is "familial
-hyperlipidemia"; "the pussytoes (*Antennaria*)" when the answer is one
-*Antennaria* species). We call this *resolvable insufficiency*: the page cannot
-settle the answer, but its family name indexes a short candidate list in an
-ontology or taxonomy. Models meet it with **CLADE**, category-level answering
-from deficient evidence: they treat such pages as permission to answer instead
-of declining or looking further, in medicine (PrimeKG + MONDO) and in ecology
-(GloBI + taxonomy) alike.
+### Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models
 
-- Paper: [`paper/neusym.pdf`](paper/neusym.pdf), supplement: [`paper/neusym_supplement.pdf`](paper/neusym_supplement.pdf)
-- Every number in the paper is in [`results/`](results/) (PrimeKG) and [`results/globi/`](results/globi/) (GloBI).
-- Data sources, versions, counts and licenses: [`DATA.md`](DATA.md).
+[![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](paper/neusym.pdf)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1AA874)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9%2B-2E7BE0)](#-run-it)
+[![Domains](https://img.shields.io/badge/domains-PrimeKG%20%C2%B7%20GloBI-F07537)](DATA.md)
+[![Check](https://img.shields.io/badge/check__results-22%2F22%20identical-1AA874)](#-run-it)
 
-## Key results
+`retrieval-augmented generation` · `knowledge graphs` · `ontologies` · `abstention` · `agents`
 
-Pooled over Qwen2.5 7B, OLMo 2 7B and Granite 3.1 8B; questions with all-sibling
-distractors; effects in points with 95% bootstrap CIs.
+<img src="docs/figures/fig_concept.png" width="95%" alt="CLADE concept">
 
-| Finding | PrimeKG (diseases) | GloBI (species) | Files |
-|---|---|---|---|
-| Questions (5 options + "Not enough information") | 856 | 900 | `results/abstain_report_*.txt`, `results/globi/globi_questions.txt` |
-| Decline effect of the page, family-only − silent | −13.8 [−20.3, −7.5], p = 3.6e-5 | −14.3 [−18.7, −9.6], p = 1.4e-9 | `abstain_report_pooled.txt` |
-| Wrong-answer effect, family-only − silent | +7.7 [+1.2, +14.0] | +11.6 [+7.5, +15.4] | `abstain_report_pooled.txt` |
-| Precision with a named page | 84–95% | 84–95% | `EXTRAS.md` §1 |
-| Precision with a family-only page | 45–59% | 22–28% (chance 20%) | `EXTRAS.md` §1 |
-| Counterfactual edit, declines, family − removed | −17.4 [−23.6, −11.5] | −27.7 [−32.2, −23.5] | `EXTRAS.md` §4 |
-| Counterfactual edit, wrong, family − removed | +5.1 [+0.5, +10.3] | +6.7 [+3.4, +10.2] | `EXTRAS.md` §4 |
-| AUROC of confidence, named vs. family-only page | 0.73–0.87 vs. 0.59–0.72 (5 models) | 0.82–0.86 vs. 0.52–0.68 | `EXTRAS.md` §1 |
-| Instruction to decline: added declines (named / family / silent) | +9.1 / +15.2 / +14.0 | — | `results/EXTRAS.md` §3 |
-| Ontology list holds the answer, family given / read off the page | 98.5% / 19.8% | — | `results/candidate_check_all.txt` |
-| Choosing within the family: popularity prior vs. model | 46.8% vs. 35.9% | — | `results/candidate_check_all.txt` |
+</div>
 
-## Repository layout
+---
 
-| Path | Contents |
+## 🧩 The problem
+
+A search tool hands a model a page. The page is true. The page is on topic.
+But it names only the answer's **family**, not the answer itself.
+
+| 🔎 The question asks for… | 📄 The page only says… |
 |---|---|
-| `run_all.sh` | Entry point for the PrimeKG pipeline (download → analysis). |
-| `globi.sh` | Entry point for the GloBI replication (download → report). |
-| `config.sh`, `config_extend.sh`, `config_globi.sh` | All settings: SLURM account, models, data URLs, sample sizes, time limits. |
-| `pipeline.sh` | The exact command behind each PrimeKG step. |
-| `lib/common.sh` | Shared helpers: environment setup, downloads, SLURM submission. |
-| `scripts/` | Analysis scripts (standard-library Python, except the model probes). |
-| `tests/` | Synthetic fixtures and a tiny random model for the offline smoke tests. |
-| `derived_data/primekg/` | PrimeKG relation splits, drug-matched samples, PubMed co-mention counts, candidate prefetch lists. |
-| `derived_data/globi/` | GloBI species-to-species edges, the taxonomy table, and page tiers per edge. |
-| `results/` | PrimeKG logs and tables; `results/csv/` holds per-question model answers. |
-| `results/globi/` | GloBI logs and tables; `results/globi/csv/` holds per-question model answers. |
-| `tools/check_results.sh` | Recomputes the tables from the shipped files and compares with `results/`. |
-| `paper/` | LaTeX source (AAAI-27 kit, anonymous submission), figures, figure scripts and the PDFs. |
+| 🩺 a specific disease: *hyperlipidemia, familial combined, LPL related* | "hyperlipidemia" |
+| 🦋 a specific plant: *Antennaria plantaginifolia* | "the pussytoes (*Antennaria*)" |
 
-## Check the results (5 minutes, no network, no GPU)
+The page cannot settle the answer. But the gap is easy to close: the family name points to a short list in an ontology or a taxonomy.
+We call this **resolvable insufficiency**.
 
-```bash
-bash tools/check_results.sh
-```
+A good agent should notice it and hand the question on ("look up the family members").
+Instead, models often just pick a family member and answer. We call that failure **CLADE**: *category-level answering from deficient evidence*.
 
-This copies `derived_data/` and the per-question files into `check/`, reruns
-the abstention reports, pooled tests, confidence, family-size, instruction and
-counterfactual analyses for both domains, and compares each new log with the
-shipped one. Expected output: `identical: 22 different: 0`. The three
-ontology-recovery logs (`candidate_check_*`, `fanout`) read Wikipedia and
-PubMed text, which is not redistributed; they are listed as "needs web caches".
+> **Our question:** When a page names only the family, do models decline, or do they guess?
 
-## Reproduce from scratch
+---
 
-Requirements: Python 3.9+, network access for the download and text steps
-(Harvard Dataverse, GitHub, Zenodo, Wikipedia, NCBI E-utilities, Hugging Face),
-and SLURM for the model jobs (12 CPUs × 12 GB; models run in fp32 on CPU; each
-job is resumable). On first use the scripts create a CPU environment at
-`$ENV_DIR` (torch 2.5.1, transformers 4.48.3).
+## 🎯 What we do
 
-### PrimeKG
+- 📄 **We sort pages** into three types: the page **names** the answer 🟢, names **only its family** 🟡, or says **nothing** ⚪.
+- ❓ **We ask** five language models multiple-choice questions. All wrong options come from the answer's own family. One option is "Not enough information to tell".
+- ⚖️ **We compare** family-only pages with silent pages. Neither page holds the answer, so a careful model should decline on both.
+- ✂️ **We edit** pages on purpose: we swap the answer's name for its family name. This shows cause, not just correlation.
+- 🌍 **We repeat** everything in a second domain: drugs and diseases (PrimeKG), then animals and plants (GloBI).
+- 🧭 **We present** simple fixes and a handover design for agents.
 
-```bash
-bash run_all.sh --smoke          # offline test on synthetic data (minutes)
-export CONTACT="you@example.org" # e-mail for the Wikipedia User-Agent
-export NCBI_API_KEY=...          # optional, faster PubMed (never commit it)
-bash run_all.sh                  # login node, inside tmux; submits SLURM jobs
-bash run_all.sh --status
-```
+---
 
-| Step | Runs on | What it does | Main outputs |
-|---|---|---|---|
-| `download` | login node | PrimeKG `kg.csv`, MONDO | `data/`, `results/data_versions.txt` |
-| `prepare` | any | Drug–disease relation splits, MONDO child→parent table | `work/pkg_*.csv`, `work/mondo_child_parent.csv` |
-| `text` | login node | Wikipedia + PubMed text; each edge labeled named / family only / silent; candidate lists | `work/me_bal_union.csv`, caches |
-| `extend` | login node | Downloads the extra models (14B, instruction and edit runs) | Hugging Face cache |
-| `models` | SLURM | Closed-book probe; abstention questions with and without the page (5 models); instruction baseline; counterfactual edits; recovery | `work/abstain_<model>_<task>.csv`, `work/recover_*.csv` |
-| `analysis` | any | All reports, pooled tests, recovery, extras, summary, figures | `results/` |
+## 📚 The data
 
-### GloBI
+<div align="center">
+<img src="docs/figures/data_at_a_glance.png" width="92%" alt="CLADE data at a glance">
+</div>
 
-```bash
-bash globi.sh --smoke all        # offline test (minutes)
-bash globi.sh download           # Zenodo snapshot, DOI 10.5281/zenodo.4460654 (~0.8 GB)
-bash globi.sh prepare            # species edges + taxonomy (15-40 min; submit with sbatch)
-GLOBI_N=8000 bash globi.sh text  # Wikipedia articles, page tiers (1-2 h, login node)
-bash globi.sh check              # question counts per group, examples (no model)
-bash globi.sh models             # 3 models x 3 tasks on SLURM, then a report job
-bash globi.sh status
-```
+We use two domains. Each has a graph of facts and a tree of families.
 
-The report is `results/globi/GLOBI.md` (written to `globi/results/` by a fresh
-run). The paper used `GLOBI_N=8000` (edges measured per relation) and
-`GLOBI_PER_BAND=75` (questions per group per relation).
-
-Wikipedia and PubMed change over time, so a fresh run measures today's text.
-The per-question files under `results/` record what the paper measured.
-
-## Where each paper result comes from
-
-| Paper item | Script | Output |
+| | 🩺 Domain 1: PrimeKG | 🦋 Domain 2: GloBI |
 |---|---|---|
-| How much graph text reaches the model; family name alone (closed book) | `four_boxes.py`, `tier_cliff.py` | `results/four_boxes_*.txt`, `results/tier_cliff_*.txt`, `results/SUMMARY.md` |
-| Outcomes by page type, per model; pooled page effect | `abstain_probe.py`, `abstain_report.py` | `results/abstain_report_*.txt` |
-| Confidence, family size, instruction baseline, counterfactual edit | `ns_extras.py` | `results/EXTRAS.md` |
-| Ontology recovery (oracle and page-built lists, choosers) | `candidate_check.py`, `fanout.py`, `recover.py` | `results/candidate_check_*.txt`, `results/fanout.txt` |
-| GloBI edges, taxonomy, tiers, questions | `globi_prep.py`, `gonogo_p1.py`, `abstain_probe.py` | `results/globi/globi_{prep,tiers,questions}.txt` |
-| GloBI abstention, confidence, counterfactual | `abstain_report.py`, `ns_extras.py` | `results/globi/GLOBI.md`, `results/globi/EXTRAS_GLOBI.md` |
-| Figures | `paper/build_figures.py`, `paper/drawio/` | `paper/fig_*.pdf` |
+| Facts | drug → disease | species → species |
+| Relations | treats · must not take | eats · preys on · parasite of · pollinates |
+| Family tree | MONDO disease ontology | taxonomy: species → genus → family |
+| Pages | Wikipedia + PubMed | Wikipedia |
+| Questions | 856 | 900 |
+| Models | 5 | 3 |
 
-## Paper and figures
+### 🩺 Domain 1: PrimeKG + MONDO
 
-```bash
-cd paper && latexmk -pdf neusym.tex && latexmk -pdf neusym_supplement.tex
-python3 build_figures.py           # forest plot, recovery, three fixes (matplotlib)
+PrimeKG is a big biomedical **knowledge graph**. MONDO places each disease inside a family.
+Here is one real question from our set:
+
+```mermaid
+flowchart LR
+    classDef drug fill:#FDE7F0,stroke:#E0457B,stroke-width:2px,color:#111
+    classDef fam fill:#F1ECFC,stroke:#7B5BD6,stroke-width:2px,stroke-dasharray:4 3,color:#111
+    classDef gold fill:#E8F7F0,stroke:#1AA874,stroke-width:3px,color:#111
+    classDef sib fill:#FFFFFF,stroke:#999,color:#111
+    classDef page fill:#FFF8E1,stroke:#E0A800,stroke-width:2px,color:#111
+
+    L["💊 lovastatin"]:::drug -- "✅ treats" --> G["🎯 hyperlipidemia,<br/>familial combined, LPL related"]:::gold
+    P["📄 Wikipedia page:<br/>'…hyperlipidemia…'"]:::page -. "names only" .-> H
+    H["📁 hyperlipidemia"]:::fam --> F["📁 familial hyperlipidemia"]:::fam
+    F --> G
+    F --> S1["hyperlipidemia due to hepatic<br/>triglyceride lipase deficiency"]:::sib
+    F --> S2["familial lipoprotein<br/>lipase deficiency"]:::sib
+    F --> S3["familial apolipoprotein<br/>C-II deficiency"]:::sib
 ```
 
-Figures 1 and 3 are draw.io files (`paper/drawio/*.drawio`; open at
-app.diagrams.net). `python3 drawio/build_ns.py` regenerates them;
-`npm install mxgraph playwright && node drawio/render_pdf.js drawio/fig_edit.drawio`
-exports a PDF. Icons are Microsoft Fluent Emoji 3D (MIT license) in `paper/icons/`.
+| PrimeKG item | Count |
+|---|---:|
+| 🗄️ PrimeKG rows | 8,100,498 |
+| ✅ Indication / ⛔ contraindication edges | 9,388 / 30,675 |
+| 📁 MONDO child → parent rows | 17,801 |
+| 💊 Drugs in the question pool | 574 |
+| ❓ Questions (150 per page type per relation) | 856 |
 
-## License
+**Why the problem lives here:** we check which edges reach the model through text. For Qwen2.5 0.5B, over 1,800 edges:
 
-Code: MIT (`LICENSE`). Derived data follow their sources' licenses (`DATA.md`).
-Wikipedia and PubMed text is not redistributed; the pipeline fetches it.
+| | 🧠 Model knows it | 🤷 Model does not |
+|---|---:|---:|
+| 📖 Text names it | 5.2% | 6.2% |
+| 🚫 Text does not name it | 22.2% | **66.4%** |
 
-## Citation
+Two in three facts reach the model neither through text nor through memory.
+And a page with just the family name gives *no* gain over a silent page (Qwen2.5 7B, closed book):
 
-See `CITATION.cff`.
+| Relation | 🟢 Named | 🟡 Family only | ⚪ Silent |
+|---|---:|---:|---:|
+| ✅ Indication | 84.2 | 44.7 | 44.0 |
+| ⛔ Contraindication | 32.5 | 18.8 | 23.4 |
+
+### 🦋 Domain 2: GloBI + taxonomy
+
+GloBI (Global Biotic Interactions) records who eats, hunts, parasitizes or pollinates whom.
+The taxonomy plays the role that MONDO plays for diseases.
+
+```mermaid
+flowchart LR
+    classDef sp fill:#E6F0FD,stroke:#2E7BE0,stroke-width:2px,color:#111
+    classDef fam fill:#F1ECFC,stroke:#7B5BD6,stroke-width:2px,stroke-dasharray:4 3,color:#111
+    classDef gold fill:#E8F7F0,stroke:#1AA874,stroke-width:3px,color:#111
+    classDef sib fill:#FFFFFF,stroke:#999,color:#111
+    classDef page fill:#FFF8E1,stroke:#E0A800,stroke-width:2px,color:#111
+
+    V["🦋 Vanessa virginiensis<br/>(American painted lady)"]:::sp -- "🍃 eats" --> AP["🎯 Antennaria<br/>plantaginifolia"]:::gold
+    P["📄 Wikipedia page:<br/>'larvae feed on … the<br/>pussytoes (Antennaria)'"]:::page -. "names only" .-> A
+    AST["📁 Asteraceae (family)"]:::fam --> A["📁 Antennaria (genus)"]:::fam
+    A --> AP
+    A --> S1["Antennaria pulcherrima"]:::sib
+    A --> S2["Antennaria microphylla"]:::sib
+    A --> S3["Antennaria dimorpha · lanata"]:::sib
+```
+
+| GloBI item | Count |
+|---|---:|
+| 🗄️ Interaction records in the dump | 7,822,670 |
+| 🔗 Species-to-species edges | 457,386 |
+| 🍃 eats · 🦈 preys on · 🪱 parasite of · 🐝 pollinates | 235,960 · 87,678 · 117,894 · 15,854 |
+| 🌳 Taxonomy child → parent rows | 77,852 |
+| 📁 Genera with two or more species | 8,370 |
+| 📖 Edges we measured (5,425 articles) | 23,694 |
+| ❓ Questions (75 per page type per relation) | 900 |
+
+**Why the problem lives here:** in GloBI, a page names the partner species only **3.9%** of the time.
+It names only the genus or family **7.1%** of the time. It says nothing **89.1%** of the time.
+So a family-only page is twice as common as a named one.
+
+Full sources, versions and licenses: [`DATA.md`](DATA.md).
+
+---
+
+## ⚙️ The method
+
+```mermaid
+flowchart TD
+    classDef s fill:#F1ECFC,stroke:#7B5BD6,stroke-width:2px,color:#111
+    classDef t fill:#E8F7F0,stroke:#1AA874,stroke-width:2px,color:#111
+    classDef m fill:#FDEFE6,stroke:#F07537,stroke-width:2px,color:#111
+    classDef r fill:#E6F0FD,stroke:#2E7BE0,stroke-width:2px,color:#111
+
+    A["🩺 PrimeKG + MONDO<br/>🦋 GloBI + taxonomy"]:::s --> B["📖 Fetch the source's page<br/>Wikipedia · PubMed"]:::t
+    B --> C{"🔎 Does the page<br/>name the answer?"}:::t
+    C -->|"yes"| N["🟢 named"]:::t
+    C -->|"only its family"| F["🟡 family only"]:::t
+    C -->|"no"| S["⚪ silent"]:::t
+    N & F & S --> Q["❓ Question: 5 family siblings<br/>+ 'Not enough information'"]:::m
+    Q --> K["🤖 Ask with no page<br/>and with the page"]:::m
+    K --> D["⚖️ Page effect:<br/>family only minus silent"]:::r
+    N --> E["✂️ Edit the page:<br/>answer → family name,<br/>or delete the sentence"]:::m
+    E --> D
+    D --> X["🛠️ Try fixes: confidence,<br/>instructions, ontology lookup"]:::r
+```
+
+**In plain steps:**
+
+1. 📖 We fetch the page for the question's source (a drug or a species).
+2. 🔎 We sort the page: it names the answer, names only its family, or says nothing.
+3. ❓ We build a question. The wrong options are the answer's siblings. We add "Not enough information to tell".
+4. 🤖 We ask each model twice: with no page, then with the page.
+5. ⚖️ We measure the page effect. We subtract the silent-page effect from the family-only effect. Both pages lack the answer, so any difference comes from the family name.
+6. ✂️ We take named pages and rewrite them: we swap the answer for its family name, or we delete the sentence. Same question, same page, one change.
+7. 🛠️ We test three easy fixes and an ontology lookup.
+
+### 🤖 The models
+
+| Model | Size | PrimeKG | GloBI |
+|---|---|:---:|:---:|
+| Qwen2.5 Instruct | 0.5B · 7B · 14B | ✅ | 7B ✅ |
+| OLMo 2 Instruct | 7B | ✅ | ✅ |
+| Granite 3.1 Instruct | 8B | ✅ | ✅ |
+
+We pool the three 7–8B models for the main tests. All models run on CPU in fp32.
+
+---
+
+## 📊 Results
+
+### 1️⃣ A family-only page makes models guess more and decline less
+
+<div align="center"><img src="docs/figures/fig_forest.png" width="95%" alt="Forest plot"></div>
+
+Outcomes with the page, PrimeKG (%):
+
+| Model | Page | ✅ Correct | ❌ Wrong | 🙅 Declined | 🎯 Precision |
+|---|---|---:|---:|---:|---:|
+| Qwen2.5 7B | 🟢 named | 71.7 | 3.8 | 24.5 | 95.0 |
+| | 🟡 family | 26.5 | 18.1 | 55.3 | 59.4 |
+| | ⚪ silent | 13.8 | 2.5 | 83.8 | 84.6 |
+| OLMo 2 7B | 🟢 named | 77.4 | 15.1 | 7.5 | 83.7 |
+| | 🟡 family | 37.2 | **44.7** | 18.1 | 45.5 |
+| | ⚪ silent | 30.6 | 24.4 | 45.0 | 55.7 |
+| Granite 3.1 8B | 🟢 named | 72.6 | 7.5 | 19.8 | 90.6 |
+| | 🟡 family | 30.2 | 26.5 | 43.3 | 53.3 |
+| | ⚪ silent | 15.0 | 10.0 | 75.0 | 60.0 |
+| Qwen2.5 0.5B | 🟢 named | 77.4 | 14.2 | 8.5 | 84.5 |
+| | 🟡 family | 34.4 | **55.8** | 9.8 | 38.1 |
+| | ⚪ silent | 28.7 | 50.6 | 20.6 | 36.2 |
+| Qwen2.5 14B | 🟢 named | 67.9 | 2.8 | 29.2 | 96.0 |
+| | 🟡 family | 24.2 | 17.2 | 58.6 | 58.4 |
+| | ⚪ silent | 11.9 | 2.5 | 85.6 | 82.6 |
+
+*Precision = correct ÷ (correct + wrong): how often an answer is right when the model does answer.*
+
+Pooled over the 7–8B models, family-only vs. silent:
+
+| | 🩺 PrimeKG | 🦋 GloBI |
+|---|---|---|
+| 🙅 Declines | **−13.8** [−20.3, −7.5], p = 3.6e-5 | **−14.3** [−18.7, −9.6], p = 1.4e-9 |
+| ❌ Wrong answers | **+7.7** [+1.2, +14.0] | **+11.6** [+7.5, +15.4] |
+
+**What it means:** the family name does not help the model find the answer. It only makes the model feel allowed to answer.
+
+### 2️⃣ The page edit proves the family name causes it
+
+<div align="center"><img src="docs/figures/fig_edit.png" width="65%" alt="Counterfactual edit"></div>
+
+We take one named page and make two copies. In one, the answer becomes its family name. In the other, we delete the sentence.
+
+| Edit: family name vs. sentence removed | 🩺 PrimeKG (130 q) | 🦋 GloBI (255 q) |
+|---|---|---|
+| 🙅 Declines | **−17.4** [−23.6, −11.5] | **−27.7** [−32.2, −23.5] |
+| ❌ Wrong answers | +5.1 | +6.7 |
+
+| Model (PrimeKG) | 🙅 Declines, sentence removed | 🙅 Declines, family name |
+|---|---:|---:|
+| Qwen2.5 7B | 70.0 | 43.8 |
+| Granite 3.1 8B | 56.2 | 40.8 |
+| OLMo 2 7B | 18.5 | 7.7 |
+
+**What it means:** same page, same question, one swap. The family name alone cuts declines by 17 points on PrimeKG and 28 points on GloBI.
+
+### 3️⃣ Same story in both domains
+
+<div align="center"><img src="docs/figures/fig_two_domains.png" width="95%" alt="Two domains"></div>
+
+| GloBI model | 🎯 Precision: 🟢 named | 🟡 family | ⚪ silent |
+|---|---:|---:|---:|
+| Qwen2.5 7B | 94.6 | 27.8 | 25.0 |
+| OLMo 2 7B | 84.4 | 26.8 | 28.1 |
+| Granite 3.1 8B | 89.4 | 21.7 | 44.4 |
+
+On GloBI, precision on family-only pages is 22–28%. Chance is 20%. So these answers are close to random picks inside the genus.
+
+### 4️⃣ Easy fixes do not solve it
+
+<div align="center"><img src="docs/figures/fig_fixes.png" width="95%" alt="Fixes"></div>
+
+| Fix | What we find |
+|---|---|
+| 📉 **Use confidence to filter** | AUROC drops from 0.73–0.87 (named) to 0.59–0.72 (family only). GloBI: 0.82–0.86 → 0.52–0.68. Confidence cannot spot these guesses. |
+| 🗣️ **Tell the model to decline on a broad category** | Declines rise everywhere: +9.1 on named pages, +15.2 on family-only, +14.0 on silent. The model also throws away good answers. |
+| 📏 **Hope big families scare the model** | The effect stays large for families up to 20 members (−17.3, −18.4). It shrinks only past 20 (−6.5). |
+
+### 5️⃣ The ontology can close the gap, if the agent finds the family
+
+<div align="center"><img src="docs/figures/fig_recovery.png" width="65%" alt="Recovery"></div>
+
+| Step | Result |
+|---|---|
+| 📁 Given the family, the list holds the answer | **98.5%** (median 14 candidates) |
+| 🔎 The agent finds the right family from the page alone | only **19.8%** |
+| 🏆 Best way to choose inside the family | popularity 46.8% · evidence then model 41.7% · model alone 35.9% · PubMed 35.9% · page in prompt 32.7% |
+| 🔁 End to end recovery | 10.0% (Wikipedia) · 1.5% (Wikipedia + PubMed) |
+
+**What it means:** the list is almost always right. The hard parts are finding the family and choosing within it.
+Some misses are not really misses. For carboplatin, the pick is ovarian carcinoma, a better-studied family member than the graph's germ cell tumor. Moxifloxacin for Legionnaires' disease is true, but the graph does not list it.
+
+---
+
+## 🔬 Case studies
+
+Real questions, real pages, real answers from our three 7–8B models.
+
+<table>
+<tr>
+<th width="25%">🟢 Named<br/><sub>GloBI · eats</sub></th>
+<th width="25%">🟡 Family only<br/><sub>GloBI · eats</sub></th>
+<th width="25%">⚪ Silent<br/><sub>GloBI · eats</sub></th>
+<th width="25%">🟡 Family only<br/><sub>PrimeKG · treats</sub></th>
+</tr>
+<tr valign="top">
+<td>
+
+🐛 ***Orgyia vetusta***<br/>(western tussock moth)
+
+📄 The page names **"toyon"**, the common name of the answer.
+
+🎯 *Photinia arbutifolia*
+
+🤖 Qwen 🙅 · OLMo 🙅 · Granite 🙅
+
+💬 All three decline. They do not link the common name to the Latin name.
+
+</td>
+<td>
+
+🦋 ***Vanessa virginiensis***<br/>(American painted lady)
+
+📄 "The larvae feed on … the pussytoes (*Antennaria*)"
+
+🎯 *Antennaria plantaginifolia*
+
+🤖 Qwen 🙅 · OLMo ❌ *A. microphylla* · Granite ❌ *A. pulcherrima*
+
+💬 Two models pick a wrong sibling. This is CLADE.
+
+</td>
+<td>
+
+🐟 ***Cottunculus microps***<br/>(polar sculpin)
+
+📄 The page covers its range and body. It says nothing about food.
+
+🎯 *Lumpenus lampretaeformis*
+
+🤖 Qwen 🙅 · OLMo 🙅 · Granite 🙅
+
+💬 All three decline. This is the right call.
+
+</td>
+<td>
+
+💊 **lovastatin**
+
+📄 The page says **"hyperlipidemia"**.
+
+🎯 hyperlipidemia, familial combined, LPL related
+
+🤖 Qwen ✅ · Granite ✅ · OLMo ❌ *hyperlipidemia due to hepatic triglyceride lipase deficiency*
+
+💬 Qwen 0.5B and 14B make the same wrong pick as OLMo.
+
+</td>
+</tr>
+</table>
+
+🙅 declined · ✅ correct · ❌ wrong
+
+---
+
+## 💡 What it means
+
+A family-only page is not a dead end. It is a **handover point**.
+
+```mermaid
+flowchart LR
+    classDef ok fill:#E8F7F0,stroke:#1AA874,stroke-width:2px,color:#111
+    classDef warn fill:#FFF8E1,stroke:#E0A800,stroke-width:2px,color:#111
+    classDef bad fill:#FDECEC,stroke:#E04848,stroke-width:2px,color:#111
+    classDef step fill:#E6F0FD,stroke:#2E7BE0,stroke-width:2px,color:#111
+
+    R["📄 Retrieved page"]:::step --> T{"🔎 Page type?"}:::step
+    T -->|"🟢 named"| A["✅ Answer and cite the page"]:::ok
+    T -->|"⚪ silent"| D["🙅 Decline, or search again"]:::ok
+    T -->|"🟡 family only"| H["🧭 Hand over:<br/>look up the family<br/>in the ontology"]:::warn
+    H --> L["📁 Short list of members<br/>(holds the answer 98.5%)"]:::step
+    L --> C["🔬 Check each member<br/>against more evidence"]:::step
+    T -.->|"what models do now"| X["❌ CLADE: guess<br/>a family member"]:::bad
+```
+
+- 🏷️ **Label the page type first.** A cheap name check tells an agent if a page names the answer or only its family.
+- 🧭 **Route family-only pages to the ontology.** Do not let the reader answer from them.
+- 📏 **Report results by page type.** One overall accuracy hides this failure.
+
+---
+
+## ⚠️ Limitations
+
+- 🔤 Our page check works on names. It misses an answer that the page describes in other words.
+- 🗄️ The graphs are our ground truth. They miss some true facts, so we undercount correct answers.
+- ❓ We use multiple-choice questions. Free-text answers may behave differently.
+- 🤖 We test open models up to 14B. We do not test large closed models.
+- 🦋 GloBI's taxonomy comes from its own records. A few species may sit under the wrong genus.
+
+## 🔭 Future work
+
+- 🤖 Build the full handover agent and test it end to end.
+- 🔎 Improve the family finder. It is the weakest step (19.8%).
+- 🌍 Add more domains: chemistry, genes, law.
+- 💬 Move from multiple choice to free-text answers.
+- 📈 Test larger and closed models.
+
+---
+
+## ▶️ Run it
+
+```bash
+# 1. Check every shipped number (5 minutes, no GPU, no network)
+bash tools/check_results.sh          # expect: identical: 22
+
+# 2. Test both pipelines on tiny fake data (minutes)
+bash run_all.sh --smoke              # PrimeKG
+bash globi.sh --smoke all            # GloBI
+
+# 3. Run everything from scratch (SLURM cluster)
+export CONTACT="you@example.org"     # for the Wikipedia User-Agent
+bash run_all.sh                      # PrimeKG
+bash globi.sh download && bash globi.sh prepare
+GLOBI_N=8000 bash globi.sh text && bash globi.sh models
+```
+
+All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_globi.sh). Each step resumes if it stops.
+
+## 🗂️ What is where
+
+| Path | What it holds |
+|---|---|
+| 📜 `run_all.sh`, `pipeline.sh` | Run the PrimeKG study, step by step |
+| 🦋 `globi.sh` | Run the GloBI study, step by step |
+| ⚙️ `config*.sh` | All settings: account, models, data links |
+| 🐍 `scripts/` | Analysis and model scripts |
+| 🗄️ `derived_data/` | PrimeKG and GloBI files the analysis reads |
+| 📊 `results/`, `results/globi/` | Every number, log and per-question answer |
+| 🧪 `tests/`, `tools/` | Fake-data tests and the result checker |
+| 📄 `paper/` | The paper and supplement PDFs |
+| 🖼️ `docs/figures/` | Figures for this page |
+
+## 📝 Cite
+
+```bibtex
+@inproceedings{rayeed2027clade,
+  title     = {{CLADE}: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models},
+  author    = {Rayeed, S M and Stewart, Charles and Ma, Yao},
+  booktitle = {NeusymBridge-27: Bridging Neurons and Symbols for Reasoning over LLMs and Knowledge Graphs, at AAAI 2027},
+  year      = {2027}
+}
+```
+
+<div align="center">
+
+MIT License · Rensselaer Polytechnic Institute · Icons: [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT)
+
+</div>
