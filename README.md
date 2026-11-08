@@ -443,13 +443,6 @@ All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_glo
 @inproceedings{rayeed2027clade,
   title     = {{CLADE}: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models},
   author    = {Rayeed, S M and Stewart, Charles and Ma, Yao},
-  booktitle = {NeusymBridge-27: Bridging Neurons and Symbols for Reasoning over LLMs and Knowledge Graphs, at AAAI 2027},
   year      = {2027}
 }
 ```
-
-<div align="center">
-
-MIT License · Rensselaer Polytechnic Institute · Icons: [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT)
-
-</div>
