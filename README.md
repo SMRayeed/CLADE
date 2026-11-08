@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🌳 CLADE
-
-### Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models
+## 🌳 CLADE: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models
 
 [![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](paper/neusym.pdf)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1AA874)](LICENSE)
@@ -441,7 +439,7 @@ All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_glo
 
 ```bibtex
 @inproceedings{rayeed2027clade,
-  title     = {{CLADE}: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models},
+  title     = {{CLADE}: {C}ategory-{L}evel {A}nswering from {D}eficient {E}vidence in {R}etrieval-{A}ugmented {L}anguage {M}odels},
   author    = {Rayeed, S M and Stewart, Charles and Ma, Yao},
   year      = {2027}
 }
