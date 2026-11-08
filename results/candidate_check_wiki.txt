@@ -1,0 +1,66 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+
+410 family-only edges, the same set recover.py scores
+  3,182 ontology categories can be read off a page
+
+HOW GOOD IS THE LIST?   (percent of all family-only edges)
+  oracle  usable lists  410 of 410   contains the sampled answer  98.5%   any true answer  99.5%   size median   14  mean  20.6
+  page    usable lists  166 of 410   contains the sampled answer  19.8%   any true answer  24.6%   size median   32  mean  31.6
+  209 page-built lists exceeded 64 candidates and count as too broad
+  categories found per page: median 5, usable after the size cap: median 5
+
+  The oracle row is what recover.py assumed. The page row is what a
+  system that does not know the answer actually gets.
+
+CANDIDATE ARTICLES   2,320 distinct, 2,320 cached
+
+PUBMED PAIR COUNTS   12,971 queries, 12,971 cached
+
+==============================================================================
+CHOOSING FROM THE CANDIDATE'S END
+
+  ORACLE lists   410 edges, 8,448 candidates
+    candidates with a Wikipedia article         48.0%
+    candidates whose article names the drug      3.9%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          82      80        248       50.0% (sampled only  26.8%)    10.0%
+    pubmed       324      12         74       45.4% (sampled only  20.4%)    35.9%
+    combined     327      14         69       44.6% (sampled only  20.2%)    35.6%
+    popular      409       0          1       46.9% (sampled only  25.7%)    46.8%
+    pubmed_norm  336       0         74       31.0% (sampled only  19.0%)    25.4%
+    evidence-narrowed list: 341 edges, median size 4, contains a true answer  68.9%
+
+  PAGE lists   166 edges, 5,241 candidates
+    candidates with a Wikipedia article         44.8%
+    candidates whose article names the drug      3.2%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          28      36        102       10.7% (sampled only   7.1%)     1.8%
+    pubmed       130      13         23       30.0% (sampled only   6.9%)    23.5%
+    combined     130      13         23       31.5% (sampled only   7.7%)    24.7%
+    popular      166       0          0       22.3% (sampled only   7.2%)    22.3%
+    pubmed_norm  143       0         23       14.7% (sampled only   7.0%)    12.7%
+    evidence-narrowed list: 143 edges, median size 5, contains a true answer  47.6%
+
+==============================================================================
+RECOVER.PY, RESCORED   recover_Qwen2.5-7B-Instruct_clean.csv
+  A pick of any true partner counts as right, for every condition alike.
+    condition     as scored before   any true answer
+    ours                  18.3%            35.9%
+    ours_ctx              17.8%            32.4%
+    random_k              30.5%            34.9%
+    rag_pool              29.0%            32.7%
+
+    true answers inside the family list: mean 2.47, and 51.0% of lists hold more than one
+
+    candidate evidence first, model pick as fallback:  41.7%
+    against page-in-prompt (rag_pool): this only 98, rag_pool only 61, p=0.0043
+    against the model alone on the same family list (ours): this only 59, ours only 35, p=0.0177
+
+    end to end, no oracle: family list built from the page, evidence pick,
+    nothing otherwise:  10.0% of 410 edges (rag_pool 32.7%)
+    rag_pool's lists are the answer among random diseases, so the page's family
+    name lets it eliminate; the comparison is reported, not endorsed.
+
+wrote <repo>/results/candidate_check_wiki.csv: 576 rows

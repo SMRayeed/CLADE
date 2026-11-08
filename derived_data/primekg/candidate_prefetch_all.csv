@@ -1,0 +1,430 @@
+mode,source,target,relation,list_size,true_in_list,pick_wiki,status_wiki,correct_wiki,pick_pubmed,status_pubmed,correct_pubmed,pick_combined,status_combined,correct_combined,pick_popular,status_popular,correct_popular,pick_pubmed_norm,status_pubmed_norm,correct_pubmed_norm,evidence_set_size,evidence_set_has_true
+oracle,Mitoxantrone,acute myeloblastic leukemia with maturation,indication,33,14,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,childhood acute myeloid leukemia,pick,0,6,0
+oracle,Benzatropine,focal hand dystonia,indication,11,2,oculogyric crisis,pick,0,,none,0,oculogyric crisis,pick,0,blepharospasm,pick,1,,none,0,1,0
+oracle,Cefprozil,infectious otitis media,indication,3,1,,none,0,,none,0,,none,0,infectious otitis media,pick,1,,none,0,0,0
+oracle,Dactinomycin,rhabdomyosarcoma (disease),indication,64,1,osteosarcoma (disease),pick,0,Ewing sarcoma,pick,1,osteosarcoma (disease),pick,0,osteosarcoma (disease),pick,0,Ewing sarcoma of bone,pick,0,11,1
+oracle,Amitriptyline,neurotic disorder,indication,10,2,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,neurotic disorder,pick,1,6,1
+oracle,Calcium gluconate,postmenopausal osteoporosis,indication,6,1,,none,0,,none,0,,none,0,postmenopausal osteoporosis,pick,1,,none,0,0,0
+oracle,Nizatidine,peptic esophagitis,indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,active peptic ulcer disease,pick,0,4,1
+oracle,Methoxsalen,primary cutaneous T-cell lymphoma,indication,25,2,,none,0,primary cutaneous T-cell lymphoma,pick,1,primary cutaneous T-cell lymphoma,pick,1,sweat gland carcinoma,pick,0,primary cutaneous T-cell lymphoma,pick,1,1,1
+oracle,Imiquimod,melanoacanthoma,indication,23,3,,none,0,porokeratosis (disease),pick,0,porokeratosis (disease),pick,0,cholesteatoma (disease),pick,0,porokeratosis of Mibelli,pick,0,7,1
+oracle,Moxifloxacin,Klebsiella pneumonia,indication,8,4,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,pneumonia caused by chlamydia,pick,1,5,1
+oracle,Ipratropium,"COPD, severe early onset",indication,5,3,chronic obstructive pulmonary disease,pick,1,chronic obstructive pulmonary disease,pick,1,chronic obstructive pulmonary disease,pick,1,chronic obstructive pulmonary disease,pick,1,chronic obstructive pulmonary disease,pick,1,3,1
+oracle,Tetrabenazine,juvenile Huntington disease,indication,2,1,juvenile Huntington disease,pick,1,juvenile Huntington disease,pick,1,juvenile Huntington disease,pick,1,juvenile Huntington disease,pick,1,juvenile Huntington disease,pick,1,1,1
+oracle,Medroxyprogesterone acetate,endometrial carcinoma (disease),indication,12,1,,none,0,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,1,1
+oracle,Norepinephrine,intrinsic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,status asthmaticus,pick,0,2,1
+oracle,Gemcitabine,non-small cell lung carcinoma (disease),indication,20,1,,tie,0,lung carcinoma,pick,0,lung carcinoma,pick,0,lung carcinoma,pick,0,lung inflammatory myofibroblastic tumor,pick,0,7,1
+oracle,Lamotrigine,visual epilepsy,indication,46,2,,tie,0,partial epilepsy,pick,1,epilepsy syndrome,pick,0,partial epilepsy,pick,1,partial epilepsy,pick,1,11,1
+oracle,Sulfanilamide,vulvovaginal candidiasis,indication,4,1,,none,0,vulvovaginal candidiasis,pick,1,vulvovaginal candidiasis,pick,1,vulvovaginal candidiasis,pick,1,vulvovaginal candidiasis,pick,1,1,1
+oracle,Salmeterol,intrinsic asthma,indication,7,2,occupational asthma,pick,0,allergic asthma,pick,1,occupational asthma,pick,0,allergic asthma,pick,1,cough variant asthma,pick,0,3,1
+oracle,Fluticasone propionate,neurodermatitis,indication,64,5,atopic eczema,pick,1,psoriasis,pick,0,atopic eczema,pick,1,psoriasis,pick,0,pruritic urticarial papules and plaques of pregnancy,pick,0,7,1
+oracle,Idarubicin,acute myeloid leukemia with NPM1 somatic mutations,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute myeloid leukemia with multilineage dysplasia,pick,0,10,1
+oracle,Mannitol,pseudotumor cerebri,indication,3,1,,none,0,posterior leukoencephalopathy syndrome,pick,0,posterior leukoencephalopathy syndrome,pick,0,pseudotumor cerebri,pick,1,posterior leukoencephalopathy syndrome,pick,0,2,0
+oracle,Omeprazole,duodenal ulcer (disease),indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,active peptic ulcer disease,pick,0,5,1
+oracle,Erlotinib,non-small cell lung carcinoma (disease),indication,20,1,,tie,0,lung adenocarcinoma,pick,0,lung adenocarcinoma,pick,0,lung adenocarcinoma,pick,0,non-small cell lung carcinoma (disease),pick,1,6,1
+oracle,Cefepime,streptococcal pneumonia,indication,8,1,,none,0,Klebsiella pneumonia,pick,0,Klebsiella pneumonia,pick,0,Legionnaires' disease,pick,0,Klebsiella pneumonia,pick,0,2,0
+oracle,Cytarabine,unclassified acute myeloid leukemia,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute megakaryoblastic leukemia,pick,0,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,10,1
+oracle,Metyrosine,sympathetic paraganglioma,indication,15,2,,none,0,,none,0,,none,0,head and neck paraganglioma,pick,0,,none,0,0,0
+oracle,Altretamine,ovarian carcinosarcoma,indication,17,6,,none,0,,none,0,,none,0,ovarian adenocarcinoma,pick,1,,none,0,0,0
+oracle,Voriconazole,disseminated candidiasis,indication,11,3,,tie,0,candidemia,pick,1,esophageal candidiasis,pick,1,candida glabrata,pick,0,"candidiasis, invasive",pick,0,10,1
+oracle,Lindane,Pthirus pubis infestation,indication,3,2,,none,0,,none,0,,none,0,Pediculus humanus capitis infestation,pick,1,,none,0,0,0
+oracle,Gemcitabine,malignant germ cell tumor of ovary,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian angiosarcoma,pick,0,4,1
+oracle,Cisapride,peptic esophagitis,indication,7,1,,none,0,gastric ulcer (disease),pick,0,gastric ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,peptic esophagitis,pick,1,4,1
+oracle,Cromoglicic acid,intrinsic asthma,indication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Clarithromycin,streptococcal pneumonia,indication,23,3,,tie,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,cryptogenic organizing pneumonia,pick,0,12,1
+oracle,Capecitabine,metastasis from malignant tumor of colon,indication,22,1,,tie,0,rectal cancer,pick,0,rectal cancer,pick,0,rectal cancer,pick,0,colorectal squamous cell carcinoma,pick,0,12,0
+oracle,Lovastatin,familial hyperlipidemia,indication,8,2,familial hyperlipidemia,pick,1,,none,0,familial hyperlipidemia,pick,1,hyperalphalipoproteinemia,pick,0,,none,0,1,1
+oracle,Felbamate,partial epilepsy,indication,46,1,,none,0,partial epilepsy,pick,1,partial epilepsy,pick,1,partial epilepsy,pick,1,partial epilepsy,pick,1,5,1
+oracle,Tenofovir disoproxil,HIV infectious disease,indication,13,1,,none,0,gonorrhea,pick,0,gonorrhea,pick,0,gonorrhea,pick,0,genital herpes,pick,0,2,0
+oracle,Tioguanine,acute myeloid leukemia and myelodysplastic syndromes related to topoisomerase type 2 inhibitor,indication,33,14,,none,0,,none,0,,none,0,acute promyelocytic leukemia,pick,0,,none,0,0,0
+oracle,Lenalidomide,plasma cell myeloma,indication,23,1,,tie,0,plasmacytoma,pick,0,plasma cell leukemia,pick,0,plasmacytoma,pick,0,smoldering plasma cell myeloma,pick,0,9,1
+oracle,Phenylbutyric acid,citrin deficiency,indication,2,2,,none,0,,none,0,,none,0,citrin deficiency,pick,1,,none,0,0,0
+oracle,Clindamycin,streptococcal pneumonia,indication,11,1,,tie,0,streptococcal toxic-shock syndrome,pick,0,streptococcal toxic-shock syndrome,pick,0,scarlet fever,pick,0,streptococcal toxic-shock syndrome,pick,0,10,1
+oracle,Acetazolamide,open-angle glaucoma,indication,13,1,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,hypersecretion glaucoma,pick,0,5,1
+oracle,Etidronic acid,juvenile Paget disease,indication,11,2,,none,0,osteoporosis,pick,0,osteoporosis,pick,0,osteoporosis,pick,0,postmenopausal osteoporosis,pick,0,3,0
+oracle,Fluorometholone,corneal ulcer,indication,21,1,,none,0,epidemic keratoconjunctivitis,pick,0,epidemic keratoconjunctivitis,pick,0,corneal ulcer,pick,1,filamentary keratitis,pick,0,7,1
+oracle,Daunorubicin,acute myeloid leukemia with t(8;21)(q22;q22) translocation,indication,33,16,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,7,1
+oracle,Nortriptyline,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Tretinoin,acne (disease),indication,64,1,acne (disease),pick,1,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,acne (disease),pick,1,14,1
+oracle,Decitabine,acute myeloid leukemia and myelodysplastic syndromes related to topoisomerase type 2 inhibitor,indication,33,14,,none,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute basophilic leukemia,pick,0,7,0
+oracle,Flumethasone,neurodermatitis,indication,64,5,,none,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,neurodermatitis,pick,1,4,1
+oracle,Amphotericin B,relapsing fever,indication,64,4,esophageal candidiasis,pick,1,esophageal candidiasis,pick,1,esophageal candidiasis,pick,1,Chagas disease,pick,0,esophageal candidiasis,pick,1,10,1
+oracle,Griseofulvin,dermatophytosis of groin and perianal area,indication,13,6,,tie,0,tinea corporis,pick,1,tinea pedis,pick,1,tinea pedis,pick,1,tinea imbricata,pick,0,8,1
+oracle,Phenoxybenzamine,adrenal gland pheochromocytoma,indication,5,1,,none,0,,none,0,,none,0,adrenal gland pheochromocytoma,pick,1,,none,0,0,0
+oracle,Azacitidine,inherited acute myeloid leukemia,indication,33,14,,none,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute myeloid leukemia with multilineage dysplasia,pick,0,10,0
+oracle,Cefamandole,streptococcal pneumonia,indication,23,1,,none,0,,tie,0,,tie,0,bacterial pneumonia,pick,0,bronchopneumonia,pick,0,3,0
+oracle,Decitabine,acute myeloblastic leukemia without maturation,indication,33,14,,none,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute basophilic leukemia,pick,0,7,0
+oracle,Amoxapine,neurotic disorder,indication,10,1,neurotic disorder,pick,1,anxiety,pick,0,neurotic disorder,pick,1,anxiety,pick,0,anxiety,pick,0,2,1
+oracle,Rotigotine,parkinsonian-pyramidal syndrome,indication,2,1,,none,0,,none,0,,none,0,parkinsonian-pyramidal syndrome,pick,1,,none,0,0,0
+oracle,Cladribine,hairy cell leukemia variant,indication,4,1,,none,0,hairy cell leukemia variant,pick,1,hairy cell leukemia variant,pick,1,hairy cell leukemia variant,pick,1,hairy cell leukemia variant,pick,1,2,1
+oracle,Levofloxacin,bacterial pneumonia,indication,23,3,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,Legionnaires' disease,pick,0,9,1
+oracle,Mesalazine,ulcerative proctosigmoiditis,indication,17,2,,tie,0,colitis (disease),pick,0,ulcerative colitis (disease),pick,1,colitis (disease),pick,0,diversion colitis,pick,0,12,1
+oracle,Fluocinonide,granuloma annulare,indication,64,5,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,mucous membrane pemphigoid,pick,0,11,1
+oracle,Carboplatin,malignant germ cell tumor of ovary,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian large-cell neuroendocrine carcinoma,pick,0,7,1
+oracle,Indomethacin,periarthritis,indication,5,1,,none,0,periarthritis,pick,1,periarthritis,pick,1,periarthritis,pick,1,periarthritis,pick,1,2,1
+oracle,Thiotepa,malignant sex cord stromal tumor of ovary,indication,26,5,,none,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,1,0
+oracle,Temozolomide,astrocytoma (excluding glioblastoma),indication,38,1,,tie,0,malignant glioma,pick,0,malignant glioma,pick,0,schwannoma,pick,0,grade III glioma,pick,0,15,0
+oracle,Telithromycin,streptococcal pneumonia,indication,2,1,,none,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,1,0
+oracle,Pemetrexed,malignant mesothelioma (disease),indication,17,2,,tie,0,pleural mesothelioma,pick,0,malignant pleural mesothelioma,pick,1,pleural mesothelioma,pick,0,malignant pleural mesothelioma,pick,1,9,1
+oracle,Cefazolin,streptococcal pneumonia,indication,11,1,,none,0,erysipelas,pick,0,erysipelas,pick,0,scarlet fever,pick,0,streptococcal toxic-shock syndrome,pick,0,6,0
+oracle,Tamoxifen,breast ductal adenocarcinoma,indication,55,3,sporadic breast cancer,pick,0,estrogen-receptor positive breast cancer,pick,0,estrogen-receptor positive breast cancer,pick,0,breast adenocarcinoma,pick,0,estrogen-receptor positive breast cancer,pick,0,20,1
+oracle,Heparin,purpura fulminans,indication,2,2,purpura fulminans,pick,1,purpura fulminans,pick,1,purpura fulminans,pick,1,purpura fulminans,pick,1,acquired purpura fulminans,pick,1,2,1
+oracle,Everolimus,renal cell carcinoma (disease),indication,17,1,,tie,0,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,3,1
+oracle,Zinc oxide,tinea infection,indication,64,0,intertrigo,pick,0,acne (disease),pick,0,intertrigo,pick,0,psoriasis,pick,0,intertrigo,pick,0,10,0
+oracle,Ethinylestradiol,postmenopausal osteoporosis,indication,6,1,,none,0,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,1,1
+oracle,Telithromycin,pneumonia caused by chlamydia,indication,8,3,,none,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,1,0
+oracle,Dapsone,acne (disease),indication,64,1,,tie,0,pemphigus,pick,0,acne (disease),pick,1,psoriasis,pick,0,linear IgA Dermatosis,pick,0,36,1
+oracle,Methazolamide,open-angle glaucoma,indication,13,1,,none,0,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,open-angle glaucoma,pick,1,1,1
+oracle,Imipramine,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,atypical depressive disorder,pick,0,2,1
+oracle,Amoxicillin,Klebsiella pneumonia,indication,23,3,,tie,0,bacterial pneumonia,pick,1,bacterial pneumonia,pick,1,bacterial pneumonia,pick,1,bacterial pneumonia,pick,1,12,1
+oracle,Ethyl loflazepate,neurotic disorder,indication,10,2,,none,0,anxiety,pick,1,anxiety,pick,1,anxiety,pick,1,anxiety,pick,1,1,1
+oracle,Amitriptyline,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Sodium oxybate,narcolepsy without cataplexy,indication,2,2,narcolepsy without cataplexy,pick,1,narcolepsy without cataplexy,pick,1,narcolepsy without cataplexy,pick,1,narcolepsy without cataplexy,pick,1,narcolepsy-cataplexy syndrome,pick,1,2,1
+oracle,Neostigmine,adult-onset myasthenia gravis,indication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Vancomycin,subacute bacterial endocarditis,indication,2,1,,none,0,subacute bacterial endocarditis,pick,1,subacute bacterial endocarditis,pick,1,subacute bacterial endocarditis,pick,1,subacute bacterial endocarditis,pick,1,1,1
+oracle,Chloroquine,Plasmodium falciparum malaria,indication,7,4,cerebral malaria,pick,0,Plasmodium falciparum malaria,pick,1,cerebral malaria,pick,0,Plasmodium falciparum malaria,pick,1,Plasmodium vivax malaria,pick,1,7,1
+oracle,Cimetidine,duodenal ulcer (disease),indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,6,1
+oracle,Theophylline,allergic asthma,indication,7,2,,none,0,status asthmaticus,pick,0,status asthmaticus,pick,0,allergic asthma,pick,1,status asthmaticus,pick,0,5,1
+oracle,Pazopanib,renal cell carcinoma (disease),indication,16,3,,tie,0,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,renal cell carcinoma (disease),pick,1,3,1
+oracle,Colchicine,autosomal recessive familial Mediterranean fever,indication,2,1,,none,0,,none,0,,none,0,,none,0,,none,0,0,0
+oracle,Minocycline,granuloma inguinale,indication,13,3,,none,0,gonorrhea,pick,1,gonorrhea,pick,1,gonorrhea,pick,1,bacterial sexually transmitted disease,pick,0,4,1
+oracle,Doxazosin,benign prostatic hyperplasia (disease),indication,13,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,1,1
+oracle,Lamotrigine,partial epilepsy,indication,46,2,,tie,0,partial epilepsy,pick,1,epilepsy syndrome,pick,0,partial epilepsy,pick,1,partial epilepsy,pick,1,11,1
+oracle,Methoxsalen,primary cutaneous T-cell non-Hodgkin lymphoma,indication,25,2,,none,0,primary cutaneous T-cell lymphoma,pick,1,primary cutaneous T-cell lymphoma,pick,1,sweat gland carcinoma,pick,0,primary cutaneous T-cell lymphoma,pick,1,1,1
+oracle,Halcinonide,occupational dermatitis,indication,9,1,,none,0,,none,0,,none,0,allergic contact dermatitis,pick,0,,none,0,0,0
+oracle,Mitoxantrone,acute myeloid leukemia with t(9;11)(p22;q23),indication,33,14,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,childhood acute myeloid leukemia,pick,0,6,0
+oracle,Dyphylline,intrinsic asthma,indication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Megestrol acetate,endometrial carcinoma (disease),indication,12,1,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,endometrial carcinoma (disease),pick,1,endometrium adenocarcinoma,pick,0,2,1
+oracle,Desloratadine,atopic conjunctivitis,indication,20,2,allergic urticaria,pick,1,allergic asthma,pick,0,allergic urticaria,pick,1,allergic asthma,pick,0,allergic asthma,pick,0,5,1
+oracle,Pentoxifylline,intermittent vascular claudication,indication,14,2,intermittent vascular claudication,pick,1,peripheral arterial disease,pick,1,peripheral arterial disease,pick,1,peripheral arterial disease,pick,1,livedo reticularis,pick,0,7,1
+oracle,Ganciclovir,herpes simplex virus keratitis,indication,18,2,cytomegalovirus retinitis,pick,1,cytomegalovirus retinitis,pick,1,cytomegalovirus retinitis,pick,1,cytomegalovirus retinitis,pick,1,cytomegalovirus retinitis,pick,1,6,1
+oracle,Etoposide,small cell lung carcinoma,indication,20,1,,tie,0,lung carcinoma,pick,0,lung carcinoma,pick,0,lung carcinoma,pick,0,small cell lung carcinoma,pick,1,5,1
+oracle,Buprenorphine,opiate dependence,indication,8,2,,tie,0,opiate dependence,pick,1,opiate dependence,pick,1,nicotine dependence,pick,0,opiate dependence,pick,1,3,1
+oracle,Metronidazole,amoebiasis due to Entamoeba histolytica,indication,64,2,,tie,0,giardiasis,pick,1,giardiasis,pick,1,malaria,pick,0,amoebiasis due to Entamoeba histolytica,pick,1,29,1
+oracle,Erythromycin,Mycoplasma pneumoniae pneumonia,indication,23,3,,tie,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,anaerobic pneumonia,pick,0,15,1
+oracle,Fluoxetine,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Benzylpenicillin,tabes dorsalis,indication,4,2,,none,0,meningovascular neurosyphilis,pick,0,meningovascular neurosyphilis,pick,0,tabes dorsalis,pick,1,meningovascular neurosyphilis,pick,0,3,1
+oracle,Cefazolin,bacterial pneumonia,indication,23,2,,none,0,,tie,0,,tie,0,bacterial pneumonia,pick,1,Klebsiella pneumonia,pick,0,3,1
+oracle,Ciclesonide,allergic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,1,1
+oracle,Atovaquone,pneumocystosis,indication,23,1,pneumocystosis,pick,1,pneumocystosis,pick,1,pneumocystosis,pick,1,bacterial pneumonia,pick,0,pneumocystosis,pick,1,2,1
+oracle,Dirithromycin,streptococcal pneumonia,indication,8,2,,none,0,,none,0,,none,0,Legionnaires' disease,pick,0,,none,0,0,0
+oracle,Pemetrexed,non-small cell lung carcinoma (disease),indication,20,1,,tie,0,lung adenocarcinoma,pick,0,lung adenocarcinoma,pick,0,lung adenocarcinoma,pick,0,lung adenocarcinoma,pick,0,6,1
+oracle,Tenofovir,HIV infectious disease,indication,13,1,,none,0,gonorrhea,pick,0,gonorrhea,pick,0,gonorrhea,pick,0,genital herpes,pick,0,2,0
+oracle,Cholecalciferol,osteomalacia (disease),indication,11,3,osteomalacia (disease),pick,1,osteoporosis,pick,1,osteomalacia (disease),pick,1,osteoporosis,pick,1,pregnancy associated osteoporosis,pick,0,4,1
+oracle,Fluticasone furoate,allergic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,1,1
+oracle,Carbamazepine,partial epilepsy,indication,46,3,,tie,0,partial epilepsy,pick,1,,tie,0,partial epilepsy,pick,1,partial epilepsy,pick,1,12,1
+oracle,Resorcinol,acneiform dermatitis,indication,64,2,,tie,0,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,acne (disease),pick,1,7,1
+oracle,Chlorambucil,neoplasm of mature B-cells,indication,55,3,lymphoplasmacytic lymphoma,pick,0,Hodgkins lymphoma,pick,1,lymphoplasmacytic lymphoma,pick,0,Hodgkins lymphoma,pick,1,lymphoplasmacytic lymphoma,pick,0,11,1
+oracle,Lenalidomide,B-cell neoplasm,indication,55,1,,none,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,AIDS-related primary central nervous system lymphoma,pick,0,13,1
+oracle,Chlorpromazine,schizophreniform disorder,indication,9,2,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizophreniform disorder,pick,1,5,1
+oracle,Magnesium sulfate,severe pre-eclampsia,indication,3,2,,none,0,HELLP syndrome,pick,0,HELLP syndrome,pick,0,HELLP syndrome,pick,0,severe pre-eclampsia,pick,1,3,1
+oracle,Tamoxifen,invasive ductal breast carcinoma,indication,55,3,sporadic breast cancer,pick,0,estrogen-receptor positive breast cancer,pick,0,estrogen-receptor positive breast cancer,pick,0,breast adenocarcinoma,pick,0,estrogen-receptor positive breast cancer,pick,0,20,1
+oracle,Hydroxyzine,familial dermatographia,indication,4,1,vibratory urticaria,pick,0,cholinergic urticaria,pick,0,vibratory urticaria,pick,0,cholinergic urticaria,pick,0,vibratory urticaria,pick,0,2,0
+oracle,Imipramine,neurotic disorder,indication,10,1,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,agoraphobia,pick,0,6,0
+oracle,Ciclesonide,intrinsic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,1,1
+oracle,Tioguanine,acute myeloid leukemia with minimal differentiation,indication,33,14,,none,0,,none,0,,none,0,acute promyelocytic leukemia,pick,0,,none,0,0,0
+oracle,Oxytetracycline,rickettsialpox,indication,16,3,,none,0,,tie,0,,tie,0,Rocky mountain spotted fever,pick,1,rickettsialpox,pick,1,3,1
+oracle,Levodopa,parkinsonian-pyramidal syndrome,indication,2,1,,none,0,parkinsonian-pyramidal syndrome,pick,1,parkinsonian-pyramidal syndrome,pick,1,parkinsonian-pyramidal syndrome,pick,1,parkinsonian-pyramidal syndrome,pick,1,1,1
+oracle,Maprotiline,neurotic disorder,indication,10,2,neurotic disorder,pick,1,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,social phobia,pick,0,5,1
+oracle,Temozolomide,brain glioblastoma,indication,20,1,gliosarcoma,pick,0,gliosarcoma,pick,0,gliosarcoma,pick,0,gliosarcoma,pick,0,adult brainstem glioma,pick,0,6,1
+oracle,Chenodeoxycholic acid,cholelithiasis,indication,38,1,,tie,0,gallstones,pick,0,gallstones,pick,0,hepatitis,pick,0,gallstones,pick,0,11,1
+oracle,Chloroquine,systemic lupus erythematosus (disease),indication,7,2,,none,0,systemic lupus erythematosus (disease),pick,1,systemic lupus erythematosus (disease),pick,1,systemic lupus erythematosus (disease),pick,1,systemic lupus erythematosus (disease),pick,1,1,1
+oracle,Danazol,breast fibrocystic disease,indication,41,1,,tie,0,breast cancer,pick,0,breast cancer,pick,0,breast cancer,pick,0,breast adenosis,pick,0,7,0
+oracle,Mitoxantrone,inherited acute myeloid leukemia,indication,33,14,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,childhood acute myeloid leukemia,pick,0,6,0
+oracle,Clofarabine,precursor T-cell acute lymphoblastic leukemia,indication,19,2,,none,0,acute lymphoblastic leukemia (disease),pick,1,acute lymphoblastic leukemia (disease),pick,1,acute lymphoblastic leukemia (disease),pick,1,acute biphenotypic leukemia,pick,0,5,1
+oracle,Ferrous fumarate,folic acid deficiency anemia,indication,19,2,,none,0,iron deficiency anemia,pick,1,iron deficiency anemia,pick,1,iron deficiency anemia,pick,1,iron deficiency anemia,pick,1,1,1
+oracle,Clobetasol propionate,occupational dermatitis,indication,9,1,,none,0,allergic contact dermatitis,pick,0,allergic contact dermatitis,pick,0,allergic contact dermatitis,pick,0,allergic contact dermatitis,pick,0,1,0
+oracle,Albendazole,echinococcus granulosus infectious disease,indication,4,2,cystic echinococcosis,pick,1,cystic echinococcosis,pick,1,cystic echinococcosis,pick,1,cystic echinococcosis,pick,1,alveolar echinococcosis,pick,0,3,1
+oracle,Fluvoxamine,phobic disorder,indication,10,2,,tie,0,anxiety,pick,0,social phobia,pick,1,anxiety,pick,0,agoraphobia,pick,0,7,1
+oracle,Azlocillin,urinary tract infection (disease),indication,16,1,,none,0,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,1,1
+oracle,Fexofenadine,atopic conjunctivitis,indication,20,1,allergic urticaria,pick,0,allergic asthma,pick,0,allergic urticaria,pick,0,allergic asthma,pick,0,allergic urticaria,pick,0,2,0
+oracle,Salmeterol,pulmonary emphysema,indication,10,1,,none,0,bronchiectasis,pick,0,bronchiectasis,pick,0,bronchiectasis,pick,0,diffuse panbronchiolitis,pick,0,3,1
+oracle,Lindane,Pediculus humanus capitis infestation,indication,3,2,,none,0,,none,0,,none,0,Pediculus humanus capitis infestation,pick,1,,none,0,0,0
+oracle,Daunorubicin,therapy related acute myeloid leukemia and myelodysplastic syndrome,indication,33,16,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,7,1
+oracle,Ertapenem,bacterial pneumonia,indication,23,2,,none,0,Klebsiella pneumonia,pick,0,Klebsiella pneumonia,pick,0,bacterial pneumonia,pick,1,Klebsiella pneumonia,pick,0,3,1
+oracle,Tiotropium,intrinsic asthma,indication,7,2,,tie,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,2,1
+oracle,Warfarin,intracranial embolism,indication,11,1,,tie,0,transient ischemic attack (disease),pick,0,transient ischemic attack (disease),pick,0,cerebral infarction,pick,0,transient ischemic attack (disease),pick,0,4,0
+oracle,Diclofenamide,open-angle glaucoma,indication,13,1,,none,0,,none,0,,none,0,open-angle glaucoma,pick,1,,none,0,0,0
+oracle,Allopurinol,acute urate nephropathy,indication,2,1,acute urate nephropathy,pick,1,acute urate nephropathy,pick,1,acute urate nephropathy,pick,1,acute urate nephropathy,pick,1,acute urate nephropathy,pick,1,1,1
+oracle,Lansoprazole,esophagitis (disease),indication,33,3,,none,0,gastroesophageal reflux disease,pick,1,gastroesophageal reflux disease,pick,1,esophageal cancer,pick,0,gastroesophageal reflux disease,pick,1,8,1
+oracle,Trimipramine,neurotic disorder,indication,10,1,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,social phobia,pick,0,3,0
+oracle,Clofazimine,pyoderma gangrenosum,indication,6,1,,none,0,pyoderma gangrenosum,pick,1,pyoderma gangrenosum,pick,1,pyoderma gangrenosum,pick,1,impetigo herpetiformis,pick,0,3,1
+oracle,Norfloxacin,urinary tract infection (disease),indication,16,2,,none,0,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,acute cystitis (disease),pick,0,3,1
+oracle,Voriconazole,candidemia,indication,11,3,,tie,0,candidemia,pick,1,esophageal candidiasis,pick,1,candida glabrata,pick,0,"candidiasis, invasive",pick,0,10,1
+oracle,Porfimer sodium,carcinoma of esophagus,indication,13,1,,none,0,esophageal squamous cell carcinoma,pick,0,esophageal squamous cell carcinoma,pick,0,esophageal squamous cell carcinoma,pick,0,esophageal squamous cell carcinoma,pick,0,1,0
+oracle,Gemifloxacin,bacterial pneumonia,indication,23,4,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,Legionnaires' disease,pick,0,2,1
+oracle,Arsenic trioxide,acute myeloid leukemia with abnormal bone marrow eosinophils inv(16)(p13q22) or t(16;16)(p13;q22),indication,33,2,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,8,1
+oracle,Ceftizoxime,streptococcal pneumonia,indication,2,1,,none,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,pneumococcal meningitis,pick,0,1,0
+oracle,Lovastatin,"hyperlipidemia, familial combined, LPL related",indication,8,2,familial hyperlipidemia,pick,1,,none,0,familial hyperlipidemia,pick,1,hyperalphalipoproteinemia,pick,0,,none,0,1,1
+oracle,Ergocalciferol,osteomalacia (disease),indication,11,3,osteomalacia (disease),pick,1,osteoporosis,pick,1,osteomalacia (disease),pick,1,osteoporosis,pick,1,osteomalacia (disease),pick,1,4,1
+oracle,Cytarabine,acute promyelocytic leukemia,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute megakaryoblastic leukemia,pick,0,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,10,1
+oracle,Budesonide,intrinsic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,5,1
+oracle,Montelukast,intrinsic asthma,indication,7,2,,tie,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,4,1
+oracle,Pentamidine,human African trypanosomiasis,indication,4,1,human African trypanosomiasis,pick,1,human African trypanosomiasis,pick,1,human African trypanosomiasis,pick,1,Chagas disease,pick,0,human African trypanosomiasis,pick,1,2,1
+oracle,Bortezomib,B-cell neoplasm,indication,55,1,,none,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,lymphoplasmacytic lymphoma,pick,0,12,1
+oracle,Testosterone enanthate,"hypogonadism, male",indication,9,2,,none,0,,tie,0,,tie,0,Turner syndrome,pick,0,gonadal dysgenesis,pick,0,2,0
+oracle,Esomeprazole,peptic esophagitis,indication,7,1,,none,0,,tie,0,,tie,0,duodenal ulcer (disease),pick,0,peptic esophagitis,pick,1,3,1
+oracle,Formoterol,pulmonary emphysema,indication,10,1,,none,0,bronchiectasis,pick,0,bronchiectasis,pick,0,bronchiectasis,pick,0,pulmonary emphysema,pick,1,2,1
+oracle,Phylloquinone,congenital prothrombin deficiency,indication,50,1,,none,0,,none,0,,none,0,purpura (disease),pick,0,,none,0,0,0
+oracle,Carbamazepine,glossopharyngeal neuralgia,indication,14,2,trigeminal neuralgia,pick,1,trigeminal neuralgia,pick,1,trigeminal neuralgia,pick,1,trigeminal neuralgia,pick,1,glossopharyngeal neuralgia,pick,1,6,1
+oracle,Buprenorphine,morphine dependence,indication,8,2,,tie,0,opiate dependence,pick,1,opiate dependence,pick,1,nicotine dependence,pick,0,opiate dependence,pick,1,3,1
+oracle,Etidronic acid,bone Paget disease,indication,11,2,,none,0,osteoporosis,pick,0,osteoporosis,pick,0,osteoporosis,pick,0,postmenopausal osteoporosis,pick,0,3,0
+oracle,Lanreotide,pituitary gigantism,indication,22,1,familial isolated pituitary adenoma,pick,0,pituitary gigantism,pick,1,familial isolated pituitary adenoma,pick,0,chromophobe adenoma,pick,0,pituitary gland adenoma,pick,0,3,1
+oracle,Altretamine,ovarian mucinous adenocarcinoma,indication,17,6,,none,0,,none,0,,none,0,ovarian adenocarcinoma,pick,1,,none,0,0,0
+oracle,Clopidogrel,intracranial embolism,indication,11,1,,tie,0,transient ischemic attack (disease),pick,0,transient ischemic attack (disease),pick,0,cerebral infarction,pick,0,transient ischemic attack (disease),pick,0,4,0
+oracle,Zoledronic acid,bone Paget disease,indication,11,4,,none,0,osteoporosis,pick,1,osteoporosis,pick,1,osteoporosis,pick,1,bone Paget disease,pick,1,6,1
+oracle,Dexlansoprazole,peptic esophagitis,indication,7,1,,none,0,,none,0,,none,0,duodenal ulcer (disease),pick,0,,none,0,0,0
+oracle,Idarubicin,acute myeloblastic leukemia with maturation,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute myeloid leukemia with multilineage dysplasia,pick,0,10,1
+oracle,Testosterone cypionate,"hypogonadism, male",indication,9,2,,none,0,,none,0,,none,0,Turner syndrome,pick,0,,none,0,0,0
+oracle,Dalteparin,purpura fulminans,indication,2,2,,none,0,,none,0,,none,0,purpura fulminans,pick,1,,none,0,0,0
+oracle,Ammonium lactate,contact dermatitis,indication,64,4,,none,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,acanthosis nigricans (disease),pick,0,2,0
+oracle,Lansoprazole,peptic esophagitis,indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,active peptic ulcer disease,pick,0,6,1
+oracle,Oxymetholone,inherited aplastic anemia,indication,10,2,,none,0,Fanconi anemia,pick,0,Fanconi anemia,pick,0,Fanconi anemia,pick,0,idiopathic aplastic anemia,pick,1,4,1
+oracle,Ketoconazole,tinea corporis,indication,13,3,,tie,0,tinea pedis,pick,1,tinea pedis,pick,1,tinea pedis,pick,1,Kerion celsi,pick,0,8,1
+oracle,Griseofulvin,tinea barbae,indication,13,6,,tie,0,tinea corporis,pick,1,tinea pedis,pick,1,tinea pedis,pick,1,tinea imbricata,pick,0,8,1
+oracle,Porfimer sodium,non-small cell lung carcinoma (disease),indication,20,1,,none,0,,tie,0,,tie,0,lung adenocarcinoma,pick,0,non-small cell lung carcinoma (disease),pick,1,4,1
+oracle,Nortriptyline,neurotic disorder,indication,10,1,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,agoraphobia,pick,0,3,0
+oracle,Clobetasol propionate,atopic eczema,indication,64,3,lichen sclerosus et atrophicus,pick,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,autoimmune bullous skin disease,pick,0,21,1
+oracle,Ethinylestradiol,acne (disease),indication,64,1,,none,0,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,acne (disease),pick,1,5,1
+oracle,Tazarotene,parapsoriasis,indication,64,3,acne (disease),pick,1,psoriasis,pick,1,acne (disease),pick,1,psoriasis,pick,1,acne (disease),pick,1,8,1
+oracle,Lincomycin,pneumococcal infection,indication,19,2,,none,0,actinomycosis,pick,0,actinomycosis,pick,0,tetanus,pick,0,actinomycosis,pick,0,5,1
+oracle,Magnesium hydroxide,peptic esophagitis,indication,7,1,,none,0,duodenal ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,2,0
+oracle,Cefotetan,bacterial pneumonia,indication,23,2,,none,0,bronchopneumonia,pick,0,bronchopneumonia,pick,0,bacterial pneumonia,pick,1,Klebsiella pneumonia,pick,0,3,1
+oracle,Orciprenaline,allergic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,1,1
+oracle,Prednisolone acetate,iridocyclitis (disease),indication,4,2,,tie,0,iridocyclitis (disease),pick,1,iridocyclitis (disease),pick,1,iridocyclitis (disease),pick,1,infectious anterior uveitis,pick,1,3,1
+oracle,Gemcitabine,ovarian small cell carcinoma,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian angiosarcoma,pick,0,4,1
+oracle,Gemifloxacin,Mycoplasma pneumoniae pneumonia,indication,23,4,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,Legionnaires' disease,pick,0,2,1
+oracle,Trimethoprim,infectious otitis media,indication,3,1,,none,0,,none,0,,none,0,infectious otitis media,pick,1,,none,0,0,0
+oracle,Nicotinamide,acne (disease),indication,64,1,,tie,0,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,autoimmune bullous skin disease,pick,0,14,1
+oracle,Daunorubicin,acute myeloid leukemia with t(9;11)(p22;q23),indication,33,16,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,7,1
+oracle,Methyltestosterone,"hypogonadism, male",indication,9,2,,none,0,gonadal dysgenesis,pick,0,gonadal dysgenesis,pick,0,Turner syndrome,pick,0,gonadal dysgenesis,pick,0,2,0
+oracle,Procyclidine,blepharospasm,indication,11,2,oculogyric crisis,pick,0,,none,0,oculogyric crisis,pick,0,blepharospasm,pick,1,,none,0,1,0
+oracle,Fluvastatin,"hyperlipidemia, familial combined, LPL related",indication,8,1,familial hyperlipidemia,pick,0,,none,0,familial hyperlipidemia,pick,0,hyperalphalipoproteinemia,pick,0,,none,0,1,0
+oracle,Etoposide,testicular seminoma,indication,17,1,,none,0,testicular seminoma,pick,1,testicular seminoma,pick,1,testicular seminoma,pick,1,testicular seminoma,pick,1,2,1
+oracle,Protriptyline,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Risedronic acid,bone Paget disease,indication,11,4,,none,0,osteoporosis,pick,1,osteoporosis,pick,1,osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,2,1
+oracle,Cytarabine,inherited acute myeloid leukemia,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute megakaryoblastic leukemia,pick,0,acute promyelocytic leukemia,pick,1,childhood acute myeloid leukemia,pick,0,10,1
+oracle,Mesalazine,ulcerative colitis (disease),indication,17,2,,tie,0,colitis (disease),pick,0,ulcerative colitis (disease),pick,1,colitis (disease),pick,0,diversion colitis,pick,0,12,1
+oracle,Azacitidine,acute myeloid leukemia with t(8;16)(p11;p13) translocation,indication,33,14,,none,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute myeloid leukemia with multilineage dysplasia,pick,0,10,0
+oracle,Bupropion,dysthymic disorder,indication,3,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Clonazepam,visual epilepsy,indication,46,1,,tie,0,partial epilepsy,pick,0,frontal lobe epilepsy,pick,0,partial epilepsy,pick,0,startle epilepsy,pick,0,10,0
+oracle,Methotrexate,parapsoriasis,indication,64,2,,tie,0,psoriasis,pick,1,psoriasis,pick,1,psoriasis,pick,1,guttate psoriasis,pick,0,37,1
+oracle,Sertraline,phobic disorder,indication,10,4,,tie,0,anxiety,pick,0,post-traumatic stress disorder,pick,1,anxiety,pick,0,mixed anxiety and depressive disorder,pick,0,8,1
+oracle,Idarubicin,acute myeloid leukemia with t(8;21)(q22;q22) translocation,indication,33,15,,tie,0,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute promyelocytic leukemia,pick,1,acute myeloid leukemia with multilineage dysplasia,pick,0,10,1
+oracle,Tamoxifen,female breast carcinoma,indication,25,1,,tie,0,breast carcinoma,pick,0,breast carcinoma,pick,0,breast carcinoma,pick,0,hereditary breast carcinoma,pick,0,10,0
+oracle,Benzoyl peroxide,granuloma annulare,indication,64,5,acne (disease),pick,1,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,acne (disease),pick,1,11,1
+oracle,Betamethasone,pemphigus,indication,64,10,neurodermatitis,pick,1,psoriasis,pick,1,psoriasis,pick,1,psoriasis,pick,1,guttate psoriasis,pick,0,24,1
+oracle,Terazosin,benign prostatic hyperplasia (disease),indication,13,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,benign prostatic hyperplasia (disease),pick,1,1,1
+oracle,Fenofibrate,familial hyperlipidemia,indication,8,2,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,hyperalphalipoproteinemia,pick,0,familial hyperlipidemia,pick,1,1,1
+oracle,Carboplatin,malignant sex cord stromal tumor of ovary,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian large-cell neuroendocrine carcinoma,pick,0,7,1
+oracle,Halofantrine,Plasmodium vivax malaria,indication,7,2,,none,0,Plasmodium falciparum malaria,pick,1,Plasmodium falciparum malaria,pick,1,Plasmodium falciparum malaria,pick,1,blackwater fever,pick,0,4,1
+oracle,Doxorubicin,familial ovarian cancer,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian sarcoma,pick,0,7,1
+oracle,Zafirlukast,allergic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,2,1
+oracle,Formoterol,intrinsic asthma,indication,7,2,,tie,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,4,1
+oracle,Pirbuterol,pulmonary emphysema,indication,10,3,,none,0,,none,0,,none,0,bronchiectasis,pick,1,,none,0,0,0
+oracle,Pantoprazole,peptic esophagitis,indication,7,1,,tie,0,duodenal ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,duodenal ulcer (disease),pick,0,active peptic ulcer disease,pick,0,5,1
+oracle,Ertapenem,streptococcal pneumonia,indication,23,2,,none,0,Klebsiella pneumonia,pick,0,Klebsiella pneumonia,pick,0,bacterial pneumonia,pick,1,Klebsiella pneumonia,pick,0,3,1
+oracle,Ammonium lactate,occupational dermatitis,indication,64,4,,none,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,acanthosis nigricans (disease),pick,0,2,0
+oracle,Vinblastine,B-cell neoplasm,indication,55,3,,none,0,Hodgkins lymphoma,pick,1,Hodgkins lymphoma,pick,1,Hodgkins lymphoma,pick,1,classic Hodgkin lymphoma,pick,1,6,1
+oracle,Temsirolimus,B-cell neoplasm,indication,55,1,,none,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,primary central nervous system lymphoma,pick,0,2,0
+oracle,Benzocaine,tinea infection,indication,64,0,,none,0,contact dermatitis,pick,0,contact dermatitis,pick,0,psoriasis,pick,0,irritant dermatitis,pick,0,4,0
+oracle,Haloperidol,schizophreniform disorder,indication,9,2,,tie,0,schizoaffective disorder,pick,1,delusional disorder,pick,0,schizoaffective disorder,pick,1,schizophreniform disorder,pick,1,9,1
+oracle,Pyridostigmine,adult-onset myasthenia gravis,indication,3,1,,none,0,myasthenia gravis with thymus hyperplasia,pick,0,myasthenia gravis with thymus hyperplasia,pick,0,adult-onset myasthenia gravis,pick,1,myasthenia gravis with thymus hyperplasia,pick,0,1,0
+oracle,Docetaxel,gastric carcinoma,indication,24,1,,tie,0,gastric adenocarcinoma,pick,0,gastric adenocarcinoma,pick,0,gastric carcinoma,pick,1,gastric cardia carcinoma,pick,0,5,1
+oracle,Sulbactam,staphylococcus aureus infection,indication,11,1,,none,0,impetigo,pick,0,impetigo,pick,0,staphylococcus aureus infection,pick,1,staphylococcal scalded skin syndrome,pick,0,6,1
+oracle,Hydroxyzine,atopic conjunctivitis,indication,20,2,,tie,0,allergic asthma,pick,0,allergic contact dermatitis,pick,0,allergic asthma,pick,0,drug allergy,pick,0,5,1
+oracle,Carmustine,angiocentric glioma,indication,38,4,,none,0,malignant glioma,pick,1,malignant glioma,pick,1,schwannoma,pick,0,malignant glioma,pick,1,6,1
+oracle,Urea,contact dermatitis,indication,64,3,,tie,0,psoriasis,pick,0,acanthosis nigricans (disease),pick,0,psoriasis,pick,0,intertrigo,pick,0,19,1
+oracle,Reserpine,schizoaffective disorder,indication,9,2,,none,0,alcoholic psychosis,pick,0,alcoholic psychosis,pick,0,schizoaffective disorder,pick,1,alcoholic psychosis,pick,0,1,0
+oracle,Resorcinol,acne (disease),indication,64,2,,tie,0,acne (disease),pick,1,acne (disease),pick,1,psoriasis,pick,0,acne (disease),pick,1,7,1
+oracle,Ranitidine,peptic esophagitis,indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,5,1
+oracle,Orciprenaline,intrinsic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,1,1
+oracle,Griseofulvin,tinea infection,indication,20,1,tinea favosa,pick,0,pityriasis versicolor,pick,0,tinea favosa,pick,0,scabies,pick,0,tinea favosa,pick,0,7,1
+oracle,Rosuvastatin,"hyperlipidemia, familial combined, LPL related",indication,8,1,familial hyperlipidemia,pick,0,familial hyperlipidemia,pick,0,familial hyperlipidemia,pick,0,hyperalphalipoproteinemia,pick,0,familial hyperlipidemia,pick,0,1,0
+oracle,Flunisolide,intrinsic asthma,indication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Lorazepam,visual epilepsy,indication,46,1,,tie,0,partial epilepsy,pick,0,epilepsy syndrome,pick,0,partial epilepsy,pick,0,reflex epilepsy,pick,0,5,0
+oracle,Bendamustine,neoplasm of mature B-cells,indication,55,1,,none,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,Hodgkins lymphoma,pick,0,lymphoplasmacytic lymphoma,pick,0,15,0
+oracle,Topotecan,cervical carcinosarcoma,indication,26,2,,none,0,cervical carcinoma,pick,1,cervical carcinoma,pick,1,cervical carcinoma,pick,1,cervical squamous cell carcinoma,pick,0,3,1
+oracle,Prednicarbate,neurodermatitis,indication,64,5,,none,0,atopic eczema,pick,1,atopic eczema,pick,1,psoriasis,pick,0,irritant dermatitis,pick,0,5,1
+oracle,Terfenadine,atopic conjunctivitis,indication,20,1,,none,0,allergic asthma,pick,0,allergic asthma,pick,0,allergic asthma,pick,0,allergic asthma,pick,0,2,0
+oracle,Fluorouracil,metastasis from malignant tumor of colon,indication,22,2,,tie,0,rectal cancer,pick,0,rectal cancer,pick,0,rectal cancer,pick,0,cecum cancer,pick,0,11,0
+oracle,Tazarotene,acne (disease),indication,64,3,acne (disease),pick,1,psoriasis,pick,1,acne (disease),pick,1,psoriasis,pick,1,acne (disease),pick,1,8,1
+oracle,Tioguanine,acute myeloid leukemia with t(8;21)(q22;q22) translocation,indication,33,14,,none,0,,none,0,,none,0,acute promyelocytic leukemia,pick,0,,none,0,0,0
+oracle,Lincomycin,streptococcal infection,indication,19,2,,none,0,actinomycosis,pick,0,actinomycosis,pick,0,tetanus,pick,0,actinomycosis,pick,0,5,1
+oracle,Pentoxifylline,peripheral arterial disease,indication,14,2,intermittent vascular claudication,pick,1,peripheral arterial disease,pick,1,peripheral arterial disease,pick,1,peripheral arterial disease,pick,1,livedo reticularis,pick,0,7,1
+oracle,Loratadine,atopic conjunctivitis,indication,20,1,allergic urticaria,pick,0,allergic asthma,pick,0,allergic urticaria,pick,0,allergic asthma,pick,0,allergic cutaneous vasculitis,pick,0,5,0
+oracle,Alprazolam,mixed anxiety and depressive disorder,indication,4,1,,none,0,neurotic depression,pick,0,neurotic depression,pick,0,postpartum depression,pick,0,neurotic depression,pick,0,3,0
+oracle,Fluticasone propionate,occupational dermatitis,indication,64,5,atopic eczema,pick,1,psoriasis,pick,0,atopic eczema,pick,1,psoriasis,pick,0,pruritic urticarial papules and plaques of pregnancy,pick,0,7,1
+oracle,Clavulanic acid,urinary tract infection (disease),indication,16,1,,tie,0,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,acute cystitis (disease),pick,0,4,1
+oracle,Ambenonium,adult-onset myasthenia gravis,indication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Paclitaxel,familial ovarian cancer,indication,26,5,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian carcinoma,pick,0,ovarian large-cell neuroendocrine carcinoma,pick,0,8,1
+oracle,Ranitidine,gastric ulcer (disease),indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,5,1
+oracle,Imipenem,streptococcal pneumonia,indication,8,1,,none,0,Klebsiella pneumonia,pick,0,Klebsiella pneumonia,pick,0,Legionnaires' disease,pick,0,Klebsiella pneumonia,pick,0,4,1
+oracle,Famotidine,peptic esophagitis,indication,7,3,,none,0,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,active peptic ulcer disease,pick,0,5,1
+oracle,Phenytoin,visual epilepsy,indication,46,3,,tie,0,partial epilepsy,pick,1,post-traumatic epilepsy,pick,0,partial epilepsy,pick,1,post-traumatic epilepsy,pick,0,11,1
+oracle,Lamivudine,HIV infectious disease,indication,13,1,,none,0,genital herpes,pick,0,genital herpes,pick,0,gonorrhea,pick,0,genital herpes,pick,0,1,0
+oracle,Progesterone,postmenopausal osteoporosis,indication,6,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,2,1
+oracle,Decitabine,acute myeloid leukemia with inv3(p21;q26.2) or t(3;3)(p21;q26.2),indication,33,14,,none,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute promyelocytic leukemia,pick,0,acute basophilic leukemia,pick,0,7,0
+oracle,Propylthiouracil,thyroid crisis (disease),indication,14,3,,tie,0,Graves disease,pick,1,Graves disease,pick,1,Graves disease,pick,1,neonatal thyrotoxicosis,pick,0,6,1
+oracle,Metyrosine,adrenal gland pheochromocytoma,indication,15,2,,none,0,,none,0,,none,0,head and neck paraganglioma,pick,0,,none,0,0,0
+oracle,Potassium citrate,acute urate nephropathy,indication,2,1,,none,0,,none,0,,none,0,acute urate nephropathy,pick,1,,none,0,0,0
+oracle,Clarithromycin,bacterial pneumonia,indication,20,1,,tie,0,pneumonia,pick,0,pneumonia,pick,0,pneumonia,pick,0,pneumonia,pick,0,9,1
+oracle,Citalopram,neurotic disorder,indication,10,1,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,social phobia,pick,0,6,0
+oracle,Zoledronic acid,juvenile Paget disease,indication,11,4,,none,0,osteoporosis,pick,1,osteoporosis,pick,1,osteoporosis,pick,1,bone Paget disease,pick,1,6,1
+oracle,Ketoconazole,tinea infection,indication,20,3,,tie,0,pityriasis versicolor,pick,1,pityriasis versicolor,pick,1,scabies,pick,0,Pthirus pubis infestation,pick,0,10,1
+oracle,Doxepin,atopic eczema,indication,64,2,,tie,0,angioedema,pick,0,,tie,0,psoriasis,pick,0,neurotic excoriation,pick,0,14,1
+oracle,Vorapaxar,cerebral infarction,indication,11,1,,none,0,transient ischemic attack (disease),pick,0,transient ischemic attack (disease),pick,0,cerebral infarction,pick,1,transient ischemic attack (disease),pick,0,1,0
+oracle,Ezetimibe,familial hyperlipidemia,indication,8,2,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,hyperalphalipoproteinemia,pick,0,familial hyperlipidemia,pick,1,1,1
+oracle,Risedronic acid,juvenile Paget disease,indication,11,4,,none,0,osteoporosis,pick,1,osteoporosis,pick,1,osteoporosis,pick,1,postmenopausal osteoporosis,pick,1,2,1
+oracle,Mezlocillin,urinary tract infection (disease),indication,16,1,,none,0,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urethritis (disease),pick,0,2,1
+oracle,Demeclocycline,urinary tract infection (disease),indication,16,1,,none,0,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,urinary tract infection (disease),pick,1,1,1
+oracle,Cyproheptadine,urticaria (disease),indication,64,1,,tie,0,cold urticaria,pick,0,cold urticaria,pick,0,psoriasis,pick,0,cold urticaria,pick,0,9,1
+oracle,Ezetimibe,"hyperlipidemia, familial combined, LPL related",indication,8,2,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,familial hyperlipidemia,pick,1,hyperalphalipoproteinemia,pick,0,familial hyperlipidemia,pick,1,1,1
+oracle,Magnesium oxide,postmenopausal osteoporosis,indication,6,1,,none,0,,none,0,,none,0,postmenopausal osteoporosis,pick,1,,none,0,0,0
+oracle,Paroxetine,neurotic disorder,indication,10,4,,tie,0,anxiety,pick,0,post-traumatic stress disorder,pick,1,anxiety,pick,0,mixed anxiety and depressive disorder,pick,0,9,1
+oracle,Phenelzine,neurotic disorder,indication,10,1,social phobia,pick,0,anxiety,pick,0,social phobia,pick,0,anxiety,pick,0,phobic disorder,pick,0,6,1
+oracle,Terbutaline,pulmonary emphysema,indication,10,1,,none,0,bronchiectasis,pick,0,bronchiectasis,pick,0,bronchiectasis,pick,0,interstitial emphysema,pick,0,2,0
+oracle,Ritonavir,hepatitis C virus infection,indication,13,1,,none,0,hepatitis C virus infection,pick,1,hepatitis C virus infection,pick,1,viral hepatitis,pick,0,hepatitis C virus infection,pick,1,5,1
+oracle,Heparin,acquired purpura fulminans,indication,2,2,purpura fulminans,pick,1,purpura fulminans,pick,1,purpura fulminans,pick,1,purpura fulminans,pick,1,acquired purpura fulminans,pick,1,2,1
+oracle,Trimipramine,dysthymic disorder,indication,3,1,,none,0,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,dysthymic disorder,pick,1,1,1
+oracle,Atorvastatin,"hyperlipidemia, familial combined, LPL related",indication,8,1,familial hyperlipidemia,pick,0,familial hyperlipidemia,pick,0,familial hyperlipidemia,pick,0,hyperalphalipoproteinemia,pick,0,familial hyperlipidemia,pick,0,1,0
+oracle,Zafirlukast,intrinsic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,2,1
+oracle,Mometasone furoate,allergic asthma,indication,7,2,,none,0,allergic asthma,pick,1,allergic asthma,pick,1,allergic asthma,pick,1,cough variant asthma,pick,0,2,1
+oracle,Phenytoin,partial epilepsy,indication,46,3,,tie,0,partial epilepsy,pick,1,post-traumatic epilepsy,pick,0,partial epilepsy,pick,1,post-traumatic epilepsy,pick,0,11,1
+oracle,Brompheniramine,urticaria (disease),indication,64,1,,none,0,contact dermatitis,pick,0,contact dermatitis,pick,0,psoriasis,pick,0,contact dermatitis,pick,0,1,0
+oracle,Rimexolone,panuveitis (disease),indication,18,1,,none,0,,tie,0,,tie,0,retinitis,pick,0,iridocyclitis (disease),pick,0,2,1
+oracle,Thiopental,pseudotumor cerebri,indication,3,1,,none,0,,none,0,,none,0,pseudotumor cerebri,pick,1,,none,0,0,0
+oracle,Cefixime,acute gonococcal cervicitis,indication,20,1,,tie,0,gonococcal urethritis,pick,0,gonococcal urethritis,pick,0,gonococcal urethritis,pick,0,gonococcal cervicitis,pick,0,4,0
+oracle,Fluorouracil,malignant colon neoplasm,indication,22,2,,tie,0,rectal cancer,pick,0,rectal cancer,pick,0,rectal cancer,pick,0,cecum cancer,pick,0,11,0
+oracle,Tretinoin,acquired keratosis,indication,23,1,,none,0,porokeratosis (disease),pick,0,porokeratosis (disease),pick,0,cholesteatoma (disease),pick,0,trichostasis spinulosa,pick,0,5,0
+oracle,Homatropine,panuveitis (disease),indication,18,1,,tie,0,iritis (disease),pick,0,iritis (disease),pick,0,retinitis,pick,0,iritis (disease),pick,0,4,0
+oracle,Gemifloxacin,streptococcal pneumonia,indication,23,4,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,Legionnaires' disease,pick,0,bacterial pneumonia,pick,1,Legionnaires' disease,pick,0,2,1
+oracle,Modafinil,psychotic disorder,contraindication,17,3,,none,0,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,substance-induced psychosis,pick,0,3,1
+oracle,Metoclopramide,cirrhosis of liver,contraindication,58,1,,none,0,drug-induced liver injury,pick,0,drug-induced liver injury,pick,0,hepatitis,pick,0,alcoholic liver cirrhosis,pick,0,5,0
+oracle,Ceftazidime,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Cobalamin,potassium deficiency disease,contraindication,19,1,pernicious anemia,pick,0,pernicious anemia,pick,0,pernicious anemia,pick,0,iron deficiency anemia,pick,0,pernicious anemia,pick,0,5,0
+oracle,Lomustine,postinflammatory pulmonary fibrosis,contraindication,5,1,,none,0,,none,0,,none,0,diffuse pulmonary fibrosis,pick,0,,none,0,0,0
+oracle,Ethinylestradiol,obstructive jaundice,contraindication,6,2,intrahepatic cholestasis,pick,1,intrahepatic cholestasis,pick,1,intrahepatic cholestasis,pick,1,obstructive jaundice,pick,1,intrahepatic cholestasis,pick,1,2,1
+oracle,Telithromycin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Dicyclomine,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Mezlocillin,pyoureter,contraindication,16,1,,none,0,,tie,0,,tie,0,urinary tract infection (disease),pick,0,urethritis (disease),pick,0,2,0
+oracle,Cyclizine,benign prostatic hyperplasia (disease),contraindication,13,1,,none,0,,none,0,,none,0,benign prostatic hyperplasia (disease),pick,1,,none,0,0,0
+oracle,Griseofulvin,inherited porphyria,contraindication,5,1,,tie,0,cutaneous porphyria,pick,0,cutaneous porphyria,pick,0,cutaneous porphyria,pick,0,cutaneous porphyria,pick,0,2,0
+oracle,Zafirlukast,cirrhosis of liver,contraindication,38,2,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced liver injury,pick,0,4,1
+oracle,Chlorthalidone,Raynaud disease,contraindication,14,1,,none,0,peripheral arterial disease,pick,0,peripheral arterial disease,pick,0,peripheral arterial disease,pick,0,peripheral arterial disease,pick,0,1,0
+oracle,Minocycline,pyoureter,contraindication,16,1,,none,0,urethritis (disease),pick,0,urethritis (disease),pick,0,urinary tract infection (disease),pick,0,urethritis (disease),pick,0,3,0
+oracle,Cefoxitin,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,acute cystitis (disease),pick,0,3,0
+oracle,Silicon dioxide,congestive heart failure,contraindication,11,1,,none,0,,none,0,,none,0,congestive heart failure,pick,1,,none,0,0,0
+oracle,Sulfisoxazole,idiopathic aplastic anemia,contraindication,10,1,,none,0,,none,0,,none,0,Fanconi anemia,pick,0,,none,0,0,0
+oracle,Omeprazole,liver failure,contraindication,58,1,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced liver injury,pick,0,6,1
+oracle,Colistin,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Vancomycin,agranulocytosis,contraindication,4,2,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,agranulocytosis,pick,1,3,1
+oracle,Primidone,autosomal dominant aplasia and myelodysplasia,contraindication,10,6,,none,0,,none,0,,none,0,Fanconi anemia,pick,1,,none,0,0,0
+oracle,Methyltestosterone,female breast carcinoma,contraindication,25,1,,none,0,breast carcinoma,pick,0,breast carcinoma,pick,0,breast carcinoma,pick,0,breast carcinoma,pick,0,1,0
+oracle,Loteprednol etabonate,herpes simplex virus keratitis,contraindication,21,1,,none,0,,none,0,,none,0,corneal ulcer,pick,0,,none,0,0,0
+oracle,Thiabendazole,liver failure,contraindication,58,1,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced liver injury,pick,0,5,1
+oracle,Asenapine,constitutional neutropenia,contraindication,6,3,,none,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,1,1
+oracle,Tazobactam,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Indomethacin,duodenal ulcer (disease),contraindication,15,3,,none,0,gastric ulcer (disease),pick,1,gastric ulcer (disease),pick,1,duodenal ulcer (disease),pick,1,gastric ulcer (disease),pick,1,4,1
+oracle,Tenofovir,hepatitis C virus infection,contraindication,7,2,,none,0,hepatitis B virus infection,pick,0,hepatitis B virus infection,pick,0,hepatitis C virus infection,pick,1,chronic hepatitis B virus infection,pick,0,6,1
+oracle,Metoprolol,parapsoriasis,contraindication,64,2,,none,0,,tie,0,,tie,0,psoriasis,pick,1,angioedema,pick,0,3,1
+oracle,Bimatoprost,iritis (disease),contraindication,18,2,,none,0,iridocyclitis (disease),pick,0,iridocyclitis (disease),pick,0,retinitis,pick,0,iridocyclitis (disease),pick,0,2,1
+oracle,Azlocillin,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Promazine,neutropenia,contraindication,6,1,,none,0,,none,0,,none,0,neutropenia,pick,1,,none,0,0,0
+oracle,Methylphenidate,schizophreniform disorder,contraindication,17,3,substance-induced psychosis,pick,0,pervasive developmental disorder,pick,0,substance-induced psychosis,pick,0,schizoaffective disorder,pick,1,pervasive developmental disorder,pick,0,5,1
+oracle,Cefoxitin,colitis (disease),contraindication,17,1,,none,0,colitis (disease),pick,1,colitis (disease),pick,1,colitis (disease),pick,1,proctitis,pick,0,2,1
+oracle,Doxepin,sleep apnea syndrome,contraindication,14,1,insomnia (disease),pick,0,insomnia (disease),pick,0,insomnia (disease),pick,0,insomnia (disease),pick,0,insomnia (disease),pick,0,3,0
+oracle,Imiquimod,photosensitivity disease,contraindication,64,1,,none,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,12,0
+oracle,Lindane,atopic eczema,contraindication,64,3,,none,0,,tie,0,,tie,0,psoriasis,pick,1,impetigo,pick,0,3,0
+oracle,Pemetrexed,agranulocytosis,contraindication,4,2,,none,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,2,1
+oracle,Amikacin,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,acute cystitis (disease),pick,0,2,0
+oracle,Methimazole,adult idiopathic neutropenia,contraindication,6,3,,none,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,acquired agranulocytosis,pick,0,2,1
+oracle,Tiopronin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Tazarotene,photosensitivity disease,contraindication,64,1,acne (disease),pick,0,psoriasis,pick,0,acne (disease),pick,0,psoriasis,pick,0,acne (disease),pick,0,5,0
+oracle,Albendazole,idiopathic aplastic anemia,contraindication,10,1,,none,0,,none,0,,none,0,Fanconi anemia,pick,0,,none,0,0,0
+oracle,Fluconazole,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Ciprofloxacin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Kanamycin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Resorcinol,folliculitis,contraindication,64,1,,tie,0,contact dermatitis,pick,0,contact dermatitis,pick,0,psoriasis,pick,0,allergic contact dermatitis,pick,0,4,0
+oracle,Testosterone enanthate,female breast carcinoma,contraindication,25,1,,none,0,,none,0,,none,0,breast carcinoma,pick,0,,none,0,0,0
+oracle,Trimethoprim,pyoureter,contraindication,16,1,,tie,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,acute cystitis (disease),pick,0,4,0
+oracle,Montelukast,cutaneous vasculitis,contraindication,33,1,,none,0,drug-induced vasculitis,pick,0,drug-induced vasculitis,pick,0,arteritis,pick,0,drug-induced vasculitis,pick,0,1,0
+oracle,Lorazepam,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Mirtazapine,postural orthostatic tachycardia syndrome,contraindication,4,1,,none,0,,none,0,,none,0,postural orthostatic tachycardia syndrome,pick,1,,none,0,0,0
+oracle,Benzoyl peroxide,exfoliative dermatitis,contraindication,64,2,acne (disease),pick,0,acne (disease),pick,0,acne (disease),pick,0,psoriasis,pick,0,acne (disease),pick,0,8,0
+oracle,Calcifediol,arteriosclerosis obliterans,contraindication,11,1,,none,0,,none,0,,none,0,coronary atherosclerosis,pick,0,,none,0,0,0
+oracle,Imipramine,paralytic ileus (disease),contraindication,4,1,,none,0,,none,0,,none,0,paralytic ileus (disease),pick,1,,none,0,0,0
+oracle,Clonazepam,sleep apnea syndrome,contraindication,14,1,,tie,0,insomnia (disease),pick,0,insomnia (disease),pick,0,insomnia (disease),pick,0,REM sleep behavior disorder,pick,0,7,1
+oracle,Pyridostigmine,pyoureter,contraindication,16,1,,none,0,,none,0,,none,0,urinary tract infection (disease),pick,0,,none,0,0,0
+oracle,Demeclocycline,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Fluocinolone acetonide,herpes simplex virus keratitis,contraindication,18,1,,none,0,infectious posterior uveitis,pick,0,infectious posterior uveitis,pick,0,cytomegalovirus retinitis,pick,0,infectious posterior uveitis,pick,0,2,0
+oracle,Lithium carbonate,neurohypophyseal diabetes insipidus,contraindication,6,1,,none,0,nephrogenic diabetes insipidus,pick,0,nephrogenic diabetes insipidus,pick,0,nephrogenic diabetes insipidus,pick,0,nephrogenic diabetes insipidus,pick,0,1,0
+oracle,Sulfamethizole,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Diazoxide,congestive heart failure,contraindication,11,1,,none,0,congestive heart failure,pick,1,congestive heart failure,pick,1,congestive heart failure,pick,1,congestive heart failure,pick,1,1,1
+oracle,Methotrexate,postinflammatory pulmonary fibrosis,contraindication,5,1,,none,0,,none,0,,none,0,diffuse pulmonary fibrosis,pick,0,,none,0,0,0
+oracle,Pazopanib,myxedema,contraindication,3,1,,none,0,,none,0,,none,0,myxedema,pick,1,,none,0,0,0
+oracle,Phenytoin,familial long QT syndrome,contraindication,5,1,,none,0,,none,0,,none,0,Andersen-Tawil syndrome,pick,0,,none,0,0,0
+oracle,Danazol,female breast carcinoma,contraindication,25,1,,none,0,breast carcinoma,pick,0,breast carcinoma,pick,0,breast carcinoma,pick,0,breast carcinoma,pick,0,1,0
+oracle,Meropenem,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Pyridostigmine,intrinsic asthma,contraindication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Ceftibuten,colitis (disease),contraindication,25,1,,none,0,,tie,0,,tie,0,colitis (disease),pick,1,dysentery,pick,0,2,1
+oracle,Pantoprazole,postmenopausal osteoporosis,contraindication,6,1,,none,0,,none,0,,none,0,postmenopausal osteoporosis,pick,1,,none,0,0,0
+oracle,Etidronic acid,intrinsic asthma,contraindication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Clindamycin,atopic eczema,contraindication,64,2,,tie,0,acne (disease),pick,0,acne (disease),pick,0,psoriasis,pick,0,acute generalized exanthematous pustulosis,pick,0,13,1
+oracle,Cephalexin,pyoureter,contraindication,16,1,,tie,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,acute cystitis (disease),pick,0,4,0
+oracle,Fluoxetine,liver failure,contraindication,58,2,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,cirrhosis of liver,pick,1,4,1
+oracle,Dexlansoprazole,postmenopausal osteoporosis,contraindication,6,1,,none,0,,none,0,,none,0,postmenopausal osteoporosis,pick,1,,none,0,0,0
+oracle,Carbamazepine,adult idiopathic neutropenia,contraindication,6,3,acquired agranulocytosis,pick,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,acquired agranulocytosis,pick,0,2,1
+oracle,Sulindac,nephrolithiasis,contraindication,7,2,,none,0,nephrolithiasis,pick,1,nephrolithiasis,pick,1,nephrolithiasis,pick,1,nephrolithiasis,pick,1,1,1
+oracle,Nifedipine,cirrhosis of liver,contraindication,58,1,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced hepatitis,pick,0,8,0
+oracle,Cefamandole,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Cefotetan,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urethritis (disease),pick,0,2,0
+oracle,Tolvaptan,cirrhosis of liver,contraindication,58,2,,none,0,drug-induced liver injury,pick,0,drug-induced liver injury,pick,0,hepatitis,pick,0,autosomal dominant polycystic liver disease,pick,0,7,1
+oracle,Rimexolone,herpes simplex virus keratitis,contraindication,8,1,,none,0,,none,0,,none,0,cytomegalovirus retinitis,pick,0,,none,0,0,0
+oracle,Cilastatin,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,acute cystitis (disease),pick,0,2,0
+oracle,Ertapenem,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,1,0
+oracle,Bupropion,schizophreniform disorder,contraindication,9,2,,none,0,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,2,1
+oracle,Donepezil,allergic asthma,contraindication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Ciprofloxacin,periarthritis,contraindication,44,2,,none,0,rheumatoid arthritis,pick,0,rheumatoid arthritis,pick,0,rheumatoid arthritis,pick,0,reactive arthritis,pick,0,4,0
+oracle,Topiramate,acute urate nephropathy,contraindication,2,1,,none,0,,none,0,,none,0,acute urate nephropathy,pick,1,,none,0,0,0
+oracle,Torasemide,cirrhosis of liver,contraindication,58,1,,none,0,liver failure,pick,0,liver failure,pick,0,hepatitis,pick,0,liver failure,pick,0,1,0
+oracle,Prednisolone,cirrhosis of liver,contraindication,58,1,,tie,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced hepatitis,pick,0,16,0
+oracle,Fluticasone furoate,pulmonary tuberculosis,contraindication,21,1,,none,0,,none,0,,none,0,pulmonary tuberculosis,pick,1,,none,0,0,0
+oracle,Pyridostigmine,allergic asthma,contraindication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Calcifediol,pyoureter,contraindication,16,1,,none,0,,none,0,,none,0,urinary tract infection (disease),pick,0,,none,0,0,0
+oracle,Moxifloxacin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Amikacin,adult-onset myasthenia gravis,contraindication,3,1,,none,0,,none,0,,none,0,adult-onset myasthenia gravis,pick,1,,none,0,0,0
+oracle,Vorapaxar,transient ischemic attack (disease),contraindication,11,1,,none,0,transient ischemic attack (disease),pick,1,transient ischemic attack (disease),pick,1,cerebral infarction,pick,0,transient ischemic attack (disease),pick,1,1,1
+oracle,Tamoxifen,cerebral infarction,contraindication,11,1,,none,0,transient ischemic attack (disease),pick,0,transient ischemic attack (disease),pick,0,cerebral infarction,pick,1,transient ischemic attack (disease),pick,0,2,1
+oracle,Fluorouracil,agranulocytosis,contraindication,4,2,,none,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,3,1
+oracle,Ferrous gluconate,ulcerative colitis (disease),contraindication,25,1,,none,0,,none,0,,none,0,colitis (disease),pick,0,,none,0,0,0
+oracle,Calcitriol,pyoureter,contraindication,16,1,,none,0,,none,0,,none,0,urinary tract infection (disease),pick,0,,none,0,0,0
+oracle,Meclocycline,pyoureter,contraindication,16,1,,none,0,,none,0,,none,0,urinary tract infection (disease),pick,0,,none,0,0,0
+oracle,Donepezil,intrinsic asthma,contraindication,7,2,,none,0,,none,0,,none,0,allergic asthma,pick,1,,none,0,0,0
+oracle,Olanzapine,constitutional neutropenia,contraindication,6,3,,none,0,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,neutropenia,pick,1,1,1
+oracle,Bupropion,psychotic disorder,contraindication,17,3,,none,0,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,schizoaffective disorder,pick,1,orgasm disorder,pick,0,6,1
+oracle,Guanfacine,neurotic disorder,contraindication,10,1,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,post-traumatic stress disorder,pick,0,3,0
+oracle,Estradiol,liver cancer,contraindication,58,2,,tie,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,intrahepatic bile duct adenoma,pick,0,14,1
+oracle,Methoxsalen,hydroa vacciniforme,contraindication,64,4,,none,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,psoriasis,pick,0,3,0
+oracle,Aztreonam,pyoureter,contraindication,16,1,,none,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,urinary tract infection (disease),pick,0,2,0
+oracle,Methylprednisolone,herpes simplex virus keratitis,contraindication,21,1,,none,0,,tie,0,,tie,0,corneal ulcer,pick,0,central corneal ulcer,pick,0,6,0
+oracle,Hydroxyzine,liver disease,contraindication,38,1,,none,0,hepatitis,pick,0,hepatitis,pick,0,hepatitis,pick,0,drug-induced liver injury,pick,0,5,1
+page,Benzatropine,focal hand dystonia,indication,42,2,oculogyric crisis,pick,0,,none,0,oculogyric crisis,pick,0,multiple sclerosis,pick,0,,none,0,1,0
+page,Ipratropium,"COPD, severe early onset",indication,64,2,,tie,0,status asthmaticus,pick,0,status asthmaticus,pick,0,spinal cord injury,pick,0,status asthmaticus,pick,0,15,1
+page,Lindane,Pthirus pubis infestation,indication,59,2,,none,0,,tie,0,,tie,0,lead poisoning,pick,0,Demodex folliculitis,pick,0,3,0
+page,Griseofulvin,dermatophytosis of groin and perianal area,indication,61,6,,tie,0,tinea corporis,pick,1,tinea pedis,pick,1,spinal cord injury,pick,0,tinea imbricata,pick,0,11,1
+page,Phenoxybenzamine,adrenal gland pheochromocytoma,indication,62,2,benign prostatic hyperplasia (disease),pick,0,benign prostatic hyperplasia (disease),pick,0,benign prostatic hyperplasia (disease),pick,0,congestive heart failure,pick,0,sympathetic paraganglioma,pick,1,5,1
+page,Sodium oxybate,narcolepsy without cataplexy,indication,57,2,,tie,0,hypersomnia (disease),pick,0,narcolepsy without cataplexy,pick,1,dementia (disease),pick,0,narcolepsy-cataplexy syndrome,pick,1,15,1
+page,Halcinonide,occupational dermatitis,indication,43,1,,none,0,cerebral infarction,pick,0,cerebral infarction,pick,0,spinal cord injury,pick,0,cerebral infarction,pick,0,1,0
+page,Dirithromycin,streptococcal pneumonia,indication,61,2,,none,0,bacterial pneumonia,pick,0,bacterial pneumonia,pick,0,bronchiectasis,pick,0,bacillary angiomatosis,pick,0,4,0
+page,Lindane,Pediculus humanus capitis infestation,indication,59,2,,none,0,,tie,0,,tie,0,lead poisoning,pick,0,Demodex folliculitis,pick,0,3,0
+page,Formoterol,pulmonary emphysema,indication,19,3,,tie,0,allergic asthma,pick,1,allergic asthma,pick,1,bronchiectasis,pick,0,cough variant asthma,pick,0,7,1
+page,Griseofulvin,tinea barbae,indication,61,6,,tie,0,tinea corporis,pick,1,tinea pedis,pick,1,spinal cord injury,pick,0,tinea imbricata,pick,0,11,1
+page,Formoterol,intrinsic asthma,indication,19,3,,tie,0,allergic asthma,pick,1,allergic asthma,pick,1,bronchiectasis,pick,0,cough variant asthma,pick,0,7,1
+page,Griseofulvin,tinea infection,indication,61,6,,tie,0,tinea corporis,pick,1,tinea pedis,pick,1,spinal cord injury,pick,0,tinea imbricata,pick,0,11,1
+page,Prednicarbate,neurodermatitis,indication,47,1,,none,0,,tie,0,,tie,0,allergic asthma,pick,0,irritant dermatitis,pick,0,2,0
+page,Ambenonium,adult-onset myasthenia gravis,indication,48,1,,none,0,encapsulated thymoma,pick,0,encapsulated thymoma,pick,0,spinal cord injury,pick,0,encapsulated thymoma,pick,0,1,0
+page,Terbutaline,pulmonary emphysema,indication,56,3,occupational asthma,pick,0,status asthmaticus,pick,0,status asthmaticus,pick,0,spinal cord injury,pick,0,status asthmaticus,pick,0,11,1
+page,Griseofulvin,inherited porphyria,contraindication,61,0,,tie,0,tinea corporis,pick,0,tinea pedis,pick,0,spinal cord injury,pick,0,Kerion celsi,pick,0,13,0
+page,Asenapine,constitutional neutropenia,contraindication,57,5,,none,0,anxiety,pick,0,anxiety,pick,0,anxiety,pick,0,early-onset schizophrenia,pick,0,5,1
+page,Lindane,atopic eczema,contraindication,59,0,,none,0,impetigo,pick,0,impetigo,pick,0,lead poisoning,pick,0,impetigo,pick,0,2,0

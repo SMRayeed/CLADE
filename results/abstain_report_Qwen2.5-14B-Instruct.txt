@@ -1,0 +1,40 @@
+
+==============================================================================
+abstain_Qwen2.5-14B-Instruct_clean.csv
+
+  PASSAGE, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    59.3% [53.7-64.7]    2.3% [ 1.1- 4.7]   38.3% [33.0-43.9]      96.2%     1.00
+    category    256    27.3% [22.2-33.1]   16.4% [12.4-21.4]   56.2% [50.1-62.2]      62.5%     1.00
+    silent      300    11.0% [ 7.9-15.0]    3.0% [ 1.6- 5.6]   86.0% [81.6-89.5]      78.6%     0.97
+
+  PASSAGE, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    67.9% [58.5-76.0]    2.8% [ 1.0- 8.0]   29.2% [21.4-38.5]      96.0%     1.00
+    category    215    24.2% [18.9-30.3]   17.2% [12.8-22.8]   58.6% [51.9-65.0]      58.4%     1.00
+    silent      160    11.9% [ 7.7-17.8]    2.5% [ 1.0- 6.3]   85.6% [79.4-90.2]      82.6%     0.99
+
+    wrong-answer rate, family-only minus silent, all-sibling only: +14.7 points  z=+4.51  p=6.34e-06
+    the headline holds when the distractors are matched
+    decline rate, family-only minus silent, all-sibling only: -27.0 points  z=-5.65  p=1.56e-08
+    'a family-only page suppresses declining' holds when the distractors are matched
+      contraindication   family-only wrong  12.5% (n=88)   silent wrong   4.4% (n=68)
+      indication         family-only wrong  20.5% (n=127)   silent wrong   1.1% (n=92)
+
+  CLOSED, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    66.3% [60.8-71.4]   16.0% [12.3-20.6]   17.7% [13.8-22.4]      80.6%     1.00
+    category    256    37.5% [31.8-43.6]   29.7% [24.4-35.6]   32.8% [27.4-38.8]      55.8%     1.00
+    silent      300    26.3% [21.7-31.6]   14.0% [10.5-18.4]   59.7% [54.0-65.1]      65.3%     1.00
+
+  CLOSED, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    67.9% [58.5-76.0]   13.2% [ 8.0-21.0]   18.9% [12.6-27.4]      83.7%     0.97
+    category    215    33.5% [27.5-40.0]   30.7% [24.9-37.2]   35.8% [29.7-42.4]      52.2%     1.00
+    silent      160    21.2% [15.6-28.2]   10.6% [ 6.7-16.4]   68.1% [60.6-74.8]      66.7%     1.00
+
+  WHAT THE PAGE DOES, per question (passage minus closed-book), all-sibling only
+    outcome    family-only change   silent change   difference [95% CI]      p
+    declines     +22.8 pts (n=215)     +17.5 pts (n=160)    +5.3 [ -4.6, +15.1]  0.293
+    wrong        -13.5 pts (n=215)      -8.1 pts (n=160)    -5.4 [-13.1,  +2.4]  0.175
+    correct       -9.3 pts (n=215)      -9.4 pts (n=160)    +0.1 [ -7.7,  +8.0]  0.986

@@ -1,0 +1,39 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+
+FAN-OUT   4,918 parents, 11,788 children
+  parents with one child only     1,736   35.3%
+  parents with two or more        3,182   64.7%
+
+  children per parent, counting only the ambiguous parents
+    median    3.0
+    mean      5.0
+    p75        6
+    p90        9
+    p95       13
+    p99       28
+    max       150
+
+  the five widest parents
+      150  multiple congenital anomalies/dysmorphic syndrome without intellectual disability
+       99  ectodermal dysplasia syndrome
+       95  congenital limb malformation
+       60  multiple congenital anomalies/dysmorphic syndrome-variable intellectual disability syndrome
+       60  hereditary connective tissue disorder
+
+RECALL    458 edges at tier 3 of 3,444 scored
+  298 of 458 tier-3 edges have a recoverable category name
+  the other 160 matched on a name this pass calls too generic, or on a
+  vernacular the climb does not carry; they are counted as branch-3 failures below
+
+  depth   recall   candidates: median  mean   p90    max
+    1     70.81% [65.40-75.68]      6.0    7.8     18     29
+    2    100.00% [98.73-100.00]     12.0   18.6     46    104
+    3    100.00% [98.73-100.00]     14.0   26.1     74    216
+
+  Read the two columns together. Recall is the ceiling on the
+  middle branch and candidates is what each item costs to score.
+  A depth that lifts recall by a point and triples the candidate
+  set is not worth taking.
+
+  wrote <repo>/results/fanout.csv
+  wrote <repo>/results/fanout_edges.csv: one row per tier-3 edge

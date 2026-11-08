@@ -1,0 +1,127 @@
+
+==============================================================================
+abstain_Qwen2.5-7B-Instruct_clean.csv
+
+  PASSAGE, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    64.7% [59.1-69.9]    3.3% [ 1.8- 6.0]   32.0% [27.0-37.5]      95.1%     0.99
+    category    256    29.3% [24.1-35.1]   17.6% [13.4-22.7]   53.1% [47.0-59.1]      62.5%     1.00
+    silent      300    13.0% [ 9.7-17.3]    2.7% [ 1.4- 5.2]   84.3% [79.8-88.0]      83.0%     0.99
+
+  PASSAGE, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    71.7% [62.5-79.4]    3.8% [ 1.5- 9.3]   24.5% [17.3-33.5]      95.0%     1.00
+    category    215    26.5% [21.1-32.8]   18.1% [13.6-23.8]   55.3% [48.7-61.8]      59.4%     1.00
+    silent      160    13.8% [ 9.3-19.9]    2.5% [ 1.0- 6.3]   83.8% [77.3-88.7]      84.6%     0.90
+
+    wrong-answer rate, family-only minus silent, all-sibling only: +15.6 points  z=+4.70  p=2.59e-06
+    the headline holds when the distractors are matched
+    decline rate, family-only minus silent, all-sibling only: -28.4 points  z=-5.81  p=6.39e-09
+    'a family-only page suppresses declining' holds when the distractors are matched
+      contraindication   family-only wrong   6.8% (n=88)   silent wrong   2.9% (n=68)
+      indication         family-only wrong  26.0% (n=127)   silent wrong   2.2% (n=92)
+
+  CLOSED, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    56.0% [50.3-61.5]   17.3% [13.5-22.0]   26.7% [22.0-31.9]      76.4%     1.00
+    category    256    39.5% [33.7-45.6]   31.6% [26.3-37.6]   28.9% [23.7-34.7]      55.5%     1.00
+    silent      300    28.3% [23.5-33.7]   21.3% [17.1-26.3]   50.3% [44.7-56.0]      57.0%     0.99
+
+  CLOSED, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    60.4% [50.9-69.2]   17.9% [11.8-26.3]   21.7% [14.9-30.5]      77.1%     1.00
+    category    215    35.3% [29.3-41.9]   32.6% [26.6-39.1]   32.1% [26.2-38.6]      52.1%     1.00
+    silent      160    25.0% [18.9-32.2]   15.6% [10.8-22.0]   59.4% [51.6-66.7]      61.5%     0.99
+
+  WHAT THE PAGE DOES, per question (passage minus closed-book), all-sibling only
+    outcome    family-only change   silent change   difference [95% CI]      p
+    declines     +23.3 pts (n=215)     +24.4 pts (n=160)    -1.1 [-10.5,  +8.4]  0.818
+    wrong        -14.4 pts (n=215)     -13.1 pts (n=160)    -1.3 [ -9.4,  +7.1]  0.761
+    correct       -8.8 pts (n=215)     -11.2 pts (n=160)    +2.4 [ -5.7, +10.5]  0.57
+
+==============================================================================
+abstain_OLMo-2-1124-7B-Instruct_clean.csv
+
+  PASSAGE, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    71.3% [66.0-76.2]   20.7% [16.5-25.6]    8.0% [ 5.4-11.6]      77.5%     0.80
+    category    256    39.1% [33.3-45.2]   42.6% [36.7-48.7]   18.4% [14.1-23.6]      47.8%     0.84
+    silent      300    32.0% [27.0-37.5]   28.0% [23.2-33.3]   40.0% [34.6-45.6]      53.3%     0.76
+
+  PASSAGE, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    77.4% [68.5-84.3]   15.1% [ 9.5-23.1]    7.5% [ 3.9-14.2]      83.7%     0.68
+    category    215    37.2% [31.0-43.8]   44.7% [38.2-51.3]   18.1% [13.6-23.8]      45.5%     0.84
+    silent      160    30.6% [24.0-38.2]   24.4% [18.4-31.6]   45.0% [37.5-52.7]      55.7%     0.75
+
+    wrong-answer rate, family-only minus silent, all-sibling only: +20.3 points  z=+4.05  p=5.21e-05
+    the headline holds when the distractors are matched
+    decline rate, family-only minus silent, all-sibling only: -26.9 points  z=-5.64  p=1.74e-08
+    'a family-only page suppresses declining' holds when the distractors are matched
+      contraindication   family-only wrong  53.4% (n=88)   silent wrong  27.9% (n=68)
+      indication         family-only wrong  38.6% (n=127)   silent wrong  21.7% (n=92)
+
+  CLOSED, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    58.7% [53.0-64.1]   38.0% [32.7-43.6]    3.3% [ 1.8- 6.0]      60.7%     0.92
+    category    256    40.6% [34.8-46.7]   52.7% [46.6-58.8]    6.6% [ 4.2-10.4]      43.5%     0.90
+    silent      300    35.3% [30.1-40.9]   54.7% [49.0-60.2]   10.0% [ 7.1-13.9]      39.3%     0.88
+
+  CLOSED, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    65.1% [55.6-73.5]   31.1% [23.1-40.5]    3.8% [ 1.5- 9.3]      67.6%     0.94
+    category    215    36.7% [30.6-43.4]   56.7% [50.1-63.2]    6.5% [ 3.9-10.6]      39.3%     0.90
+    silent      160    37.5% [30.4-45.2]   51.2% [43.6-58.9]   11.2% [ 7.2-17.1]      42.3%     0.87
+
+  WHAT THE PAGE DOES, per question (passage minus closed-book), all-sibling only
+    outcome    family-only change   silent change   difference [95% CI]      p
+    declines     +11.6 pts (n=215)     +33.8 pts (n=160)   -22.1 [-31.8, -12.6]  5.85e-06
+    wrong        -12.1 pts (n=215)     -26.9 pts (n=160)   +14.8 [ +3.6, +26.1]  0.00913
+    correct       +0.5 pts (n=215)      -6.9 pts (n=160)    +7.3 [ -2.6, +17.0]  0.148
+
+==============================================================================
+abstain_granite-3.1-8b-instruct_clean.csv
+
+  PASSAGE, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    64.3% [58.8-69.5]    4.7% [ 2.8- 7.7]   31.0% [26.0-36.4]      93.2%     0.67
+    category    256    33.2% [27.7-39.2]   25.0% [20.1-30.6]   41.8% [35.9-47.9]      57.0%     0.93
+    silent      300    15.7% [12.0-20.2]   11.0% [ 7.9-15.0]   73.3% [68.1-78.0]      58.8%     0.81
+
+  PASSAGE, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    72.6% [63.5-80.2]    7.5% [ 3.9-14.2]   19.8% [13.3-28.4]      90.6%     0.67
+    category    215    30.2% [24.5-36.7]   26.5% [21.1-32.8]   43.3% [36.8-49.9]      53.3%     0.93
+    silent      160    15.0% [10.3-21.3]   10.0% [ 6.2-15.6]   75.0% [67.8-81.1]      60.0%     0.76
+
+    wrong-answer rate, family-only minus silent, all-sibling only: +16.5 points  z=+3.99  p=6.49e-05
+    the headline holds when the distractors are matched
+    decline rate, family-only minus silent, all-sibling only: -31.7 points  z=-6.14  p=8.37e-10
+    'a family-only page suppresses declining' holds when the distractors are matched
+      contraindication   family-only wrong  10.2% (n=88)   silent wrong   1.5% (n=68)
+      indication         family-only wrong  37.8% (n=127)   silent wrong  16.3% (n=92)
+
+  CLOSED, all questions
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       300    47.7% [42.1-53.3]   19.0% [15.0-23.8]   33.3% [28.2-38.8]      71.5%     0.80
+    category    256    35.5% [29.9-41.6]   31.6% [26.3-37.6]   32.8% [27.4-38.8]      52.9%     0.76
+    silent      300    27.3% [22.6-32.6]   23.7% [19.2-28.8]   49.0% [43.4-54.6]      53.6%     0.82
+
+  CLOSED, only questions whose 4 distractors are all siblings
+    group        n   correct            wrong              declines        precision  conf. when wrong
+    named       106    50.9% [41.6-60.3]   24.5% [17.3-33.5]   24.5% [17.3-33.5]      67.5%     0.66
+    category    215    33.0% [27.1-39.6]   33.0% [27.1-39.6]   34.0% [28.0-40.5]      50.0%     0.76
+    silent      160    26.2% [20.0-33.6]   26.2% [20.0-33.6]   47.5% [39.9-55.2]      50.0%     0.76
+
+  WHAT THE PAGE DOES, per question (passage minus closed-book), all-sibling only
+    outcome    family-only change   silent change   difference [95% CI]      p
+    declines      +9.3 pts (n=215)     +27.5 pts (n=160)   -18.2 [-28.5,  -8.1]  0.000558
+    wrong         -6.5 pts (n=215)     -16.2 pts (n=160)    +9.7 [ -0.1, +19.9]  0.0559
+    correct       -2.8 pts (n=215)     -11.2 pts (n=160)    +8.5 [ -0.9, +17.8]  0.0641
+
+==============================================================================
+POOLED OVER 3 MODELS, 481 questions seen by all, all-sibling only
+    outcome    family-only change   silent change   difference [95% CI]      p
+    declines     +14.7 pts (n=215)     +28.5 pts (n=160)   -13.8 [-20.3,  -7.5]  3.61e-05
+    wrong        -11.0 pts (n=215)     -18.8 pts (n=160)    +7.7 [ +1.2, +14.0]  0.0188
+    correct       -3.7 pts (n=215)      -9.8 pts (n=160)    +6.1 [ -0.1, +12.4]  0.0583

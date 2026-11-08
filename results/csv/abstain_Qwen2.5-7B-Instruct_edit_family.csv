@@ -1,0 +1,133 @@
+id,relation,group,tier,source,target,condition,n_options,n_sibling,edit,family_used,pick,outcome,p_pick,p_decline,p_true
+contraindication|named|Piroxicam|acute liver failure,contraindication,named,2,Piroxicam,acute liver failure,passage,6,4,to_family,liver failure,acute liver failure,correct,0.9947,0.0053,0.9947
+contraindication|named|Acetaminophen|liver failure,contraindication,named,0,Acetaminophen,liver failure,passage,6,4,to_family,liver disease,liver failure,correct,1.0,0.0,1.0
+contraindication|named|Pralatrexate|neutropenia,contraindication,named,0,Pralatrexate,neutropenia,passage,6,2,to_family,agranulocytosis,acquired agranulocytosis,wrong,0.9998,0.0002,0.0
+contraindication|named|Cefixime|Clostridium difficile colitis,contraindication,named,2,Cefixime,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Clostridium difficile colitis,correct,0.9986,0.0014,0.9986
+contraindication|named|Clofarabine|liver disease,contraindication,named,2,Clofarabine,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,1.0,0.0,1.0
+contraindication|named|Thiotepa|leukopenia,contraindication,named,0,Thiotepa,leukopenia,passage,6,4,to_family,leukocyte disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Cefuroxime|Clostridium difficile colitis,contraindication,named,2,Cefuroxime,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,0.9466,0.9466,0.0534
+contraindication|named|Midodrine|thyrotoxicosis,contraindication,named,0,Midodrine,thyrotoxicosis,passage,6,4,to_family,hyperthyroidism,Not enough information to tell,abstain,0.6474,0.6474,0.3525
+contraindication|named|Capecitabine|dihydropyrimidine dehydrogenase deficiency,contraindication,named,0,Capecitabine,dihydropyrimidine dehydrogenase deficiency,passage,6,4,to_family,osteochondrosis,dihydropyrimidine dehydrogenase deficiency,correct,0.9891,0.0109,0.9891
+contraindication|named|Mitoxantrone|liver disease,contraindication,named,0,Mitoxantrone,liver disease,passage,6,2,to_family,hepatobiliary disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Cilastatin|Clostridium difficile colitis,contraindication,named,2,Cilastatin,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Mechlorethamine|neutropenia,contraindication,named,0,Mechlorethamine,neutropenia,passage,6,2,to_family,agranulocytosis,neutropenia,correct,0.9896,0.0024,0.9896
+contraindication|named|Rabeprazole|liver disease,contraindication,named,2,Rabeprazole,liver disease,passage,6,2,to_family,hepatobiliary disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Simvastatin|coronary artery disease,contraindication,named,0,Simvastatin,coronary artery disease,passage,6,4,to_family,arterial disorder,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Neostigmine|asthma,contraindication,named,0,Neostigmine,asthma,passage,6,4,to_family,bronchial disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Flutamide|liver disease,contraindication,named,0,Flutamide,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,1.0,0.0,1.0
+contraindication|named|Methylprednisolone|tuberculosis,contraindication,named,0,Methylprednisolone,tuberculosis,passage,6,4,to_family,mycobacterial infectious disease,Not enough information to tell,abstain,0.7878,0.7878,0.2122
+contraindication|named|Dexamethasone|hyperglycemia,contraindication,named,0,Dexamethasone,hyperglycemia,passage,6,4,to_family,glucose metabolism disease,diabetes mellitus (disease),wrong,0.9992,0.0007,0.0
+contraindication|named|Pentamidine|hypoglycemia,contraindication,named,0,Pentamidine,hypoglycemia,passage,6,4,to_family,glucose metabolism disease,Not enough information to tell,abstain,0.9999,0.9999,0.0
+contraindication|named|Cyproheptadine|bladder neck obstruction,contraindication,named,0,Cyproheptadine,bladder neck obstruction,passage,6,4,to_family,urinary bladder disease,bladder neck obstruction,correct,1.0,0.0,1.0
+contraindication|named|Ceftriaxone|hemolytic anemia,contraindication,named,0,Ceftriaxone,hemolytic anemia,passage,6,4,to_family,normocytic anemia,Not enough information to tell,abstain,0.9699,0.9699,0.0301
+contraindication|named|Enalapril|angioedema,contraindication,named,0,Enalapril,angioedema,passage,6,4,to_family,urticaria (disease),angioedema,correct,0.9992,0.0008,0.9992
+contraindication|named|Ceftizoxime|Clostridium difficile colitis,contraindication,named,2,Ceftizoxime,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Triamterene|liver disease,contraindication,named,0,Triamterene,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,0.7697,0.0278,0.7697
+contraindication|named|Vorapaxar|intracerebral hemorrhage,contraindication,named,0,Vorapaxar,intracerebral hemorrhage,passage,6,1,to_family,hemorrhagic stroke,intracerebral hemorrhage,correct,1.0,0.0,1.0
+contraindication|named|Oxacillin|Clostridium difficile colitis,contraindication,named,2,Oxacillin,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Amoxicillin|liver failure,contraindication,named,0,Amoxicillin,liver failure,passage,6,4,to_family,liver disease,liver failure,correct,0.5919,0.0023,0.5919
+contraindication|named|Sulindac|congestive heart failure,contraindication,named,0,Sulindac,congestive heart failure,passage,6,3,to_family,heart failure,congestive heart failure,correct,0.9775,0.0021,0.9775
+contraindication|named|Acetaminophen|hepatic encephalopathy,contraindication,named,0,Acetaminophen,hepatic encephalopathy,passage,6,3,to_family,toxic encephalopathy,Not enough information to tell,abstain,0.6922,0.6922,0.3078
+contraindication|named|Nelarabine|liver failure,contraindication,named,2,Nelarabine,liver failure,passage,6,4,to_family,liver disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Cefadroxil|Clostridium difficile colitis,contraindication,named,0,Cefadroxil,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,0.8326,0.8326,0.1674
+contraindication|named|Warfarin|intracerebral hemorrhage,contraindication,named,0,Warfarin,intracerebral hemorrhage,passage,6,1,to_family,hemorrhagic stroke,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Aztreonam|Clostridium difficile colitis,contraindication,named,2,Aztreonam,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Clostridium difficile colitis,correct,0.9976,0.0024,0.9976
+contraindication|named|Midodrine|hyperthyroidism,contraindication,named,0,Midodrine,hyperthyroidism,passage,6,4,to_family,thyroid gland disease,hyperthyroidism,correct,0.993,0.0066,0.993
+contraindication|named|Tadalafil|priapism,contraindication,named,0,Tadalafil,priapism,passage,6,4,to_family,peripheral vascular disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Capecitabine|stomatitis,contraindication,named,0,Capecitabine,stomatitis,passage,6,4,to_family,mucositis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Ammonium chloride|liver failure,contraindication,named,2,Ammonium chloride,liver failure,passage,6,4,to_family,liver disease,liver failure,correct,0.9994,0.0006,0.9994
+contraindication|named|Topiramate|nephrolithiasis,contraindication,named,0,Topiramate,nephrolithiasis,passage,6,1,to_family,urolithiasis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Omeprazole|osteoporosis,contraindication,named,0,Omeprazole,osteoporosis,passage,6,4,to_family,bone resorption disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Methyltestosterone|prostate cancer,contraindication,named,0,Methyltestosterone,prostate cancer,passage,6,4,to_family,prostate neoplasm,prostate cancer,correct,1.0,0.0,1.0
+contraindication|named|Cephalexin|Clostridium difficile colitis,contraindication,named,2,Cephalexin,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Clostridium difficile colitis,correct,0.9997,0.0003,0.9997
+contraindication|named|Metamfetamine|atherosclerosis,contraindication,named,0,Metamfetamine,atherosclerosis,passage,6,4,to_family,arteriosclerosis disorder,atherosclerosis,correct,0.9942,0.0058,0.9942
+contraindication|named|Oxybutynin|gastroesophageal reflux disease,contraindication,named,0,Oxybutynin,gastroesophageal reflux disease,passage,6,4,to_family,stomach disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Caffeine|liver disease,contraindication,named,0,Caffeine,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,1.0,0.0,1.0
+contraindication|named|Tolmetin|peptic ulcer disease,contraindication,named,2,Tolmetin,peptic ulcer disease,passage,6,2,to_family,ulcer disease,peptic ulcer disease,correct,1.0,0.0,1.0
+contraindication|named|Romidepsin|liver disease,contraindication,named,2,Romidepsin,liver disease,passage,6,2,to_family,hepatobiliary disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Acetylcysteine|asthma,contraindication,named,0,Acetylcysteine,asthma,passage,6,4,to_family,bronchial disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Docetaxel|liver disease,contraindication,named,2,Docetaxel,liver disease,passage,6,2,to_family,hepatobiliary disease,biliary tract disease,wrong,0.9707,0.0,0.0293
+contraindication|named|Amlodipine|liver disease,contraindication,named,2,Amlodipine,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,0.9997,0.0003,0.9997
+contraindication|named|Budesonide|tuberculosis,contraindication,named,0,Budesonide,tuberculosis,passage,6,4,to_family,mycobacterial infectious disease,Not enough information to tell,abstain,0.8447,0.8447,0.1549
+contraindication|named|Fluticasone propionate|osteoporosis,contraindication,named,0,Fluticasone propionate,osteoporosis,passage,6,4,to_family,bone resorption disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Loteprednol etabonate|ocular hypertension,contraindication,named,0,Loteprednol etabonate,ocular hypertension,passage,6,4,to_family,hypertensive disorder,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Cabergoline|liver disease,contraindication,named,2,Cabergoline,liver disease,passage,6,2,to_family,hepatobiliary disease,biliary tract disease,wrong,0.9982,0.0,0.0018
+contraindication|named|Dexlansoprazole|osteoporosis,contraindication,named,0,Dexlansoprazole,osteoporosis,passage,6,4,to_family,bone resorption disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Sulfadiazine|liver disease,contraindication,named,0,Sulfadiazine,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,1.0,0.0,1.0
+contraindication|named|Ceftriaxone|Clostridium difficile colitis,contraindication,named,0,Ceftriaxone,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Hydroxychloroquine|liver disease,contraindication,named,2,Hydroxychloroquine,liver disease,passage,6,2,to_family,hepatobiliary disease,Not enough information to tell,abstain,0.9925,0.9925,0.0075
+contraindication|named|Cyproheptadine|peptic ulcer disease,contraindication,named,2,Cyproheptadine,peptic ulcer disease,passage,6,2,to_family,ulcer disease,peptic ulcer disease,correct,1.0,0.0,1.0
+contraindication|named|Ampicillin|Clostridium difficile colitis,contraindication,named,2,Ampicillin,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Tazobactam|neutropenia,contraindication,named,0,Tazobactam,neutropenia,passage,6,2,to_family,agranulocytosis,Not enough information to tell,abstain,0.999,0.999,0.0
+contraindication|named|Tioguanine|cholestasis,contraindication,named,2,Tioguanine,cholestasis,passage,6,4,to_family,bile duct disorder,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Erlotinib|pulmonary fibrosis,contraindication,named,0,Erlotinib,pulmonary fibrosis,passage,6,4,to_family,interstitial lung disease,Not enough information to tell,abstain,0.9997,0.9997,0.0
+contraindication|named|Albendazole|pancytopenia,contraindication,named,0,Albendazole,pancytopenia,passage,6,4,to_family,anemia (disease),pancytopenia,correct,0.9998,0.0002,0.9998
+contraindication|named|Rabeprazole|osteoporosis,contraindication,named,0,Rabeprazole,osteoporosis,passage,6,4,to_family,bone resorption disease,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Doripenem|Clostridium difficile colitis,contraindication,named,2,Doripenem,Clostridium difficile colitis,passage,6,4,to_family,infectious colitis,Clostridium difficile colitis,correct,1.0,0.0,1.0
+contraindication|named|Tolcapone|liver disease,contraindication,named,0,Tolcapone,liver disease,passage,6,2,to_family,hepatobiliary disease,liver disease,correct,1.0,0.0,1.0
+contraindication|named|Praziquantel|liver disease,contraindication,named,2,Praziquantel,liver disease,passage,6,2,to_family,hepatobiliary disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Fluconazole|vulvovaginal candidiasis,indication,named,0,Fluconazole,vulvovaginal candidiasis,passage,6,4,to_family,vulvovaginitis,vulvovaginal candidiasis,correct,1.0,0.0,1.0
+indication|named|Doxorubicin|ovarian cancer,indication,named,0,Doxorubicin,ovarian cancer,passage,6,4,to_family,ovarian neoplasm,ovarian cancer,correct,1.0,0.0,1.0
+indication|named|Pregabalin|fibromyalgia,indication,named,0,Pregabalin,fibromyalgia,passage,6,4,to_family,idiopathic disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Pentobarbital|brain ischemia,indication,named,2,Pentobarbital,brain ischemia,passage,6,4,to_family,ischemic disease,brain ischemia,correct,1.0,0.0,1.0
+indication|named|Calcitriol|nephrocalcinosis,indication,named,0,Calcitriol,nephrocalcinosis,passage,6,4,to_family,calcinosis,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Diltiazem|Prinzmetal angina,indication,named,2,Diltiazem,Prinzmetal angina,passage,6,4,to_family,coronary vasospasm,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Hydrochlorothiazide|congestive heart failure,indication,named,0,Hydrochlorothiazide,congestive heart failure,passage,6,3,to_family,heart failure,congestive heart failure,correct,1.0,0.0,1.0
+indication|named|Irbesartan|diabetic nephropathy,indication,named,0,Irbesartan,diabetic nephropathy,passage,6,2,to_family,chronic kidney disease,diabetic nephropathy,correct,1.0,0.0,1.0
+indication|named|Salsalate|rheumatoid arthritis,indication,named,0,Salsalate,rheumatoid arthritis,passage,6,4,to_family,rheumatologic disorder,rheumatoid arthritis,correct,0.9991,0.0009,0.9991
+indication|named|Nabumetone|rheumatoid arthritis,indication,named,0,Nabumetone,rheumatoid arthritis,passage,6,4,to_family,rheumatologic disorder,rheumatoid arthritis,correct,1.0,0.0,1.0
+indication|named|Ketoconazole|histoplasmosis,indication,named,0,Ketoconazole,histoplasmosis,passage,6,4,to_family,primary systemic mycosis,paracoccidioidomycosis,wrong,1.0,0.0,0.0
+indication|named|Fluconazole|candidiasis,indication,named,0,Fluconazole,candidiasis,passage,6,4,to_family,opportunistic mycosis,cryptococcosis,wrong,1.0,0.0,0.0
+indication|named|Acyclovir|herpes zoster,indication,named,0,Acyclovir,herpes zoster,passage,6,4,to_family,post-viral disorder,herpes zoster,correct,1.0,0.0,1.0
+indication|named|Pregabalin|postherpetic neuralgia,indication,named,0,Pregabalin,postherpetic neuralgia,passage,6,4,to_family,post-infectious neuralgia,Not enough information to tell,abstain,0.8606,0.8606,0.1394
+indication|named|Ranitidine|gastroesophageal reflux disease,indication,named,0,Ranitidine,gastroesophageal reflux disease,passage,6,4,to_family,stomach disease,Not enough information to tell,abstain,0.816,0.816,0.184
+indication|named|Isoprenaline|cardiac arrest,indication,named,0,Isoprenaline,cardiac arrest,passage,6,4,to_family,cardiac rhythm disease,Not enough information to tell,abstain,0.9999,0.9999,0.0
+indication|named|Aurothioglucose|rheumatoid arthritis,indication,named,0,Aurothioglucose,rheumatoid arthritis,passage,6,4,to_family,rheumatologic disorder,rheumatoid arthritis,correct,0.9999,0.0001,0.9999
+indication|named|Cyclosporine|Sjogren syndrome,indication,named,2,Cyclosporine,Sjogren syndrome,passage,6,4,to_family,salivary gland disease,Not enough information to tell,abstain,0.9437,0.9437,0.0563
+indication|named|Flunisolide|asthma,indication,named,0,Flunisolide,asthma,passage,6,4,to_family,bronchial disease,Not enough information to tell,abstain,0.9987,0.9987,0.0013
+indication|named|Dapsone|leprosy,indication,named,0,Dapsone,leprosy,passage,6,4,to_family,mycobacterial infectious disease,leprosy,correct,1.0,0.0,1.0
+indication|named|Docetaxel|prostate cancer,indication,named,0,Docetaxel,prostate cancer,passage,6,4,to_family,prostate neoplasm,prostate cancer,correct,0.9987,0.0,0.9987
+indication|named|Hydrocortisone acetate|asthma,indication,named,0,Hydrocortisone acetate,asthma,passage,6,4,to_family,bronchial disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Meropenem|bacterial meningitis,indication,named,0,Meropenem,bacterial meningitis,passage,6,4,to_family,infectious meningitis,bacterial meningitis,correct,1.0,0.0,1.0
+indication|named|Ibandronate|postmenopausal osteoporosis,indication,named,0,Ibandronate,postmenopausal osteoporosis,passage,6,4,to_family,osteoporosis,postmenopausal osteoporosis,correct,1.0,0.0,1.0
+indication|named|Fluticasone furoate|asthma,indication,named,0,Fluticasone furoate,asthma,passage,6,4,to_family,bronchial disease,asthma,correct,0.974,0.0257,0.974
+indication|named|Isocarboxazid|endogenous depression,indication,named,0,Isocarboxazid,endogenous depression,passage,6,0,to_family,major depressive disorder,Not enough information to tell,abstain,0.9966,0.9966,0.0034
+indication|named|Rabeprazole|Zollinger-Ellison syndrome,indication,named,0,Rabeprazole,Zollinger-Ellison syndrome,passage,6,4,to_family,neoplastic syndrome,Zollinger-Ellison syndrome,correct,0.9997,0.0003,0.9997
+indication|named|Itraconazole|blastomycosis,indication,named,0,Itraconazole,blastomycosis,passage,6,3,to_family,primary systemic mycosis,paracoccidioidomycosis,wrong,1.0,0.0,0.0
+indication|named|Thiabendazole|Trichinellosis,indication,named,0,Thiabendazole,Trichinellosis,passage,6,4,to_family,parasitic myositis,Trichinellosis,correct,1.0,0.0,1.0
+indication|named|Triamcinolone|tendinitis,indication,named,0,Triamcinolone,tendinitis,passage,6,4,to_family,myositis,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Desonide|granuloma annulare,indication,named,0,Desonide,granuloma annulare,passage,6,4,to_family,dermatitis,contact dermatitis,wrong,1.0,0.0,0.0
+indication|named|Calcifediol|renal osteodystrophy,indication,named,0,Calcifediol,renal osteodystrophy,passage,6,4,to_family,rickets (disease),hypocalcemic rickets,wrong,0.9979,0.0021,0.0
+indication|named|Cyclosporine|dry eye syndrome,indication,named,0,Cyclosporine,dry eye syndrome,passage,6,4,to_family,keratoconjunctivitis,dry eye syndrome,correct,1.0,0.0,1.0
+indication|named|Vincristine|Hodgkins lymphoma,indication,named,2,Vincristine,Hodgkins lymphoma,passage,6,4,to_family,lymphoma,Not enough information to tell,abstain,0.8177,0.8177,0.179
+indication|named|Itraconazole|coccidioidomycosis,indication,named,0,Itraconazole,coccidioidomycosis,passage,6,4,to_family,parasitic infection,coccidioidomycosis,correct,0.9994,0.0006,0.9994
+indication|named|Itraconazole|histoplasmosis,indication,named,0,Itraconazole,histoplasmosis,passage,6,3,to_family,primary systemic mycosis,paracoccidioidomycosis,wrong,1.0,0.0,0.0
+indication|named|Cobalamin|pernicious anemia,indication,named,0,Cobalamin,pernicious anemia,passage,6,4,to_family,megaloblastic anemia (disease),pernicious anemia,correct,0.9977,0.0004,0.9977
+indication|named|Thiabendazole|cutaneous larva migrans,indication,named,0,Thiabendazole,cutaneous larva migrans,passage,6,4,to_family,parasitic infection,cutaneous larva migrans,correct,0.9067,0.0933,0.9067
+indication|named|Praziquantel|schistosomiasis,indication,named,0,Praziquantel,schistosomiasis,passage,6,4,to_family,helminthiasis,schistosomiasis,correct,1.0,0.0,1.0
+indication|named|Lindane|scabies,indication,named,0,Lindane,scabies,passage,6,4,to_family,skin infection,Not enough information to tell,abstain,0.5428,0.5428,0.0
+indication|named|Colchicine|familial Mediterranean fever,indication,named,0,Colchicine,familial Mediterranean fever,passage,6,4,to_family,hereditary periodic fever syndrome,familial Mediterranean fever,correct,0.6952,0.0,0.6952
+indication|named|Calcium chloride|cardiac arrest,indication,named,0,Calcium chloride,cardiac arrest,passage,6,4,to_family,cardiac rhythm disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Lanreotide|acromegaly,indication,named,0,Lanreotide,acromegaly,passage,6,3,to_family,hyperpituitarism,acromegaly,correct,0.9999,0.0001,0.9999
+indication|named|Albendazole|cysticercosis,indication,named,0,Albendazole,cysticercosis,passage,6,4,to_family,taeniasis,cysticercosis,correct,1.0,0.0,1.0
+indication|named|Albendazole|cystic echinococcosis,indication,named,0,Albendazole,cystic echinococcosis,passage,6,2,to_family,echinococcus granulosus infectious disease,alveolar echinococcosis,wrong,1.0,0.0,0.0
+indication|named|Pazopanib|soft tissue sarcoma,indication,named,0,Pazopanib,soft tissue sarcoma,passage,6,4,to_family,sarcoma,soft tissue sarcoma,correct,1.0,0.0,1.0
+indication|named|Magnesium trisilicate|gastroesophageal reflux disease,indication,named,0,Magnesium trisilicate,gastroesophageal reflux disease,passage,6,4,to_family,stomach disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Hydroxychloroquine|rheumatoid arthritis,indication,named,0,Hydroxychloroquine,rheumatoid arthritis,passage,6,4,to_family,rheumatologic disorder,rheumatoid arthritis,correct,1.0,0.0,1.0
+indication|named|Magnesium sulfate|preeclampsia,indication,named,0,Magnesium sulfate,preeclampsia,passage,6,1,to_family,toxemia of pregnancy,eclampsia,wrong,0.7962,0.0,0.2038
+indication|named|Fluphenazine|schizoaffective disorder,indication,named,0,Fluphenazine,schizoaffective disorder,passage,6,4,to_family,psychotic disorder,Not enough information to tell,abstain,0.9943,0.9943,0.0009
+indication|named|Midodrine|multiple system atrophy,indication,named,0,Midodrine,multiple system atrophy,passage,6,2,to_family,synucleinopathy,Not enough information to tell,abstain,0.9996,0.9996,0.0004
+indication|named|Betamethasone|psoriasis,indication,named,0,Betamethasone,psoriasis,passage,6,4,to_family,dermatitis,Not enough information to tell,abstain,0.9963,0.9963,0.0037
+indication|named|Chlorpromazine|psychotic disorder,indication,named,0,Chlorpromazine,psychotic disorder,passage,6,4,to_family,mental disorder,psychotic disorder,correct,1.0,0.0,1.0
+indication|named|Amoxicillin|pharyngitis,indication,named,0,Amoxicillin,pharyngitis,passage,6,4,to_family,upper respiratory tract disease,Not enough information to tell,abstain,0.998,0.998,0.0
+indication|named|Meloxicam|rheumatoid arthritis,indication,named,0,Meloxicam,rheumatoid arthritis,passage,6,4,to_family,rheumatologic disorder,Not enough information to tell,abstain,0.8551,0.8551,0.1449
+indication|named|Imatinib|systemic mastocytosis,indication,named,0,Imatinib,systemic mastocytosis,passage,6,4,to_family,mastocytosis,systemic mastocytosis,correct,1.0,0.0,1.0
+indication|named|Ferric maltol|iron deficiency anemia,indication,named,0,Ferric maltol,iron deficiency anemia,passage,6,4,to_family,hypochromic microcytic anemia,iron deficiency anemia,correct,1.0,0.0,1.0
+indication|named|Echothiophate|open-angle glaucoma,indication,named,0,Echothiophate,open-angle glaucoma,passage,6,4,to_family,glaucoma,open-angle glaucoma,correct,1.0,0.0,1.0
+indication|named|Estramustine|prostate carcinoma,indication,named,0,Estramustine,prostate carcinoma,passage,6,4,to_family,prostate cancer,prostate carcinoma,correct,1.0,0.0,1.0
+indication|named|Clofazimine|leprosy,indication,named,0,Clofazimine,leprosy,passage,6,4,to_family,mycobacterial infectious disease,leprosy,correct,1.0,0.0,1.0
+indication|named|Octreotide|acromegaly,indication,named,0,Octreotide,acromegaly,passage,6,4,to_family,hyperpituitarism,pituitary gigantism,wrong,1.0,0.0,0.0
+indication|named|Cefamandole|pneumonia,indication,named,0,Cefamandole,pneumonia,passage,6,4,to_family,pneumonitis,pneumonia,correct,1.0,0.0,1.0
+indication|named|Metoclopramide|gastroesophageal reflux disease,indication,named,0,Metoclopramide,gastroesophageal reflux disease,passage,6,4,to_family,stomach disease,Not enough information to tell,abstain,1.0,1.0,0.0
+indication|named|Dexchlorpheniramine|angioedema,indication,named,0,Dexchlorpheniramine,angioedema,passage,6,4,to_family,urticaria (disease),Not enough information to tell,abstain,0.9717,0.9717,0.0
+indication|named|Zinc acetate|Wilson disease,indication,named,0,Zinc acetate,Wilson disease,passage,6,4,to_family,disorder of copper metabolism,Wilson disease,correct,0.9554,0.0446,0.9554

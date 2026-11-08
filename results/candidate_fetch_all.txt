@@ -1,0 +1,56 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+  fetching 94 at about 3 per second ...
+
+  12 requests, 0 throttle events, 0 unrecoverable
+    100/624, about 2 min left
+    200/624, about 2 min left
+    300/624, about 2 min left
+    400/624, about 1 min left
+    500/624, about 1 min left
+    600/624, about 0 min left
+  624 requests, 0 unrecoverable
+
+410 family-only edges, the same set recover.py scores
+  3,182 ontology categories can be read off a page
+
+HOW GOOD IS THE LIST?   (percent of all family-only edges)
+  oracle  usable lists  410 of 410   contains the sampled answer  98.5%   any true answer  99.5%   size median   14  mean  20.6
+  page    usable lists   19 of 410   contains the sampled answer   3.7%   any true answer   4.1%   size median   59  mean  52.4
+  391 page-built lists exceeded 64 candidates and count as too broad
+  categories found per page: median 17, usable after the size cap: median 16
+
+  The oracle row is what recover.py assumed. The page row is what a
+  system that does not know the answer actually gets.
+
+CANDIDATE ARTICLES   1,950 distinct, 1,856 cached
+
+PUBMED PAIR COUNTS   9,847 queries, 9,223 cached
+
+==============================================================================
+CHOOSING FROM THE CANDIDATE'S END
+
+  ORACLE lists   410 edges, 8,448 candidates
+    candidates with a Wikipedia article         48.0%
+    candidates whose article names the drug      3.9%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          82      80        248       50.0% (sampled only  26.8%)    10.0%
+    pubmed       324      12         74       45.4% (sampled only  20.4%)    35.9%
+    combined     327      14         69       44.6% (sampled only  20.2%)    35.6%
+    popular      409       0          1       46.9% (sampled only  25.7%)    46.8%
+    pubmed_norm  336       0         74       31.0% (sampled only  19.0%)    25.4%
+    evidence-narrowed list: 341 edges, median size 4, contains a true answer  68.9%
+
+  PAGE lists   19 edges, 996 candidates
+    candidates with a Wikipedia article         56.7%
+    candidates whose article names the drug      3.0%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki           3       8          8        0.0% (sampled only   0.0%)     0.0%
+    pubmed        15       3          1       33.3% (sampled only   0.0%)    26.3%
+    combined      16       3          0       37.5% (sampled only   6.2%)    31.6%
+    popular       19       0          0        0.0% (sampled only   0.0%)     0.0%
+    pubmed_norm   18       0          1       11.1% (sampled only   0.0%)    10.5%
+    evidence-narrowed list: 19 edges, median size 5, contains a true answer  52.6%
+
+wrote candidate_prefetch_all.csv: 429 rows

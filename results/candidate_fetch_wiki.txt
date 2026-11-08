@@ -1,0 +1,196 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+  fetching 2,320 at about 3 per second ...
+
+    throttled (HTTP 503); pacing +0.4s/request
+
+    throttled (HTTP 503); pacing +0.5s/request
+
+    throttled (HTTP 503); pacing +1.1s/request
+
+    throttled (HTTP 503); pacing +1.9s/request
+    throttled (HTTP 503); pacing +3.5s/request
+
+    throttled (HTTP 503); pacing +4.4s/request
+
+    throttled (HTTP 503); pacing +0.7s/request
+
+    throttled (HTTP 503); pacing +0.4s/request
+
+    throttled (HTTP 503); pacing +0.4s/request
+
+  299 requests, 9 throttle events, 0 unrecoverable
+    100/12,971, about 54 min left
+    200/12,971, about 55 min left
+    300/12,971, about 54 min left
+    400/12,971, about 54 min left
+    500/12,971, about 53 min left
+    600/12,971, about 53 min left
+    700/12,971, about 52 min left
+    800/12,971, about 51 min left
+    900/12,971, about 51 min left
+    1,000/12,971, about 50 min left
+    1,100/12,971, about 50 min left
+    1,200/12,971, about 49 min left
+    1,300/12,971, about 49 min left
+    1,400/12,971, about 48 min left
+    1,500/12,971, about 47 min left
+    1,600/12,971, about 47 min left
+    1,700/12,971, about 47 min left
+    1,800/12,971, about 46 min left
+    1,900/12,971, about 45 min left
+    2,000/12,971, about 45 min left
+    2,100/12,971, about 44 min left
+    2,200/12,971, about 44 min left
+    2,300/12,971, about 43 min left
+    2,400/12,971, about 43 min left
+    2,500/12,971, about 43 min left
+    2,600/12,971, about 42 min left
+    2,700/12,971, about 42 min left
+    2,800/12,971, about 41 min left
+    2,900/12,971, about 41 min left
+    3,000/12,971, about 41 min left
+    3,100/12,971, about 40 min left
+    3,200/12,971, about 40 min left
+    3,300/12,971, about 39 min left
+    3,400/12,971, about 39 min left
+    3,500/12,971, about 38 min left
+    3,600/12,971, about 38 min left
+    3,700/12,971, about 38 min left
+    3,800/12,971, about 37 min left
+    3,900/12,971, about 37 min left
+    4,000/12,971, about 36 min left
+    4,100/12,971, about 36 min left
+    4,200/12,971, about 36 min left
+    4,300/12,971, about 35 min left
+    4,400/12,971, about 35 min left
+    4,500/12,971, about 34 min left
+    4,600/12,971, about 34 min left
+    4,700/12,971, about 34 min left
+    4,800/12,971, about 33 min left
+    4,900/12,971, about 33 min left
+    5,000/12,971, about 32 min left
+    5,100/12,971, about 32 min left
+    5,200/12,971, about 32 min left
+    5,300/12,971, about 31 min left
+    5,400/12,971, about 31 min left
+    5,500/12,971, about 30 min left
+    5,600/12,971, about 30 min left
+    5,700/12,971, about 30 min left
+    5,800/12,971, about 29 min left
+    5,900/12,971, about 29 min left
+    6,000/12,971, about 28 min left
+    6,100/12,971, about 28 min left
+    6,200/12,971, about 28 min left
+    6,300/12,971, about 27 min left
+    6,400/12,971, about 27 min left
+    6,500/12,971, about 26 min left
+    6,600/12,971, about 26 min left
+    6,700/12,971, about 26 min left
+    6,800/12,971, about 25 min left
+    6,900/12,971, about 25 min left
+    7,000/12,971, about 24 min left
+    7,100/12,971, about 24 min left
+    7,200/12,971, about 23 min left
+    7,300/12,971, about 23 min left
+    7,400/12,971, about 23 min left
+    7,500/12,971, about 22 min left
+    7,600/12,971, about 22 min left
+    7,700/12,971, about 22 min left
+    7,800/12,971, about 21 min left
+    7,900/12,971, about 21 min left
+    8,000/12,971, about 20 min left
+    8,100/12,971, about 20 min left
+    8,200/12,971, about 20 min left
+    8,300/12,971, about 19 min left
+    8,400/12,971, about 19 min left
+    8,500/12,971, about 18 min left
+    8,600/12,971, about 18 min left
+    8,700/12,971, about 18 min left
+    8,800/12,971, about 17 min left
+    8,900/12,971, about 17 min left
+    9,000/12,971, about 16 min left
+    9,100/12,971, about 16 min left
+    9,200/12,971, about 15 min left
+    9,300/12,971, about 15 min left
+    9,400/12,971, about 15 min left
+    9,500/12,971, about 14 min left
+    9,600/12,971, about 14 min left
+    9,700/12,971, about 13 min left
+    9,800/12,971, about 13 min left
+    9,900/12,971, about 13 min left
+    10,000/12,971, about 12 min left
+    10,100/12,971, about 12 min left
+    10,200/12,971, about 11 min left
+    10,300/12,971, about 11 min left
+    10,400/12,971, about 10 min left
+    10,500/12,971, about 10 min left
+    10,600/12,971, about 10 min left
+    10,700/12,971, about 9 min left
+    10,800/12,971, about 9 min left
+    10,900/12,971, about 8 min left
+    11,000/12,971, about 8 min left
+    11,100/12,971, about 8 min left
+    11,200/12,971, about 7 min left
+    11,300/12,971, about 7 min left
+    11,400/12,971, about 6 min left
+    11,500/12,971, about 6 min left
+    11,600/12,971, about 6 min left
+    11,700/12,971, about 5 min left
+    11,800/12,971, about 5 min left
+    11,900/12,971, about 4 min left
+    12,000/12,971, about 4 min left
+    12,100/12,971, about 3 min left
+    12,200/12,971, about 3 min left
+    12,300/12,971, about 3 min left
+    12,400/12,971, about 2 min left
+    12,500/12,971, about 2 min left
+    12,600/12,971, about 1 min left
+    12,700/12,971, about 1 min left
+    12,800/12,971, about 1 min left
+    12,900/12,971, about 0 min left
+  12,972 requests, 0 unrecoverable
+
+410 family-only edges, the same set recover.py scores
+  3,182 ontology categories can be read off a page
+
+HOW GOOD IS THE LIST?   (percent of all family-only edges)
+  oracle  usable lists  410 of 410   contains the sampled answer  98.5%   any true answer  99.5%   size median   14  mean  20.6
+  page    usable lists  166 of 410   contains the sampled answer  19.8%   any true answer  24.6%   size median   32  mean  31.6
+  209 page-built lists exceeded 64 candidates and count as too broad
+  categories found per page: median 5, usable after the size cap: median 5
+
+  The oracle row is what recover.py assumed. The page row is what a
+  system that does not know the answer actually gets.
+
+CANDIDATE ARTICLES   2,320 distinct, 0 cached
+
+PUBMED PAIR COUNTS   12,971 queries, 0 cached
+
+==============================================================================
+CHOOSING FROM THE CANDIDATE'S END
+
+  ORACLE lists   410 edges, 8,448 candidates
+    candidates with a Wikipedia article         48.0%
+    candidates whose article names the drug      3.9%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          82      80        248       50.0% (sampled only  26.8%)    10.0%
+    pubmed       324      12         74       45.4% (sampled only  20.4%)    35.9%
+    combined     327      14         69       44.6% (sampled only  20.2%)    35.6%
+    popular      409       0          1       46.9% (sampled only  25.7%)    46.8%
+    pubmed_norm  336       0         74       31.0% (sampled only  19.0%)    25.4%
+    evidence-narrowed list: 341 edges, median size 4, contains a true answer  68.9%
+
+  PAGE lists   166 edges, 5,241 candidates
+    candidates with a Wikipedia article         44.8%
+    candidates whose article names the drug      3.2%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          28      36        102       10.7% (sampled only   7.1%)     1.8%
+    pubmed       130      13         23       30.0% (sampled only   6.9%)    23.5%
+    combined     130      13         23       31.5% (sampled only   7.7%)    24.7%
+    popular      166       0          0       22.3% (sampled only   7.2%)    22.3%
+    pubmed_norm  143       0         23       14.7% (sampled only   7.0%)    12.7%
+    evidence-narrowed list: 143 edges, median size 5, contains a true answer  47.6%
+
+wrote candidate_prefetch_wiki.csv: 576 rows

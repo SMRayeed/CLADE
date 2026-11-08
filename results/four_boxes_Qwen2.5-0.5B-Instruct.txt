@@ -1,0 +1,81 @@
+chance = 20.00%   text-cut = tier 2
+
+ALL EDGES   n = 1,800
+                        model knows      model does not        row
+  text names it           93    5.2%       111    6.2%     11.3%
+  text silent            400   22.2%     1,196   66.4%     88.7%
+  column                      27.4%            72.6%
+
+  reachable by text         11.3%   (the text states the fact at tier <= 2)
+  retrieval has room to help    6.2%   (stated, and the model misses it)
+  out of reach of text         66.4%   (in neither; needs the graph itself)
+  accuracy, text names it     45.59% [38.90-52.44]  n=   204   chance-corrected +25.59
+  accuracy, text silent       25.06% [23.00-27.25]  n= 1,596   chance-corrected  +5.06
+  difference               +20.53 points
+
+  accuracy by tier
+    tier 0 exact name          46.77% [39.74-53.94]  n=   186   +26.77
+    tier 2 +common name        33.33% [16.28-56.25]  n=    18   +13.33
+    tier 3 ancestor only       29.67% [23.51-36.67]  n=   182    +9.67
+    tier 4 not named at all    24.47% [22.30-26.78]  n= 1,414    +4.47
+
+CONTRAINDICATION   n = 600
+                        model knows      model does not        row
+  text names it            9    1.5%        31    5.2%      6.7%
+  text silent            124   20.7%       436   72.7%     93.3%
+  column                      22.2%            77.8%
+
+  reachable by text          6.7%   (the text states the fact at tier <= 2)
+  retrieval has room to help    5.2%   (stated, and the model misses it)
+  out of reach of text         72.7%   (in neither; needs the graph itself)
+  accuracy, text names it     22.50% [12.32-37.50]  n=    40   chance-corrected  +2.50
+  accuracy, text silent       22.14% [18.90-25.77]  n=   560   chance-corrected  +2.14
+  difference                +0.36 points
+
+  accuracy by tier
+    tier 0 exact name          21.21% [10.68-37.75]  n=    33    +1.21
+    tier 2 +common name        28.57% [ 8.22-64.11]  n=     7    +8.57
+    tier 3 ancestor only       18.75% [ 6.59-43.01]  n=    16    -1.25
+    tier 4 not named at all    22.24% [18.95-25.93]  n=   544    +2.24
+
+INDICATION   n = 600
+                        model knows      model does not        row
+  text names it           58    9.7%        43    7.2%     16.8%
+  text silent            131   21.8%       368   61.3%     83.2%
+  column                      31.5%            68.5%
+
+  reachable by text         16.8%   (the text states the fact at tier <= 2)
+  retrieval has room to help    7.2%   (stated, and the model misses it)
+  out of reach of text         61.3%   (in neither; needs the graph itself)
+  accuracy, text names it     57.43% [47.68-66.62]  n=   101   chance-corrected +37.43
+  accuracy, text silent       26.25% [22.58-30.28]  n=   499   chance-corrected  +6.25
+  difference               +31.17 points
+
+  accuracy by tier
+    tier 0 exact name          59.57% [49.47-68.93]  n=    94   +39.57
+    tier 2 +common name        28.57% [ 8.22-64.11]  n=     7    +8.57
+    tier 3 ancestor only       30.85% [22.42-40.79]  n=    94   +10.85
+    tier 4 not named at all    25.19% [21.20-29.63]  n=   405    +5.19
+
+OFF-LABEL USE   n = 600
+                        model knows      model does not        row
+  text names it           26    4.3%        37    6.2%     10.5%
+  text silent            145   24.2%       392   65.3%     89.5%
+  column                      28.5%            71.5%
+
+  reachable by text         10.5%   (the text states the fact at tier <= 2)
+  retrieval has room to help    6.2%   (stated, and the model misses it)
+  out of reach of text         65.3%   (in neither; needs the graph itself)
+  accuracy, text names it     41.27% [29.96-53.58]  n=    63   chance-corrected +21.27
+  accuracy, text silent       27.00% [23.42-30.91]  n=   537   chance-corrected  +7.00
+  difference               +14.27 points
+
+  accuracy by tier
+    tier 0 exact name          40.68% [29.09-53.41]  n=    59   +20.68
+    tier 2 +common name        50.00% [15.00-85.00]  n=     4   +30.00
+    tier 3 ancestor only       30.56% [21.13-41.95]  n=    72   +10.56
+    tier 4 not named at all    26.45% [22.65-30.64]  n=   465    +6.45
+
+wrote <repo>/results/four_boxes_Qwen2.5-0.5B-Instruct.csv
+
+Re-run with --text-cut 3 to move the ancestor tier to the 'text names it' side.

@@ -1,0 +1,28 @@
+balanced retrieval: 2 queries per entity, 20 records each
+    AND (treat*[tiab] OR therap*[tiab] OR efficac*[tiab])
+    AND (contraindicat*[tiab] OR adverse[tiab] OR toxicit*[tiab] OR "side effect"[tiab] OR "side effects"[tiab] OR induced[tiab])
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+574 distinct sources, 0 to fetch from pubmed at 8.0 req/s
+
+pubmed documents shorter than 400 chars, counted absent: 12 of 3,444
+
+SILENT BOX, three ways
+  cut   encyclopedia   second corpus   union      union shrinks it by
+   <=2       84.93%         81.13%     77.53%        +7.40 points
+   <=3       75.15%         69.13%     64.23%       +10.92 points
+
+  The union is the number the paper has to report. A union close
+  to the encyclopedia column means the fact is absent from both
+  bodies of text and the silent box is a property of the graph.
+
+BY RELATION, at cut <= 2
+  relation                      n   encyc.   second    union
+  contraindication          1,722   90.19%   88.56%   84.09%
+  indication                1,722   79.67%   73.69%   70.96%
+
+  An asymmetry between relations that holds in the second
+  column as well is not an artifact of one corpus either.
+
+wrote matched_edges_pm_balanced.csv
+Re-run four_boxes.py on it with --scored matched_edges_pm_balanced.csv after renaming
+tier_union to tier, to get the four-box table against both corpora.

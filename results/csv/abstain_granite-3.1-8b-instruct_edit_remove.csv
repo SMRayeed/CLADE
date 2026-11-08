@@ -1,0 +1,299 @@
+id,relation,group,tier,source,target,condition,n_options,n_sibling,edit,family_used,pick,outcome,p_pick,p_decline,p_true
+contraindication|named|Piroxicam|acute liver failure,contraindication,named,2,Piroxicam,acute liver failure,passage,6,4,remove,,Not enough information to tell,abstain,0.6241,0.6241,0.0041
+contraindication|named|Celecoxib|hypertension,contraindication,named,0,Celecoxib,hypertension,passage,6,0,remove,,Not enough information to tell,abstain,0.8253,0.8253,0.0153
+contraindication|named|Acetaminophen|liver failure,contraindication,named,0,Acetaminophen,liver failure,passage,6,4,remove,,liver failure,correct,0.9609,0.005,0.9609
+contraindication|named|Pralatrexate|neutropenia,contraindication,named,0,Pralatrexate,neutropenia,passage,6,2,remove,,Not enough information to tell,abstain,0.7474,0.7474,0.21
+contraindication|named|Armodafinil|mental disorder,contraindication,named,0,Armodafinil,mental disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.9119,0.9119,0.0005
+contraindication|named|Terazosin|orthostatic hypotension,contraindication,named,2,Terazosin,orthostatic hypotension,passage,6,0,remove,,Not enough information to tell,abstain,0.9954,0.9954,0.0031
+contraindication|named|Cefixime|Clostridium difficile colitis,contraindication,named,2,Cefixime,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9909,0.9909,0.0051
+contraindication|named|Magnesium salicylate|kidney disease,contraindication,named,2,Magnesium salicylate,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.8353,0.8353,0.1463
+contraindication|named|Clofarabine|liver disease,contraindication,named,2,Clofarabine,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.8144,0.8144,0.1291
+contraindication|named|Sulbactam|kidney disease,contraindication,named,0,Sulbactam,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9402,0.9402,0.0289
+contraindication|named|Hydroxyurea|thrombocytopenia,contraindication,named,0,Hydroxyurea,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9898,0.9898,0.0044
+contraindication|named|Thiotepa|leukopenia,contraindication,named,0,Thiotepa,leukopenia,passage,6,4,remove,,Not enough information to tell,abstain,0.7828,0.7828,0.114
+contraindication|named|Levofloxacin|long QT syndrome,contraindication,named,0,Levofloxacin,long QT syndrome,passage,6,0,remove,,long QT syndrome,correct,0.7106,0.1782,0.7106
+contraindication|named|Paroxetine|bipolar disorder,contraindication,named,0,Paroxetine,bipolar disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.7355,0.7355,0.2451
+contraindication|named|Cefuroxime|Clostridium difficile colitis,contraindication,named,2,Cefuroxime,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.3155,0.3155,0.2106
+contraindication|named|Modafinil|mental disorder,contraindication,named,0,Modafinil,mental disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.9944,0.9944,0.0012
+contraindication|named|Amoxapine|cardiovascular disease,contraindication,named,2,Amoxapine,cardiovascular disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9937,0.9937,0.0003
+contraindication|named|Midodrine|thyrotoxicosis,contraindication,named,0,Midodrine,thyrotoxicosis,passage,6,4,remove,,Not enough information to tell,abstain,0.8499,0.8499,0.0411
+contraindication|named|Losartan|gout,contraindication,named,0,Losartan,gout,passage,6,0,remove,,Not enough information to tell,abstain,0.7278,0.7278,0.2705
+contraindication|named|Capecitabine|dihydropyrimidine dehydrogenase deficiency,contraindication,named,0,Capecitabine,dihydropyrimidine dehydrogenase deficiency,passage,6,4,remove,,Not enough information to tell,abstain,0.9395,0.9395,0.0553
+contraindication|named|Deferasirox|cancer,contraindication,named,0,Deferasirox,cancer,passage,6,0,remove,,Not enough information to tell,abstain,0.9792,0.9792,0.0016
+contraindication|named|Mitoxantrone|liver disease,contraindication,named,0,Mitoxantrone,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.8263,0.8263,0.1658
+contraindication|named|Cilastatin|Clostridium difficile colitis,contraindication,named,2,Cilastatin,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9483,0.9483,0.0011
+contraindication|named|Rimexolone|viral eye infection,contraindication,named,0,Rimexolone,viral eye infection,passage,6,4,remove,,viral eye infection,correct,0.9997,0.0002,0.9997
+contraindication|named|Mechlorethamine|neutropenia,contraindication,named,0,Mechlorethamine,neutropenia,passage,6,2,remove,,Not enough information to tell,abstain,0.9511,0.9511,0.0096
+contraindication|named|Rabeprazole|liver disease,contraindication,named,2,Rabeprazole,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.8598,0.8598,0.095
+contraindication|named|Simvastatin|coronary artery disease,contraindication,named,0,Simvastatin,coronary artery disease,passage,6,4,remove,,Not enough information to tell,abstain,0.9835,0.9835,0.0141
+contraindication|named|Calcium gluconate|chronic kidney disease,contraindication,named,0,Calcium gluconate,chronic kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9713,0.9713,0.0025
+contraindication|named|Pemetrexed|thrombocytopenia,contraindication,named,0,Pemetrexed,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.904,0.904,0.0109
+contraindication|named|Citalopram|long QT syndrome,contraindication,named,2,Citalopram,long QT syndrome,passage,6,0,remove,,long QT syndrome,correct,0.9945,0.005,0.9945
+contraindication|named|Neostigmine|asthma,contraindication,named,0,Neostigmine,asthma,passage,6,4,remove,,Not enough information to tell,abstain,0.9992,0.9992,0.0001
+contraindication|named|Flutamide|liver disease,contraindication,named,0,Flutamide,liver disease,passage,6,2,remove,,liver disease,correct,0.9682,0.0048,0.9682
+contraindication|named|Methylprednisolone|tuberculosis,contraindication,named,0,Methylprednisolone,tuberculosis,passage,6,4,remove,,Not enough information to tell,abstain,0.9119,0.9119,0.0728
+contraindication|named|Methylphenidate|mental disorder,contraindication,named,0,Methylphenidate,mental disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.9994,0.9994,0.0001
+contraindication|named|Topotecan|thrombocytopenia,contraindication,named,0,Topotecan,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9936,0.9936,0.0002
+contraindication|named|Magnesium hydroxide|kidney disease,contraindication,named,0,Magnesium hydroxide,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9107,0.9107,0.0475
+contraindication|named|Phenylbutyric acid|kidney disease,contraindication,named,2,Phenylbutyric acid,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9476,0.9476,0.0403
+contraindication|named|Ezetimibe|myopathy,contraindication,named,0,Ezetimibe,myopathy,passage,6,0,remove,,Not enough information to tell,abstain,0.9945,0.9945,0.0004
+contraindication|named|Bimatoprost|uveitis,contraindication,named,0,Bimatoprost,uveitis,passage,6,0,remove,,Not enough information to tell,abstain,0.9988,0.9988,0.0001
+contraindication|named|Isocarboxazid|hypertension,contraindication,named,0,Isocarboxazid,hypertension,passage,6,0,remove,,Not enough information to tell,abstain,0.9535,0.9535,0.0345
+contraindication|named|Dactinomycin|thrombocytopenia,contraindication,named,0,Dactinomycin,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9987,0.9987,0.0004
+contraindication|named|Dihydroergotamine|hypertension,contraindication,named,0,Dihydroergotamine,hypertension,passage,6,0,remove,,Not enough information to tell,abstain,0.5992,0.5992,0.0027
+contraindication|named|Fenoprofen|kidney disease,contraindication,named,0,Fenoprofen,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9314,0.9314,0.0366
+contraindication|named|Dexamethasone|hyperglycemia,contraindication,named,0,Dexamethasone,hyperglycemia,passage,6,4,remove,,Not enough information to tell,abstain,0.5755,0.5755,0.0077
+contraindication|named|Pentamidine|hypoglycemia,contraindication,named,0,Pentamidine,hypoglycemia,passage,6,4,remove,,Not enough information to tell,abstain,0.9804,0.9804,0.01
+contraindication|named|Decitabine|kidney disease,contraindication,named,0,Decitabine,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.998,0.998,0.0007
+contraindication|named|Cyproheptadine|bladder neck obstruction,contraindication,named,0,Cyproheptadine,bladder neck obstruction,passage,6,4,remove,,Not enough information to tell,abstain,0.9964,0.9964,0.0003
+contraindication|named|Terbinafine|kidney disease,contraindication,named,0,Terbinafine,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9858,0.9858,0.0098
+contraindication|named|Ceftriaxone|hemolytic anemia,contraindication,named,0,Ceftriaxone,hemolytic anemia,passage,6,4,remove,,hemolytic anemia,correct,0.9473,0.0493,0.9473
+contraindication|named|Enalapril|angioedema,contraindication,named,0,Enalapril,angioedema,passage,6,4,remove,,angioedema,correct,0.8569,0.1123,0.8569
+contraindication|named|Ceftizoxime|Clostridium difficile colitis,contraindication,named,2,Ceftizoxime,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9947,0.9947,0.0022
+contraindication|named|Mezlocillin|kidney disease,contraindication,named,0,Mezlocillin,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9916,0.9916,0.0002
+contraindication|named|Chlorthalidone|gout,contraindication,named,0,Chlorthalidone,gout,passage,6,0,remove,,Not enough information to tell,abstain,0.9998,0.9998,0.0002
+contraindication|named|Nabumetone|kidney disease,contraindication,named,0,Nabumetone,kidney disease,passage,6,0,remove,,kidney disease,correct,0.7844,0.2122,0.7844
+contraindication|named|Triamterene|liver disease,contraindication,named,0,Triamterene,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.9617,0.9617,0.0036
+contraindication|named|Vorapaxar|intracerebral hemorrhage,contraindication,named,0,Vorapaxar,intracerebral hemorrhage,passage,6,1,remove,,intracerebral hemorrhage,correct,0.8943,0.0016,0.8943
+contraindication|named|Oxacillin|Clostridium difficile colitis,contraindication,named,2,Oxacillin,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.8548,0.8548,0.1078
+contraindication|named|Amoxicillin|liver failure,contraindication,named,0,Amoxicillin,liver failure,passage,6,4,remove,,hepatitis,wrong,0.458,0.2068,0.3258
+contraindication|named|Sulindac|congestive heart failure,contraindication,named,0,Sulindac,congestive heart failure,passage,6,3,remove,,congestive heart failure,correct,0.591,0.0451,0.591
+contraindication|named|Acetaminophen|hepatic encephalopathy,contraindication,named,0,Acetaminophen,hepatic encephalopathy,passage,6,3,remove,,hepatic encephalopathy,correct,0.66,0.3271,0.66
+contraindication|named|Phenylbutyric acid|liver disease,contraindication,named,0,Phenylbutyric acid,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.9895,0.9895,0.0008
+contraindication|named|Nelarabine|liver failure,contraindication,named,2,Nelarabine,liver failure,passage,6,4,remove,,Not enough information to tell,abstain,0.9136,0.9136,0.0373
+contraindication|named|Cefadroxil|Clostridium difficile colitis,contraindication,named,0,Cefadroxil,Clostridium difficile colitis,passage,6,4,remove,,Clostridium difficile colitis,correct,0.8077,0.1706,0.8077
+contraindication|named|Penicillamine|glomerulonephritis,contraindication,named,0,Penicillamine,glomerulonephritis,passage,6,0,remove,,Not enough information to tell,abstain,0.9644,0.9644,0.0124
+contraindication|named|Warfarin|intracerebral hemorrhage,contraindication,named,0,Warfarin,intracerebral hemorrhage,passage,6,1,remove,,Not enough information to tell,abstain,0.9954,0.9954,0.0003
+contraindication|named|Azacitidine|thrombocytopenia,contraindication,named,0,Azacitidine,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9619,0.9619,0.0283
+contraindication|named|Diazepam|anxiety disorder,contraindication,named,0,Diazepam,anxiety disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.438,0.438,0.013
+contraindication|named|Thiotepa|kidney disease,contraindication,named,0,Thiotepa,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9097,0.9097,0.0516
+contraindication|named|Nitric Oxide|heart failure,contraindication,named,0,Nitric Oxide,heart failure,passage,6,0,remove,,Not enough information to tell,abstain,0.8303,0.8303,0.0022
+contraindication|named|Midodrine|hyperthyroidism,contraindication,named,0,Midodrine,hyperthyroidism,passage,6,4,remove,,Not enough information to tell,abstain,0.9063,0.9063,0.0205
+contraindication|named|Tadalafil|priapism,contraindication,named,0,Tadalafil,priapism,passage,6,4,remove,,Not enough information to tell,abstain,0.9233,0.9233,0.001
+contraindication|named|Glycine|kidney disease,contraindication,named,0,Glycine,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9799,0.9799,0.0074
+contraindication|named|Moxifloxacin|peripheral neuropathy,contraindication,named,0,Moxifloxacin,peripheral neuropathy,passage,6,0,remove,,Not enough information to tell,abstain,0.9953,0.9953,0.0009
+contraindication|named|Capecitabine|stomatitis,contraindication,named,0,Capecitabine,stomatitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9837,0.9837,0.0001
+contraindication|named|Ammonium chloride|liver failure,contraindication,named,2,Ammonium chloride,liver failure,passage,6,4,remove,,liver failure,correct,0.981,0.01,0.981
+contraindication|named|Topiramate|nephrolithiasis,contraindication,named,0,Topiramate,nephrolithiasis,passage,6,1,remove,,Not enough information to tell,abstain,0.6657,0.6657,0.2966
+contraindication|named|Omeprazole|osteoporosis,contraindication,named,0,Omeprazole,osteoporosis,passage,6,4,remove,,Not enough information to tell,abstain,0.4255,0.4255,0.248
+contraindication|named|Ketorolac|myocardial infarction,contraindication,named,0,Ketorolac,myocardial infarction,passage,6,0,remove,,Not enough information to tell,abstain,0.8767,0.8767,0.0005
+contraindication|named|Methyltestosterone|prostate cancer,contraindication,named,0,Methyltestosterone,prostate cancer,passage,6,4,remove,,prostate cancer,correct,0.9788,0.021,0.9788
+contraindication|named|Phenylephrine|injury,contraindication,named,0,Phenylephrine,injury,passage,6,0,remove,,Not enough information to tell,abstain,0.825,0.825,0.0076
+contraindication|named|Clobetasol propionate|skin atrophy,contraindication,named,0,Clobetasol propionate,skin atrophy,passage,6,0,remove,,Not enough information to tell,abstain,0.9552,0.9552,0.0067
+contraindication|named|Cephalexin|Clostridium difficile colitis,contraindication,named,2,Cephalexin,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9705,0.9705,0.0033
+contraindication|named|Valproic acid|kidney disease,contraindication,named,2,Valproic acid,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.7522,0.7522,0.0198
+contraindication|named|Fluocinolone acetonide|glaucoma,contraindication,named,0,Fluocinolone acetonide,glaucoma,passage,6,0,remove,,glaucoma,correct,0.9613,0.0354,0.9613
+contraindication|named|Chlorpromazine|orthostatic hypotension,contraindication,named,0,Chlorpromazine,orthostatic hypotension,passage,6,0,remove,,Not enough information to tell,abstain,0.9733,0.9733,0.0018
+contraindication|named|Metamfetamine|atherosclerosis,contraindication,named,0,Metamfetamine,atherosclerosis,passage,6,4,remove,,Not enough information to tell,abstain,0.9855,0.9855,0.0001
+contraindication|named|Telmisartan|kidney disease,contraindication,named,0,Telmisartan,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.8593,0.8593,0.1042
+contraindication|named|Oxybutynin|gastroesophageal reflux disease,contraindication,named,0,Oxybutynin,gastroesophageal reflux disease,passage,6,4,remove,,esophageal varices,wrong,0.4224,0.4036,0.0024
+contraindication|named|Vancomycin|kidney disease,contraindication,named,0,Vancomycin,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9733,0.9733,0.0023
+contraindication|named|Thiotepa|thrombocytopenia,contraindication,named,0,Thiotepa,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9545,0.9545,0.0016
+contraindication|named|Carboplatin|thrombocytopenia,contraindication,named,0,Carboplatin,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9572,0.9572,0.0039
+contraindication|named|Edetic acid|kidney disease,contraindication,named,0,Edetic acid,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.6135,0.6135,0.3155
+contraindication|named|Lovastatin|myopathy,contraindication,named,0,Lovastatin,myopathy,passage,6,0,remove,,Not enough information to tell,abstain,0.9892,0.9892,0.0001
+contraindication|named|Caffeine|liver disease,contraindication,named,0,Caffeine,liver disease,passage,6,2,remove,,liver disease,correct,0.9941,0.0051,0.9941
+contraindication|named|Ticarcillin|kidney disease,contraindication,named,0,Ticarcillin,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9965,0.9965,0.0008
+contraindication|named|Thiabendazole|kidney disease,contraindication,named,0,Thiabendazole,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.8362,0.8362,0.0223
+contraindication|named|Metamfetamine|cardiomyopathy,contraindication,named,0,Metamfetamine,cardiomyopathy,passage,6,0,remove,,Not enough information to tell,abstain,0.9794,0.9794,0.0005
+contraindication|named|Escitalopram|bipolar disorder,contraindication,named,0,Escitalopram,bipolar disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.5543,0.5543,0.0058
+contraindication|named|Tolmetin|peptic ulcer disease,contraindication,named,2,Tolmetin,peptic ulcer disease,passage,6,2,remove,,Not enough information to tell,abstain,0.4455,0.4455,0.4168
+contraindication|named|Romidepsin|liver disease,contraindication,named,2,Romidepsin,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.9696,0.9696,0.0039
+contraindication|named|Acetylcysteine|asthma,contraindication,named,0,Acetylcysteine,asthma,passage,6,4,remove,,Not enough information to tell,abstain,0.9906,0.9906,0.0003
+contraindication|named|Docetaxel|liver disease,contraindication,named,2,Docetaxel,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.8806,0.8806,0.0495
+contraindication|named|Amlodipine|liver disease,contraindication,named,2,Amlodipine,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.9927,0.9927,0.0047
+contraindication|named|Budesonide|tuberculosis,contraindication,named,0,Budesonide,tuberculosis,passage,6,4,remove,,Not enough information to tell,abstain,0.9875,0.9875,0.0003
+contraindication|named|Halofantrine|long QT syndrome,contraindication,named,2,Halofantrine,long QT syndrome,passage,6,0,remove,,long QT syndrome,correct,0.9999,0.0001,0.9999
+contraindication|named|Fluticasone propionate|osteoporosis,contraindication,named,0,Fluticasone propionate,osteoporosis,passage,6,4,remove,,Not enough information to tell,abstain,0.993,0.993,0.0031
+contraindication|named|Linezolid|thrombocytopenia,contraindication,named,0,Linezolid,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9958,0.9958,0.0002
+contraindication|named|Vilazodone|serotonin syndrome,contraindication,named,0,Vilazodone,serotonin syndrome,passage,6,0,remove,,Not enough information to tell,abstain,0.5678,0.5678,0.4073
+contraindication|named|Loteprednol etabonate|ocular hypertension,contraindication,named,0,Loteprednol etabonate,ocular hypertension,passage,6,4,remove,,Not enough information to tell,abstain,0.9974,0.9974,0.0002
+contraindication|named|Histamine|hypertension,contraindication,named,0,Histamine,hypertension,passage,6,0,remove,,Not enough information to tell,abstain,0.985,0.985,0.0001
+contraindication|named|Triflupromazine|neuroleptic malignant syndrome,contraindication,named,0,Triflupromazine,neuroleptic malignant syndrome,passage,6,0,remove,,Not enough information to tell,abstain,0.9934,0.9934,0.0002
+contraindication|named|Cabergoline|liver disease,contraindication,named,2,Cabergoline,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.8637,0.8637,0.1071
+contraindication|named|Selegiline|orthostatic hypotension,contraindication,named,0,Selegiline,orthostatic hypotension,passage,6,0,remove,,Not enough information to tell,abstain,0.9927,0.9927,0.0033
+contraindication|named|Dexlansoprazole|osteoporosis,contraindication,named,0,Dexlansoprazole,osteoporosis,passage,6,4,remove,,Not enough information to tell,abstain,0.9351,0.9351,0.0102
+contraindication|named|Sulfadiazine|liver disease,contraindication,named,0,Sulfadiazine,liver disease,passage,6,2,remove,,liver disease,correct,0.8117,0.1611,0.8117
+contraindication|named|Hydroxychloroquine|liver disease,contraindication,named,2,Hydroxychloroquine,liver disease,passage,6,2,remove,,intraoperative floppy iris syndrome,wrong,0.579,0.3539,0.0548
+contraindication|named|Meloxicam|cardiovascular disease,contraindication,named,2,Meloxicam,cardiovascular disease,passage,6,0,remove,,Not enough information to tell,abstain,0.8441,0.8441,0.0168
+contraindication|named|Cyproheptadine|peptic ulcer disease,contraindication,named,2,Cyproheptadine,peptic ulcer disease,passage,6,2,remove,,Not enough information to tell,abstain,0.977,0.977,0.0002
+contraindication|named|Thiopental|kidney failure,contraindication,named,2,Thiopental,kidney failure,passage,6,0,remove,,kidney failure,correct,0.5837,0.4135,0.5837
+contraindication|named|Ampicillin|Clostridium difficile colitis,contraindication,named,2,Ampicillin,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.9329,0.9329,0.0571
+contraindication|named|Tazobactam|neutropenia,contraindication,named,0,Tazobactam,neutropenia,passage,6,2,remove,,Not enough information to tell,abstain,0.9585,0.9585,0.0036
+contraindication|named|Ibuprofen|myocardial infarction,contraindication,named,0,Ibuprofen,myocardial infarction,passage,6,0,remove,,Not enough information to tell,abstain,0.8551,0.8551,0.0439
+contraindication|named|Rosuvastatin|myopathy,contraindication,named,0,Rosuvastatin,myopathy,passage,6,0,remove,,Not enough information to tell,abstain,0.9106,0.9106,0.0019
+contraindication|named|Flunisolide|glaucoma,contraindication,named,0,Flunisolide,glaucoma,passage,6,0,remove,,Not enough information to tell,abstain,0.9639,0.9639,0.0053
+contraindication|named|Tioguanine|cholestasis,contraindication,named,2,Tioguanine,cholestasis,passage,6,4,remove,,Not enough information to tell,abstain,0.9849,0.9849,0.0012
+contraindication|named|Chlorpromazine|epilepsy,contraindication,named,0,Chlorpromazine,epilepsy,passage,6,0,remove,,Not enough information to tell,abstain,0.8659,0.8659,0.1242
+contraindication|named|Ketoprofen|kidney disease,contraindication,named,0,Ketoprofen,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9532,0.9532,0.0336
+contraindication|named|Venlafaxine|hypertension,contraindication,named,0,Venlafaxine,hypertension,passage,6,0,remove,,Not enough information to tell,abstain,0.7613,0.7613,0.0066
+contraindication|named|Gemifloxacin|peripheral neuropathy,contraindication,named,0,Gemifloxacin,peripheral neuropathy,passage,6,0,remove,,Not enough information to tell,abstain,0.7448,0.7448,0.0015
+contraindication|named|Erlotinib|pulmonary fibrosis,contraindication,named,0,Erlotinib,pulmonary fibrosis,passage,6,4,remove,,interstitial lung disease specific to adulthood,wrong,0.838,0.1265,0.004
+contraindication|named|Levothyroxine|heart disease,contraindication,named,0,Levothyroxine,heart disease,passage,6,0,remove,,heart disease,correct,0.9988,0.0008,0.9988
+contraindication|named|Albendazole|pancytopenia,contraindication,named,0,Albendazole,pancytopenia,passage,6,4,remove,,Not enough information to tell,abstain,0.6902,0.6902,0.011
+contraindication|named|Trazodone|long QT syndrome,contraindication,named,0,Trazodone,long QT syndrome,passage,6,0,remove,,Not enough information to tell,abstain,0.9976,0.9976,0.0001
+contraindication|named|Norfloxacin|kidney disease,contraindication,named,0,Norfloxacin,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.8655,0.8655,0.0055
+contraindication|named|Lindane|epilepsy,contraindication,named,2,Lindane,epilepsy,passage,6,0,remove,,Not enough information to tell,abstain,0.9869,0.9869,0.0036
+contraindication|named|Pralatrexate|thrombocytopenia,contraindication,named,0,Pralatrexate,thrombocytopenia,passage,6,0,remove,,Not enough information to tell,abstain,0.9956,0.9956,0.0001
+contraindication|named|Levocetirizine|kidney disease,contraindication,named,0,Levocetirizine,kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9778,0.9778,0.0065
+contraindication|named|Rabeprazole|osteoporosis,contraindication,named,0,Rabeprazole,osteoporosis,passage,6,4,remove,,Not enough information to tell,abstain,0.7133,0.7133,0.0032
+contraindication|named|Doripenem|Clostridium difficile colitis,contraindication,named,2,Doripenem,Clostridium difficile colitis,passage,6,4,remove,,Not enough information to tell,abstain,0.6053,0.6053,0.0003
+contraindication|named|Tolcapone|liver disease,contraindication,named,0,Tolcapone,liver disease,passage,6,2,remove,,liver disease,correct,0.9999,0.0,0.9999
+contraindication|named|Meropenem|epilepsy,contraindication,named,0,Meropenem,epilepsy,passage,6,0,remove,,Not enough information to tell,abstain,0.9635,0.9635,0.0004
+contraindication|named|Histamine|mental disorder,contraindication,named,2,Histamine,mental disorder,passage,6,0,remove,,Not enough information to tell,abstain,1.0,1.0,0.0
+contraindication|named|Praziquantel|liver disease,contraindication,named,2,Praziquantel,liver disease,passage,6,2,remove,,Not enough information to tell,abstain,0.9798,0.9798,0.0145
+contraindication|named|Venlafaxine|epilepsy,contraindication,named,2,Venlafaxine,epilepsy,passage,6,0,remove,,Not enough information to tell,abstain,0.7718,0.7718,0.0034
+contraindication|named|Imiquimod|autoimmune disease,contraindication,named,2,Imiquimod,autoimmune disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9958,0.9958,0.0001
+contraindication|named|Apomorphine|orthostatic hypotension,contraindication,named,0,Apomorphine,orthostatic hypotension,passage,6,0,remove,,Not enough information to tell,abstain,0.7858,0.7858,0.1364
+contraindication|named|Loxapine|cardiovascular disease,contraindication,named,2,Loxapine,cardiovascular disease,passage,6,0,remove,,Not enough information to tell,abstain,0.9999,0.9999,0.0
+contraindication|named|Omeprazole|liver disease,contraindication,named,0,Omeprazole,liver disease,passage,6,2,remove,,liver disease,correct,0.9775,0.0131,0.9775
+indication|named|Fluconazole|vulvovaginal candidiasis,indication,named,0,Fluconazole,vulvovaginal candidiasis,passage,6,4,remove,,vulvovaginal candidiasis,correct,0.9995,0.0,0.9995
+indication|named|Doxorubicin|ovarian cancer,indication,named,0,Doxorubicin,ovarian cancer,passage,6,4,remove,,Not enough information to tell,abstain,0.6631,0.6631,0.122
+indication|named|Pregabalin|fibromyalgia,indication,named,0,Pregabalin,fibromyalgia,passage,6,4,remove,,Not enough information to tell,abstain,0.7736,0.7736,0.2141
+indication|named|Lomustine|brain neoplasm,indication,named,0,Lomustine,brain neoplasm,passage,6,0,remove,,brain neoplasm,correct,0.9998,0.0,0.9998
+indication|named|Scopolamine|irritable bowel syndrome,indication,named,0,Scopolamine,irritable bowel syndrome,passage,6,0,remove,,Not enough information to tell,abstain,0.9796,0.9796,0.003
+indication|named|Fluoxetine|bipolar disorder,indication,named,2,Fluoxetine,bipolar disorder,passage,6,0,remove,,bipolar disorder,correct,0.9746,0.0076,0.9746
+indication|named|Methimazole|Graves disease,indication,named,0,Methimazole,Graves disease,passage,6,4,remove,,Graves disease,correct,0.9991,0.0002,0.9991
+indication|named|Pentobarbital|brain ischemia,indication,named,2,Pentobarbital,brain ischemia,passage,6,4,remove,,Not enough information to tell,abstain,0.8491,0.8491,0.0407
+indication|named|Dirithromycin|bronchitis,indication,named,0,Dirithromycin,bronchitis,passage,6,0,remove,,Not enough information to tell,abstain,0.9086,0.9086,0.0371
+indication|named|Diltiazem|hypertension,indication,named,0,Diltiazem,hypertension,passage,6,0,remove,,hypertension,correct,0.998,0.0019,0.998
+indication|named|Losartan|hypertension,indication,named,0,Losartan,hypertension,passage,6,0,remove,,hypertension,correct,0.9999,0.0001,0.9999
+indication|named|Ziprasidone|schizophrenia,indication,named,0,Ziprasidone,schizophrenia,passage,6,0,remove,,schizophrenia,correct,0.9835,0.0164,0.9835
+indication|named|Calcitriol|nephrocalcinosis,indication,named,0,Calcitriol,nephrocalcinosis,passage,6,4,remove,,hypercalcemia disease,wrong,0.6197,0.0032,0.0307
+indication|named|Olanzapine|schizophrenia,indication,named,0,Olanzapine,schizophrenia,passage,6,0,remove,,schizophrenia,correct,0.9996,0.0,0.9996
+indication|named|Diltiazem|Prinzmetal angina,indication,named,2,Diltiazem,Prinzmetal angina,passage,6,4,remove,,Prinzmetal angina,correct,0.6313,0.3034,0.6313
+indication|named|Propylthiouracil|Graves disease,indication,named,0,Propylthiouracil,Graves disease,passage,6,4,remove,,Graves disease,correct,0.7918,0.0771,0.7918
+indication|named|Methscopolamine|irritable bowel syndrome,indication,named,0,Methscopolamine,irritable bowel syndrome,passage,6,0,remove,,peptic ulcer disease,wrong,0.9992,0.0005,0.0
+indication|named|Tolvaptan|polycystic kidney disease,indication,named,0,Tolvaptan,polycystic kidney disease,passage,6,0,remove,,Not enough information to tell,abstain,0.711,0.711,0.1741
+indication|named|Hydrochlorothiazide|congestive heart failure,indication,named,0,Hydrochlorothiazide,congestive heart failure,passage,6,3,remove,,congestive heart failure,correct,0.5449,0.1668,0.5449
+indication|named|Meloxicam|juvenile idiopathic arthritis,indication,named,2,Meloxicam,juvenile idiopathic arthritis,passage,6,0,remove,,juvenile idiopathic arthritis,correct,0.8422,0.1556,0.8422
+indication|named|Ziprasidone|bipolar disorder,indication,named,0,Ziprasidone,bipolar disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.6012,0.6012,0.2842
+indication|named|Nitric Oxide|pulmonary hypertension,indication,named,0,Nitric Oxide,pulmonary hypertension,passage,6,0,remove,,pulmonary hypertension,correct,0.9778,0.0221,0.9778
+indication|named|Irbesartan|diabetic nephropathy,indication,named,0,Irbesartan,diabetic nephropathy,passage,6,2,remove,,Not enough information to tell,abstain,0.5453,0.5453,0.4528
+indication|named|Cetirizine|allergic rhinitis,indication,named,0,Cetirizine,allergic rhinitis,passage,6,0,remove,,allergic rhinitis,correct,0.9988,0.0001,0.9988
+indication|named|Salsalate|rheumatoid arthritis,indication,named,0,Salsalate,rheumatoid arthritis,passage,6,4,remove,,Not enough information to tell,abstain,0.9506,0.9506,0.0092
+indication|named|Quetiapine|bipolar disorder,indication,named,0,Quetiapine,bipolar disorder,passage,6,0,remove,,bipolar disorder,correct,0.9738,0.0061,0.9738
+indication|named|Nabumetone|rheumatoid arthritis,indication,named,0,Nabumetone,rheumatoid arthritis,passage,6,4,remove,,rheumatoid arthritis,correct,0.992,0.0066,0.992
+indication|named|Temsirolimus|mantle cell lymphoma,indication,named,0,Temsirolimus,mantle cell lymphoma,passage,6,0,remove,,mantle cell lymphoma,correct,0.973,0.0,0.973
+indication|named|Ketoconazole|histoplasmosis,indication,named,0,Ketoconazole,histoplasmosis,passage,6,4,remove,,Not enough information to tell,abstain,0.7239,0.7239,0.0072
+indication|named|Desvenlafaxine|major depressive disorder,indication,named,0,Desvenlafaxine,major depressive disorder,passage,6,0,remove,,major depressive disorder,correct,0.997,0.0028,0.997
+indication|named|Fluconazole|candidiasis,indication,named,0,Fluconazole,candidiasis,passage,6,4,remove,,candidiasis,correct,0.996,0.0003,0.996
+indication|named|Acyclovir|herpes zoster,indication,named,0,Acyclovir,herpes zoster,passage,6,4,remove,,herpes zoster,correct,0.9525,0.0014,0.9525
+indication|named|Pregabalin|postherpetic neuralgia,indication,named,0,Pregabalin,postherpetic neuralgia,passage,6,4,remove,,Not enough information to tell,abstain,0.5177,0.5177,0.4083
+indication|named|Ranitidine|gastroesophageal reflux disease,indication,named,0,Ranitidine,gastroesophageal reflux disease,passage,6,4,remove,,gastroesophageal reflux disease,correct,0.9202,0.0233,0.9202
+indication|named|Nefazodone|unipolar depression,indication,named,0,Nefazodone,unipolar depression,passage,6,0,remove,,unipolar depression,correct,0.9999,0.0,0.9999
+indication|named|Desmopressin|von Willebrand disease,indication,named,0,Desmopressin,von Willebrand disease,passage,6,0,remove,,Not enough information to tell,abstain,0.781,0.781,0.2022
+indication|named|Venlafaxine|anxiety disorder,indication,named,0,Venlafaxine,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.8078,0.0118,0.8078
+indication|named|Ezetimibe|sitosterolemia,indication,named,0,Ezetimibe,sitosterolemia,passage,6,0,remove,,sitosterolemia,correct,0.6003,0.3477,0.6003
+indication|named|Isoprenaline|cardiac arrest,indication,named,0,Isoprenaline,cardiac arrest,passage,6,4,remove,,sino-auricular heart block,wrong,0.8719,0.1171,0.0
+indication|named|Nifedipine|hypertension,indication,named,0,Nifedipine,hypertension,passage,6,0,remove,,hypertension,correct,0.9945,0.0027,0.9945
+indication|named|Dalteparin|disseminated intravascular coagulation,indication,named,0,Dalteparin,disseminated intravascular coagulation,passage,6,0,remove,,Not enough information to tell,abstain,0.7581,0.7581,0.0088
+indication|named|Aurothioglucose|rheumatoid arthritis,indication,named,0,Aurothioglucose,rheumatoid arthritis,passage,6,4,remove,,rheumatoid arthritis,correct,0.7805,0.2189,0.7805
+indication|named|Cyclosporine|Sjogren syndrome,indication,named,2,Cyclosporine,Sjogren syndrome,passage,6,4,remove,,Not enough information to tell,abstain,0.8177,0.8177,0.0657
+indication|named|Flunisolide|asthma,indication,named,0,Flunisolide,asthma,passage,6,4,remove,,bronchiectasis,wrong,0.5013,0.0154,0.4605
+indication|named|Dapsone|leprosy,indication,named,0,Dapsone,leprosy,passage,6,4,remove,,leprosy,correct,0.7076,0.2581,0.7076
+indication|named|Benzylpenicillin|endocarditis,indication,named,0,Benzylpenicillin,endocarditis,passage,6,0,remove,,endocarditis,correct,0.4198,0.2953,0.4198
+indication|named|Docetaxel|prostate cancer,indication,named,0,Docetaxel,prostate cancer,passage,6,4,remove,,prostate cancer,correct,0.9995,0.0004,0.9995
+indication|named|Hydrocortisone acetate|asthma,indication,named,0,Hydrocortisone acetate,asthma,passage,6,4,remove,,Not enough information to tell,abstain,0.7585,0.7585,0.084
+indication|named|Meropenem|bacterial meningitis,indication,named,0,Meropenem,bacterial meningitis,passage,6,4,remove,,bacterial meningitis,correct,0.9994,0.0,0.9994
+indication|named|Terazosin|hypertension,indication,named,0,Terazosin,hypertension,passage,6,0,remove,,hypertension,correct,0.9823,0.0176,0.9823
+indication|named|Ibandronate|postmenopausal osteoporosis,indication,named,0,Ibandronate,postmenopausal osteoporosis,passage,6,4,remove,,postmenopausal osteoporosis,correct,0.9993,0.0,0.9993
+indication|named|Ipratropium|bronchitis,indication,named,0,Ipratropium,bronchitis,passage,6,0,remove,,bronchitis,correct,0.8298,0.0834,0.8298
+indication|named|Fluticasone furoate|asthma,indication,named,0,Fluticasone furoate,asthma,passage,6,4,remove,,asthma,correct,0.8422,0.1307,0.8422
+indication|named|Isocarboxazid|endogenous depression,indication,named,0,Isocarboxazid,endogenous depression,passage,6,0,remove,,endogenous depression,correct,0.982,0.0176,0.982
+indication|named|Potassium citrate|renal tubular acidosis,indication,named,0,Potassium citrate,renal tubular acidosis,passage,6,0,remove,,renal tubular acidosis,correct,0.9997,0.0002,0.9997
+indication|named|Leuprolide|precocious puberty,indication,named,0,Leuprolide,precocious puberty,passage,6,0,remove,,Not enough information to tell,abstain,0.6124,0.6124,0.3516
+indication|named|Potassium Iodide|allergic rhinitis,indication,named,0,Potassium Iodide,allergic rhinitis,passage,6,0,remove,,Not enough information to tell,abstain,0.9175,0.9175,0.0569
+indication|named|Fluvoxamine|obsessive-compulsive disorder,indication,named,0,Fluvoxamine,obsessive-compulsive disorder,passage,6,0,remove,,obsessive-compulsive disorder,correct,1.0,0.0,1.0
+indication|named|Doxepin|anxiety disorder,indication,named,0,Doxepin,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.946,0.0198,0.946
+indication|named|Tobramycin|staphylococcal infection,indication,named,0,Tobramycin,staphylococcal infection,passage,6,0,remove,,Not enough information to tell,abstain,0.9731,0.9731,0.0207
+indication|named|Rabeprazole|Zollinger-Ellison syndrome,indication,named,0,Rabeprazole,Zollinger-Ellison syndrome,passage,6,4,remove,,Zollinger-Ellison syndrome,correct,0.9951,0.0045,0.9951
+indication|named|Diflunisal|osteoarthritis,indication,named,0,Diflunisal,osteoarthritis,passage,6,0,remove,,osteoarthritis,correct,0.9723,0.0161,0.9723
+indication|named|Itraconazole|blastomycosis,indication,named,0,Itraconazole,blastomycosis,passage,6,3,remove,,Not enough information to tell,abstain,0.7919,0.7919,0.0123
+indication|named|Triamterene|hypertension,indication,named,0,Triamterene,hypertension,passage,6,0,remove,,hypertension,correct,0.9989,0.0009,0.9989
+indication|named|Thiabendazole|Trichinellosis,indication,named,0,Thiabendazole,Trichinellosis,passage,6,4,remove,,Not enough information to tell,abstain,0.9457,0.9457,0.0495
+indication|named|Triamcinolone|tendinitis,indication,named,0,Triamcinolone,tendinitis,passage,6,4,remove,,Not enough information to tell,abstain,0.7961,0.7961,0.0018
+indication|named|Fenoprofen|arthropathy,indication,named,2,Fenoprofen,arthropathy,passage,6,0,remove,,arthropathy,correct,0.9708,0.0113,0.9708
+indication|named|Desonide|granuloma annulare,indication,named,0,Desonide,granuloma annulare,passage,6,4,remove,,contact dermatitis,wrong,0.9996,0.0002,0.0
+indication|named|Calcifediol|renal osteodystrophy,indication,named,0,Calcifediol,renal osteodystrophy,passage,6,4,remove,,Not enough information to tell,abstain,0.8814,0.8814,0.0577
+indication|named|Linezolid|streptococcal infection,indication,named,0,Linezolid,streptococcal infection,passage,6,4,remove,,streptococcal infection,correct,0.9998,0.0,0.9998
+indication|named|Cyclosporine|dry eye syndrome,indication,named,0,Cyclosporine,dry eye syndrome,passage,6,4,remove,,Not enough information to tell,abstain,0.7504,0.7504,0.0063
+indication|named|Amitriptyline|anxiety disorder,indication,named,0,Amitriptyline,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.8394,0.0814,0.8394
+indication|named|Citalopram|anxiety disorder,indication,named,0,Citalopram,anxiety disorder,passage,6,0,remove,,Not enough information to tell,abstain,0.9219,0.9219,0.0597
+indication|named|Valproic acid|epilepsy,indication,named,0,Valproic acid,epilepsy,passage,6,0,remove,,epilepsy,correct,1.0,0.0,1.0
+indication|named|Modafinil|narcolepsy,indication,named,0,Modafinil,narcolepsy,passage,6,0,remove,,narcolepsy,correct,0.9478,0.0521,0.9478
+indication|named|Vincristine|Hodgkins lymphoma,indication,named,2,Vincristine,Hodgkins lymphoma,passage,6,4,remove,,Burkitt lymphoma,wrong,0.469,0.3233,0.0826
+indication|named|Itraconazole|coccidioidomycosis,indication,named,0,Itraconazole,coccidioidomycosis,passage,6,4,remove,,Not enough information to tell,abstain,0.8918,0.8918,0.0985
+indication|named|Enalaprilat|hypertension,indication,named,0,Enalaprilat,hypertension,passage,6,0,remove,,hypertension,correct,0.9799,0.0201,0.9799
+indication|named|Brompheniramine|common cold,indication,named,0,Brompheniramine,common cold,passage,6,4,remove,,Not enough information to tell,abstain,0.9924,0.9924,0.0074
+indication|named|Pazopanib|cancer,indication,named,0,Pazopanib,cancer,passage,6,0,remove,,cancer,correct,0.9999,0.0001,0.9999
+indication|named|Phenelzine|anxiety disorder,indication,named,0,Phenelzine,anxiety disorder,passage,6,0,remove,,major affective disorder,wrong,0.9803,0.0,0.0196
+indication|named|Itraconazole|histoplasmosis,indication,named,0,Itraconazole,histoplasmosis,passage,6,3,remove,,allescheriosis,wrong,0.4821,0.2279,0.1059
+indication|named|Cobalamin|pernicious anemia,indication,named,0,Cobalamin,pernicious anemia,passage,6,4,remove,,pernicious anemia,correct,0.9951,0.0012,0.9951
+indication|named|Amphetamine|narcolepsy,indication,named,0,Amphetamine,narcolepsy,passage,6,0,remove,,Not enough information to tell,abstain,0.913,0.913,0.0351
+indication|named|Thiabendazole|cutaneous larva migrans,indication,named,0,Thiabendazole,cutaneous larva migrans,passage,6,4,remove,,cutaneous larva migrans,correct,0.9752,0.0203,0.9752
+indication|named|Praziquantel|schistosomiasis,indication,named,0,Praziquantel,schistosomiasis,passage,6,4,remove,,schistosomiasis,correct,0.9991,0.0006,0.9991
+indication|named|Cefixime|bronchitis,indication,named,0,Cefixime,bronchitis,passage,6,0,remove,,Not enough information to tell,abstain,0.3965,0.3965,0.0269
+indication|named|Lindane|scabies,indication,named,0,Lindane,scabies,passage,6,4,remove,,scabies,correct,0.5409,0.4548,0.5409
+indication|named|Colchicine|familial Mediterranean fever,indication,named,0,Colchicine,familial Mediterranean fever,passage,6,4,remove,,Not enough information to tell,abstain,0.4907,0.4907,0.2408
+indication|named|Tazobactam|peritonitis,indication,named,0,Tazobactam,peritonitis,passage,6,0,remove,,Not enough information to tell,abstain,0.9744,0.9744,0.02
+indication|named|Amoxapine|anxiety disorder,indication,named,0,Amoxapine,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.974,0.0207,0.974
+indication|named|Calcium chloride|cardiac arrest,indication,named,0,Calcium chloride,cardiac arrest,passage,6,4,remove,,Not enough information to tell,abstain,0.9554,0.9554,0.0431
+indication|named|Irbesartan|hypertension,indication,named,0,Irbesartan,hypertension,passage,6,0,remove,,hypertension,correct,1.0,0.0,1.0
+indication|named|Lanreotide|acromegaly,indication,named,0,Lanreotide,acromegaly,passage,6,3,remove,,ACTH-dependent Cushing syndrome,wrong,0.959,0.015,0.0251
+indication|named|Albendazole|cysticercosis,indication,named,0,Albendazole,cysticercosis,passage,6,4,remove,,Not enough information to tell,abstain,0.705,0.705,0.2268
+indication|named|Albendazole|cystic echinococcosis,indication,named,0,Albendazole,cystic echinococcosis,passage,6,2,remove,,alveolar echinococcosis,wrong,0.8827,0.002,0.1012
+indication|named|Dicloxacillin|staphylococcus aureus infection,indication,named,0,Dicloxacillin,staphylococcus aureus infection,passage,6,2,remove,,staphylococcus aureus infection,correct,0.9943,0.0001,0.9943
+indication|named|Lithium carbonate|bipolar disorder,indication,named,0,Lithium carbonate,bipolar disorder,passage,6,0,remove,,bipolar disorder,correct,0.9944,0.0051,0.9944
+indication|named|Pazopanib|soft tissue sarcoma,indication,named,0,Pazopanib,soft tissue sarcoma,passage,6,4,remove,,soft tissue sarcoma,correct,0.9993,0.0,0.9993
+indication|named|Tetracycline|bronchitis,indication,named,0,Tetracycline,bronchitis,passage,6,0,remove,,renal cell carcinoma (disease),wrong,0.7179,0.1866,0.0062
+indication|named|Sertraline|anxiety disorder,indication,named,0,Sertraline,anxiety disorder,passage,6,0,remove,,mental disorder,wrong,0.7101,0.0002,0.2896
+indication|named|Pyrazinamide|tuberculous meningitis,indication,named,0,Pyrazinamide,tuberculous meningitis,passage,6,0,remove,,tuberculous meningitis,correct,0.9563,0.0082,0.9563
+indication|named|Magnesium trisilicate|gastroesophageal reflux disease,indication,named,0,Magnesium trisilicate,gastroesophageal reflux disease,passage,6,4,remove,,Not enough information to tell,abstain,0.8833,0.8833,0.0014
+indication|named|Hydroxychloroquine|rheumatoid arthritis,indication,named,0,Hydroxychloroquine,rheumatoid arthritis,passage,6,4,remove,,rheumatoid arthritis,correct,0.707,0.1594,0.707
+indication|named|Magnesium sulfate|preeclampsia,indication,named,0,Magnesium sulfate,preeclampsia,passage,6,1,remove,,eclampsia,wrong,0.9975,0.0002,0.0022
+indication|named|Fluphenazine|schizoaffective disorder,indication,named,0,Fluphenazine,schizoaffective disorder,passage,6,4,remove,,schizoaffective disorder,correct,0.6896,0.012,0.6896
+indication|named|Midodrine|multiple system atrophy,indication,named,0,Midodrine,multiple system atrophy,passage,6,2,remove,,amyloidosis (disease),wrong,0.6948,0.084,0.19
+indication|named|Mirtazapine|anxiety disorder,indication,named,0,Mirtazapine,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.9991,0.0001,0.9991
+indication|named|Betamethasone|psoriasis,indication,named,0,Betamethasone,psoriasis,passage,6,4,remove,,Not enough information to tell,abstain,0.439,0.439,0.027
+indication|named|Chlorpromazine|psychotic disorder,indication,named,0,Chlorpromazine,psychotic disorder,passage,6,4,remove,,psychotic disorder,correct,0.9999,0.0,0.9999
+indication|named|Aripiprazole|schizophrenia,indication,named,0,Aripiprazole,schizophrenia,passage,6,0,remove,,schizophrenia,correct,0.9999,0.0,0.9999
+indication|named|Amoxicillin|pharyngitis,indication,named,0,Amoxicillin,pharyngitis,passage,6,4,remove,,adenoid hypertrophy,wrong,0.52,0.2152,0.0223
+indication|named|Mezlocillin|pneumonitis,indication,named,0,Mezlocillin,pneumonitis,passage,6,0,remove,,Not enough information to tell,abstain,0.9638,0.9638,0.0011
+indication|named|Voriconazole|aspergillosis,indication,named,0,Voriconazole,aspergillosis,passage,6,0,remove,,aspergillosis,correct,0.9988,0.0002,0.9988
+indication|named|Procyclidine|Parkinson disease,indication,named,2,Procyclidine,Parkinson disease,passage,6,0,remove,,Parkinson disease,correct,0.9996,0.0001,0.9996
+indication|named|Meloxicam|rheumatoid arthritis,indication,named,0,Meloxicam,rheumatoid arthritis,passage,6,4,remove,,rheumatoid arthritis,correct,0.9949,0.0042,0.9949
+indication|named|Midodrine|orthostatic hypotension,indication,named,0,Midodrine,orthostatic hypotension,passage,6,0,remove,,orthostatic hypotension,correct,0.9999,0.0,0.9999
+indication|named|Imatinib|systemic mastocytosis,indication,named,0,Imatinib,systemic mastocytosis,passage,6,4,remove,,Not enough information to tell,abstain,0.632,0.632,0.0431
+indication|named|Ferric maltol|iron deficiency anemia,indication,named,0,Ferric maltol,iron deficiency anemia,passage,6,4,remove,,iron deficiency anemia,correct,0.9959,0.0016,0.9959
+indication|named|Etodolac|osteoarthritis,indication,named,0,Etodolac,osteoarthritis,passage,6,0,remove,,Not enough information to tell,abstain,0.546,0.546,0.4424
+indication|named|Mesalazine|inflammatory bowel disease,indication,named,0,Mesalazine,inflammatory bowel disease,passage,6,0,remove,,inflammatory bowel disease,correct,0.9954,0.0,0.9954
+indication|named|Trazodone|anxiety disorder,indication,named,0,Trazodone,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.6803,0.2866,0.6803
+indication|named|Haloperidol|psychotic disorder,indication,named,0,Haloperidol,psychotic disorder,passage,6,4,remove,,psychotic disorder,correct,0.9998,0.0,0.9998
+indication|named|Echothiophate|open-angle glaucoma,indication,named,0,Echothiophate,open-angle glaucoma,passage,6,4,remove,,open-angle glaucoma,correct,1.0,0.0,1.0
+indication|named|Imipramine|anxiety disorder,indication,named,0,Imipramine,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.9998,0.0,0.9998
+indication|named|Estramustine|prostate carcinoma,indication,named,0,Estramustine,prostate carcinoma,passage,6,4,remove,,prostate carcinoma,correct,0.9995,0.0003,0.9995
+indication|named|Paroxetine|anxiety disorder,indication,named,0,Paroxetine,anxiety disorder,passage,6,0,remove,,heart cancer,wrong,0.6557,0.006,0.3367
+indication|named|Levocetirizine|idiopathic urticaria,indication,named,0,Levocetirizine,idiopathic urticaria,passage,6,0,remove,,idiopathic urticaria,correct,0.9992,0.0001,0.9992
+indication|named|Armodafinil|narcolepsy,indication,named,0,Armodafinil,narcolepsy,passage,6,0,remove,,narcolepsy,correct,0.9981,0.0018,0.9981
+indication|named|Ethyl loflazepate|anxiety disorder,indication,named,0,Ethyl loflazepate,anxiety disorder,passage,6,0,remove,,anxiety disorder,correct,0.9964,0.0035,0.9964
+indication|named|Clofazimine|leprosy,indication,named,0,Clofazimine,leprosy,passage,6,4,remove,,leprosy,correct,0.9402,0.0394,0.9402
+indication|named|Octreotide|acromegaly,indication,named,0,Octreotide,acromegaly,passage,6,4,remove,,Not enough information to tell,abstain,0.5598,0.5598,0.0663
+indication|named|Cefamandole|pneumonia,indication,named,0,Cefamandole,pneumonia,passage,6,4,remove,,Not enough information to tell,abstain,0.9626,0.9626,0.0013
+indication|named|Metoclopramide|gastroesophageal reflux disease,indication,named,0,Metoclopramide,gastroesophageal reflux disease,passage,6,4,remove,,Not enough information to tell,abstain,0.4062,0.4062,0.1103
+indication|named|Pyrimethamine|toxoplasmosis,indication,named,0,Pyrimethamine,toxoplasmosis,passage,6,0,remove,,toxoplasmosis,correct,0.7639,0.1777,0.7639
+indication|named|Dexchlorpheniramine|angioedema,indication,named,0,Dexchlorpheniramine,angioedema,passage,6,4,remove,,"urticaria, aquagenic",wrong,0.8748,0.1158,0.0001
+indication|named|Olopatadine|allergic rhinitis,indication,named,0,Olopatadine,allergic rhinitis,passage,6,0,remove,,allergic rhinitis,correct,0.9944,0.0054,0.9944
+indication|named|Mirtazapine|major depressive disorder,indication,named,0,Mirtazapine,major depressive disorder,passage,6,0,remove,,major depressive disorder,correct,1.0,0.0,1.0
+indication|named|Dicyclomine|irritable bowel syndrome,indication,named,0,Dicyclomine,irritable bowel syndrome,passage,6,0,remove,,irritable bowel syndrome,correct,0.9996,0.0,0.9996
+indication|named|Phentermine|monogenic obesity,indication,named,0,Phentermine,monogenic obesity,passage,6,1,remove,,morbid obesity,wrong,0.9931,0.0066,0.0002
+indication|named|Penicillamine|cystinuria,indication,named,0,Penicillamine,cystinuria,passage,6,0,remove,,Not enough information to tell,abstain,0.8779,0.8779,0.0684
+indication|named|Zinc acetate|Wilson disease,indication,named,0,Zinc acetate,Wilson disease,passage,6,4,remove,,Not enough information to tell,abstain,0.9559,0.9559,0.0034
+indication|named|Acetylcysteine|bronchitis,indication,named,0,Acetylcysteine,bronchitis,passage,6,0,remove,,Not enough information to tell,abstain,0.7455,0.7455,0.0657
+indication|named|Enalapril|heart failure,indication,named,0,Enalapril,heart failure,passage,6,0,remove,,heart failure,correct,0.6767,0.3228,0.6767
+indication|named|Porfimer sodium|lung cancer,indication,named,0,Porfimer sodium,lung cancer,passage,6,4,remove,,lung cancer,correct,0.9898,0.0061,0.9898
+indication|named|Lisinopril|hypertension,indication,named,0,Lisinopril,hypertension,passage,6,0,remove,,hypertension,correct,0.9996,0.0,0.9996
+indication|named|Oxaprozin|juvenile idiopathic arthritis,indication,named,2,Oxaprozin,juvenile idiopathic arthritis,passage,6,0,remove,,Not enough information to tell,abstain,0.8426,0.8426,0.1351
+indication|named|Aripiprazole|bipolar disorder,indication,named,0,Aripiprazole,bipolar disorder,passage,6,0,remove,,bipolar disorder,correct,0.9879,0.0003,0.9879
+indication|named|Indomethacin|patent ductus arteriosus,indication,named,0,Indomethacin,patent ductus arteriosus,passage,6,0,remove,,patent ductus arteriosus,correct,0.577,0.3981,0.577
+indication|named|Loxapine|schizophrenia,indication,named,0,Loxapine,schizophrenia,passage,6,0,remove,,schizophrenia,correct,0.9999,0.0,0.9999

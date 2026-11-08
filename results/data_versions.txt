@@ -1,0 +1,5 @@
+# data files used by this run
+# downloaded 2026-10-28 05:25 UTC
+0a5a010fcd88dcec572a573d98c26c1c244a11567092b6161d3ded611cfb5c69  kg.csv
+2631e8e165d41def1a46749adb1ce0a336c8aba7f6bc0978729592cee8fed60b  mondo.obo
+mondo.obo data-version: releases/2026-10-06

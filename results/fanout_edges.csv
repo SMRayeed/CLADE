@@ -1,0 +1,299 @@
+id,relation,source,target,narrowest,hit_d1,hit_d2,hit_d3,n_d1,n_d2,n_d3
+indication|1,indication,Mitoxantrone,acute myeloblastic leukemia with maturation,acute myeloid leukemia,0,1,1,18,33,37
+indication|10,indication,Cefprozil,infectious otitis media,ear infection,1,1,1,3,3,3
+indication|18,indication,Dactinomycin,rhabdomyosarcoma (disease),sarcoma,0,1,1,22,104,216
+indication|24,indication,Calcium gluconate,postmenopausal osteoporosis,osteoporosis,1,1,1,5,6,7
+indication|40,indication,Imiquimod,melanoacanthoma,keratosis,0,1,1,9,23,27
+indication|41,indication,Moxifloxacin,Klebsiella pneumonia,pneumonia,0,1,1,8,23,25
+indication|45,indication,Fluoxetine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|58,indication,Ipratropium,"COPD, severe early onset",chronic obstructive pulmonary disease,1,1,1,4,10,10
+indication|69,indication,Methylphenidate,"attention deficit hyperactivity disorder, inattentive type",attention deficit-hyperactivity disorder,1,1,1,1,1,1
+indication|77,indication,Medroxyprogesterone acetate,endometrial carcinoma (disease),endometrial cancer,1,1,1,2,12,22
+indication|83,indication,Norepinephrine,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|86,indication,Gemcitabine,non-small cell lung carcinoma (disease),lung cancer,0,1,1,7,20,31
+indication|88,indication,Lamotrigine,visual epilepsy,epilepsy,0,1,1,9,46,74
+indication|94,indication,Sulfanilamide,vulvovaginal candidiasis,vulvovaginitis,1,1,1,4,4,4
+indication|98,indication,Salmeterol,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|104,indication,Idarubicin,acute myeloid leukemia with NPM1 somatic mutations,acute myeloid leukemia,1,1,1,18,33,37
+indication|120,indication,Omeprazole,duodenal ulcer (disease),peptic ulcer disease,0,1,1,3,7,7
+indication|121,indication,Erlotinib,non-small cell lung carcinoma (disease),lung cancer,0,1,1,7,20,31
+indication|135,indication,Cefepime,streptococcal pneumonia,pneumonia,0,1,1,8,23,25
+indication|141,indication,Cytarabine,unclassified acute myeloid leukemia,acute myeloid leukemia,1,1,1,18,33,37
+indication|155,indication,Lithium citrate,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|159,indication,Metyrosine,sympathetic paraganglioma,paraganglioma,1,1,1,5,15,19
+indication|160,indication,Altretamine,ovarian carcinosarcoma,ovarian carcinoma,1,1,1,8,17,23
+indication|161,indication,Voriconazole,disseminated candidiasis,candidiasis,1,1,1,9,11,11
+indication|178,indication,Lindane,Pthirus pubis infestation,dermatitis,0,1,1,29,78,105
+indication|186,indication,Gemcitabine,malignant germ cell tumor of ovary,ovarian cancer,0,1,1,11,26,49
+indication|195,indication,Cromoglicic acid,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|203,indication,Clarithromycin,streptococcal pneumonia,pneumonia,0,1,1,8,23,25
+indication|205,indication,Capecitabine,metastasis from malignant tumor of colon,colorectal cancer,0,1,1,4,22,50
+indication|211,indication,Lovastatin,familial hyperlipidemia,hyperlipidemia,1,1,1,3,8,8
+indication|216,indication,Felbamate,partial epilepsy,epilepsy,1,1,1,9,46,74
+indication|221,indication,Tenofovir disoproxil,HIV infectious disease,sexually transmitted disease,0,1,1,3,13,34
+indication|224,indication,Tioguanine,acute myeloid leukemia and myelodysplastic syndromes related to topoisomerase type 2 inhibitor,acute myeloid leukemia,0,1,1,18,33,37
+indication|252,indication,Phenylbutyric acid,citrin deficiency,citrullinemia,1,1,1,1,2,2
+indication|255,indication,Clindamycin,streptococcal pneumonia,pneumonia,0,1,1,8,23,25
+indication|256,indication,Acetazolamide,open-angle glaucoma,glaucoma,1,1,1,6,13,15
+indication|266,indication,Daunorubicin,acute myeloid leukemia with t(8;21)(q22;q22) translocation,acute myeloid leukemia,1,1,1,18,33,37
+indication|292,indication,Decitabine,acute myeloid leukemia and myelodysplastic syndromes related to topoisomerase type 2 inhibitor,acute myeloid leukemia,0,1,1,18,33,37
+indication|309,indication,Griseofulvin,dermatophytosis of groin and perianal area,dermatophytosis,1,1,1,11,13,13
+indication|315,indication,Azacitidine,inherited acute myeloid leukemia,acute myeloid leukemia,1,1,1,18,33,37
+indication|328,indication,Decitabine,acute myeloblastic leukemia without maturation,acute myeloid leukemia,0,1,1,18,33,37
+indication|341,indication,Cladribine,hairy cell leukemia variant,hairy cell leukemia,0,1,1,2,4,4
+indication|344,indication,Venlafaxine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|364,indication,Levofloxacin,bacterial pneumonia,pneumonia,1,1,1,8,23,25
+indication|373,indication,Mesalazine,ulcerative proctosigmoiditis,inflammatory bowel disease,1,1,1,7,17,25
+indication|376,indication,Tranylcypromine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|378,indication,Fluocinonide,granuloma annulare,dermatitis,1,1,1,29,78,105
+indication|380,indication,Carboplatin,malignant germ cell tumor of ovary,ovarian cancer,0,1,1,11,26,49
+indication|384,indication,Indomethacin,periarthritis,bursitis,1,1,1,5,5,5
+indication|389,indication,Thiotepa,malignant sex cord stromal tumor of ovary,ovarian cancer,0,1,1,11,26,49
+indication|393,indication,Temozolomide,astrocytoma (excluding glioblastoma),glioma,0,1,1,8,38,111
+indication|398,indication,Telithromycin,streptococcal pneumonia,bacterial pneumonia,1,1,1,6,8,8
+indication|404,indication,Pemetrexed,malignant mesothelioma (disease),mesothelioma,1,1,1,4,17,21
+indication|413,indication,Cefazolin,streptococcal pneumonia,streptococcal infection,0,1,1,7,11,11
+indication|426,indication,Everolimus,renal cell carcinoma (disease),kidney cancer,0,1,1,7,17,31
+indication|433,indication,Zinc oxide,tinea infection,dermatitis,0,1,1,29,78,105
+indication|438,indication,Montelukast,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|441,indication,Ethinylestradiol,postmenopausal osteoporosis,osteoporosis,1,1,1,5,6,7
+indication|447,indication,Telithromycin,pneumonia caused by chlamydia,bacterial pneumonia,0,1,1,6,8,8
+indication|457,indication,Dapsone,acne (disease),dermatitis,1,1,1,29,78,105
+indication|465,indication,Methazolamide,open-angle glaucoma,glaucoma,1,1,1,6,13,15
+indication|473,indication,Amoxicillin,Klebsiella pneumonia,pneumonia,0,1,1,8,23,25
+indication|479,indication,Ethyl loflazepate,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|482,indication,Duloxetine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|490,indication,Sodium oxybate,narcolepsy without cataplexy,narcolepsy,1,1,1,2,2,2
+indication|492,indication,Neostigmine,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+indication|500,indication,Vancomycin,subacute bacterial endocarditis,infective endocarditis,1,1,1,2,2,2
+indication|501,indication,Chloroquine,Plasmodium falciparum malaria,malaria,1,1,1,7,7,7
+indication|504,indication,Cimetidine,duodenal ulcer (disease),peptic ulcer disease,0,1,1,3,7,7
+indication|505,indication,Theophylline,allergic asthma,asthma,1,1,1,6,7,7
+indication|510,indication,Colchicine,autosomal recessive familial Mediterranean fever,familial Mediterranean fever,1,1,1,2,2,2
+indication|514,indication,Chlordiazepoxide,alcohol withdrawal delirium,alcohol withdrawal,1,1,1,1,1,1
+indication|521,indication,Nefazodone,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|522,indication,Doxazosin,benign prostatic hyperplasia (disease),hyperplasia,1,1,1,11,13,13
+indication|527,indication,Lamotrigine,partial epilepsy,epilepsy,1,1,1,9,46,74
+indication|539,indication,Mitoxantrone,acute myeloid leukemia with t(9;11)(p22;q23),acute myeloid leukemia,1,1,1,18,33,37
+indication|543,indication,Dyphylline,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|547,indication,Megestrol acetate,endometrial carcinoma (disease),endometrial cancer,1,1,1,2,12,22
+indication|550,indication,Pentoxifylline,intermittent vascular claudication,peripheral vascular disease,1,1,1,11,14,14
+indication|552,indication,Ganciclovir,herpes simplex virus keratitis,keratitis,0,1,1,8,21,23
+indication|567,indication,Etoposide,small cell lung carcinoma,lung cancer,0,1,1,7,20,31
+indication|570,indication,Buprenorphine,opiate dependence,drug dependence,1,1,1,7,8,8
+indication|602,indication,Valproic acid,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|621,indication,Cefazolin,bacterial pneumonia,pneumonia,1,1,1,8,23,25
+indication|628,indication,Paroxetine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|635,indication,Ciclesonide,allergic asthma,asthma,1,1,1,6,7,7
+indication|637,indication,Atovaquone,pneumocystosis,pneumonia,1,1,1,8,23,25
+indication|640,indication,Lactulose,hepatic coma,hepatic encephalopathy,1,1,1,1,1,1
+indication|661,indication,Pemetrexed,non-small cell lung carcinoma (disease),lung cancer,0,1,1,7,20,31
+indication|669,indication,Tenofovir,HIV infectious disease,sexually transmitted disease,0,1,1,3,13,34
+indication|672,indication,Fluticasone furoate,allergic asthma,asthma,1,1,1,6,7,7
+indication|677,indication,Carbamazepine,partial epilepsy,epilepsy,1,1,1,9,46,74
+indication|682,indication,Ziprasidone,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|693,indication,Chlorambucil,neoplasm of mature B-cells,lymphoma,0,1,1,24,55,86
+indication|694,indication,Lenalidomide,B-cell neoplasm,lymphoma,1,1,1,24,55,86
+indication|696,indication,Levocetirizine,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|698,indication,Chlorpromazine,schizophreniform disorder,psychotic disorder,1,1,1,7,9,9
+indication|716,indication,Quetiapine,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|734,indication,Imipramine,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|738,indication,Ciclesonide,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|742,indication,Tioguanine,acute myeloid leukemia with minimal differentiation,acute myeloid leukemia,0,1,1,18,33,37
+indication|745,indication,Oxytetracycline,rickettsialpox,spotted fever,1,1,1,11,16,16
+indication|760,indication,Levodopa,parkinsonian-pyramidal syndrome,Parkinson disease,1,1,1,1,2,2
+indication|762,indication,Budesonide,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|770,indication,Temozolomide,brain glioblastoma,brain cancer,0,1,1,8,31,56
+indication|787,indication,Chloroquine,systemic lupus erythematosus (disease),lupus erythematosus,1,1,1,2,7,7
+indication|789,indication,Danazol,breast fibrocystic disease,breast disease,1,1,1,14,41,70
+indication|790,indication,Phenylpropanolamine,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|797,indication,Mitoxantrone,inherited acute myeloid leukemia,acute myeloid leukemia,1,1,1,18,33,37
+indication|818,indication,Clobetasol propionate,occupational dermatitis,contact dermatitis,1,1,1,4,9,9
+indication|821,indication,Albendazole,echinococcus granulosus infectious disease,echinococcosis,1,1,1,3,4,4
+indication|826,indication,Fluvoxamine,phobic disorder,anxiety disorder,1,1,1,5,10,13
+indication|838,indication,Salmeterol,pulmonary emphysema,chronic obstructive pulmonary disease,1,1,1,4,10,10
+indication|848,indication,Daunorubicin,therapy related acute myeloid leukemia and myelodysplastic syndrome,acute myeloid leukemia,1,1,1,18,33,37
+indication|857,indication,Ertapenem,bacterial pneumonia,pneumonia,1,1,1,8,23,25
+indication|860,indication,Tiotropium,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|862,indication,Warfarin,intracranial embolism,ischemic stroke,1,1,1,5,11,11
+indication|888,indication,Diclofenamide,open-angle glaucoma,glaucoma,1,1,1,6,13,15
+indication|889,indication,Asenapine,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|905,indication,Ciclesonide,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|910,indication,Trimipramine,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|919,indication,Norfloxacin,urinary tract infection (disease),urinary tract infection,1,1,1,5,16,23
+indication|923,indication,Voriconazole,candidemia,candidiasis,0,1,1,9,11,11
+indication|927,indication,Porfimer sodium,carcinoma of esophagus,esophageal cancer,1,1,1,7,13,16
+indication|941,indication,Gemifloxacin,bacterial pneumonia,pneumonia,1,1,1,8,23,25
+indication|945,indication,Lovastatin,"hyperlipidemia, familial combined, LPL related",hyperlipidemia,0,1,1,3,8,8
+indication|947,indication,Cytarabine,acute promyelocytic leukemia,acute myeloid leukemia,0,1,1,18,33,37
+indication|952,indication,Budesonide,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|968,indication,Montelukast,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|971,indication,Pentamidine,human African trypanosomiasis,trypanosomiasis,1,1,1,2,4,4
+indication|982,indication,Aripiprazole,autism (disease),autism spectrum disorder,1,1,1,1,1,1
+indication|984,indication,Bortezomib,B-cell neoplasm,lymphoma,1,1,1,24,55,86
+indication|989,indication,Testosterone enanthate,"hypogonadism, male",hypogonadism,1,1,1,5,9,14
+indication|992,indication,Esomeprazole,peptic esophagitis,peptic ulcer disease,0,1,1,3,7,7
+indication|996,indication,Formoterol,pulmonary emphysema,chronic obstructive pulmonary disease,1,1,1,4,10,10
+indication|1024,indication,Carbamazepine,glossopharyngeal neuralgia,neuralgia,0,1,1,5,14,14
+indication|1027,indication,Cetirizine,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|1029,indication,Buprenorphine,morphine dependence,drug dependence,0,1,1,7,8,8
+indication|1047,indication,Altretamine,ovarian mucinous adenocarcinoma,ovarian carcinoma,0,1,1,8,17,23
+indication|1048,indication,Fluticasone furoate,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|1084,indication,Idarubicin,acute myeloblastic leukemia with maturation,acute myeloid leukemia,0,1,1,18,33,37
+indication|1085,indication,Testosterone cypionate,"hypogonadism, male",hypogonadism,1,1,1,5,9,14
+indication|1104,indication,Lansoprazole,peptic esophagitis,peptic ulcer disease,0,1,1,3,7,7
+indication|1114,indication,Griseofulvin,tinea barbae,dermatophytosis,1,1,1,11,13,13
+indication|1117,indication,Porfimer sodium,non-small cell lung carcinoma (disease),lung cancer,0,1,1,7,20,31
+indication|1124,indication,Clobetasol propionate,atopic eczema,dermatitis,1,1,1,29,78,105
+indication|1127,indication,Ethinylestradiol,acne (disease),dermatitis,1,1,1,29,78,105
+indication|1144,indication,Orciprenaline,allergic asthma,asthma,1,1,1,6,7,7
+indication|1154,indication,Gemcitabine,ovarian small cell carcinoma,ovarian cancer,0,1,1,11,26,49
+indication|1155,indication,Gemifloxacin,Mycoplasma pneumoniae pneumonia,pneumonia,0,1,1,8,23,25
+indication|1159,indication,Trimethoprim,infectious otitis media,ear infection,1,1,1,3,3,3
+indication|1162,indication,Nicotinamide,acne (disease),dermatitis,1,1,1,29,78,105
+indication|1167,indication,Daunorubicin,acute myeloid leukemia with t(9;11)(p22;q23),acute myeloid leukemia,1,1,1,18,33,37
+indication|1172,indication,Methyltestosterone,"hypogonadism, male",hypogonadism,1,1,1,5,9,14
+indication|1186,indication,Etoposide,testicular seminoma,testicular cancer,0,1,1,10,17,25
+indication|1190,indication,Protriptyline,dysthymic disorder,mood disorder,1,1,1,3,3,3
+indication|1192,indication,Cytarabine,inherited acute myeloid leukemia,acute myeloid leukemia,1,1,1,18,33,37
+indication|1195,indication,Mesalazine,ulcerative colitis (disease),inflammatory bowel disease,0,1,1,7,17,25
+indication|1197,indication,Azacitidine,acute myeloid leukemia with t(8;16)(p11;p13) translocation,acute myeloid leukemia,1,1,1,18,33,37
+indication|1232,indication,Bupropion,dysthymic disorder,mood disorder,1,1,1,3,3,3
+indication|1236,indication,Vilazodone,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|1241,indication,Clonazepam,visual epilepsy,epilepsy,0,1,1,9,46,74
+indication|1243,indication,Methotrexate,parapsoriasis,dermatitis,1,1,1,29,78,105
+indication|1248,indication,Sertraline,phobic disorder,anxiety disorder,1,1,1,5,10,13
+indication|1255,indication,Idarubicin,acute myeloid leukemia with t(8;21)(q22;q22) translocation,acute myeloid leukemia,1,1,1,18,33,37
+indication|1265,indication,Acrivastine,vasomotor rhinitis,allergic rhinitis,1,1,1,1,1,1
+indication|1268,indication,Tamoxifen,female breast carcinoma,breast cancer,0,1,1,5,25,67
+indication|1270,indication,Benzoyl peroxide,granuloma annulare,dermatitis,1,1,1,29,78,105
+indication|1272,indication,Betamethasone,pemphigus,dermatitis,0,1,1,29,78,105
+indication|1286,indication,Terazosin,benign prostatic hyperplasia (disease),hyperplasia,1,1,1,11,13,13
+indication|1288,indication,Fenofibrate,familial hyperlipidemia,hyperlipidemia,1,1,1,3,8,8
+indication|1308,indication,Carboplatin,malignant sex cord stromal tumor of ovary,ovarian cancer,0,1,1,11,26,49
+indication|1309,indication,Risperidone,autism (disease),autism spectrum disorder,1,1,1,1,1,1
+indication|1310,indication,Halofantrine,Plasmodium vivax malaria,malaria,1,1,1,7,7,7
+indication|1312,indication,Doxorubicin,familial ovarian cancer,ovarian cancer,1,1,1,11,26,49
+indication|1313,indication,Zafirlukast,allergic asthma,asthma,1,1,1,6,7,7
+indication|1329,indication,Trazodone,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|1331,indication,Formoterol,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|1346,indication,Ertapenem,streptococcal pneumonia,pneumonia,0,1,1,8,23,25
+indication|1358,indication,Vinblastine,B-cell neoplasm,lymphoma,1,1,1,24,55,86
+indication|1367,indication,Benzocaine,tinea infection,dermatitis,0,1,1,29,78,105
+indication|1369,indication,Haloperidol,schizophreniform disorder,psychotic disorder,1,1,1,7,9,9
+indication|1373,indication,Pyridostigmine,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+indication|1392,indication,Carmustine,angiocentric glioma,glioma,0,1,1,8,38,111
+indication|1395,indication,Urea,contact dermatitis,dermatitis,1,1,1,29,78,105
+indication|1410,indication,Chenodeoxycholic acid,choledocholithiasis,gallstones,1,1,1,1,1,1
+indication|1411,indication,Reserpine,schizoaffective disorder,psychotic disorder,1,1,1,7,9,9
+indication|1435,indication,Ranitidine,peptic esophagitis,peptic ulcer disease,0,1,1,3,7,7
+indication|1437,indication,Orciprenaline,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|1443,indication,Rosuvastatin,"hyperlipidemia, familial combined, LPL related",hyperlipidemia,0,1,1,3,8,8
+indication|1452,indication,Lorazepam,visual epilepsy,epilepsy,0,1,1,9,46,74
+indication|1460,indication,Bendamustine,neoplasm of mature B-cells,lymphoma,0,1,1,24,55,86
+indication|1469,indication,Topotecan,cervical carcinosarcoma,cervical cancer,0,1,1,9,26,45
+indication|1494,indication,Fluorouracil,metastasis from malignant tumor of colon,colorectal cancer,0,1,1,4,22,50
+indication|1498,indication,Tioguanine,acute myeloid leukemia with t(8;21)(q22;q22) translocation,acute myeloid leukemia,1,1,1,18,33,37
+indication|1511,indication,Cyclosporine,xerophthalmia,dry eye syndrome,1,1,1,1,1,1
+indication|1515,indication,Pentoxifylline,peripheral arterial disease,peripheral vascular disease,1,1,1,11,14,14
+indication|1528,indication,Alprazolam,mixed anxiety and depressive disorder,depressive disorder,1,1,1,4,4,4
+indication|1536,indication,Clavulanic acid,urinary tract infection (disease),urinary tract infection,1,1,1,5,16,23
+indication|1539,indication,Ambenonium,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+indication|1542,indication,Paclitaxel,familial ovarian cancer,ovarian cancer,1,1,1,11,26,49
+indication|1548,indication,Ranitidine,gastric ulcer (disease),peptic ulcer disease,0,1,1,3,7,7
+indication|1564,indication,Famotidine,peptic esophagitis,peptic ulcer disease,0,1,1,3,7,7
+indication|1575,indication,Phenytoin,visual epilepsy,epilepsy,0,1,1,9,46,74
+indication|1582,indication,Olanzapine,manic bipolar affective disorder,bipolar disorder,1,1,1,1,1,1
+indication|1585,indication,Decitabine,acute myeloid leukemia with inv3(p21;q26.2) or t(3;3)(p21;q26.2),acute myeloid leukemia,1,1,1,18,33,37
+indication|1591,indication,Propylthiouracil,thyroid crisis (disease),hyperthyroidism,1,1,1,8,14,15
+indication|1592,indication,Metyrosine,adrenal gland pheochromocytoma,paraganglioma,0,1,1,5,15,19
+indication|1606,indication,Clarithromycin,bacterial pneumonia,pneumonia,1,1,1,8,23,25
+indication|1608,indication,Citalopram,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|1612,indication,Escitalopram,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|1617,indication,Ketoconazole,tinea infection,skin infection,1,1,1,10,20,22
+indication|1618,indication,Doxepin,atopic eczema,dermatitis,1,1,1,29,78,105
+indication|1622,indication,Vorapaxar,cerebral infarction,ischemic stroke,1,1,1,5,11,11
+indication|1626,indication,Ezetimibe,familial hyperlipidemia,hyperlipidemia,1,1,1,3,8,8
+indication|1653,indication,Ezetimibe,"hyperlipidemia, familial combined, LPL related",hyperlipidemia,0,1,1,3,8,8
+indication|1656,indication,Paroxetine,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|1658,indication,Phenelzine,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+indication|1662,indication,Ritonavir,hepatitis C virus infection,hepatitis,0,1,1,8,13,15
+indication|1663,indication,Heparin,acquired purpura fulminans,thrombotic disease,1,1,1,7,7,7
+indication|1664,indication,Trimipramine,dysthymic disorder,mood disorder,1,1,1,3,3,3
+indication|1668,indication,Mirtazapine,endogenous depression,major depressive disorder,1,1,1,1,1,1
+indication|1670,indication,Atorvastatin,"hyperlipidemia, familial combined, LPL related",hyperlipidemia,0,1,1,3,8,8
+indication|1674,indication,Zafirlukast,intrinsic asthma,asthma,1,1,1,6,7,7
+indication|1675,indication,Mometasone furoate,allergic asthma,asthma,1,1,1,6,7,7
+indication|1677,indication,Phenytoin,partial epilepsy,epilepsy,1,1,1,9,46,74
+indication|1695,indication,Rimexolone,panuveitis (disease),uveitis,1,1,1,7,18,31
+indication|1704,indication,Cefixime,acute gonococcal cervicitis,gonorrhea,0,1,1,10,20,20
+indication|1708,indication,Fluorouracil,malignant colon neoplasm,colorectal cancer,1,1,1,4,22,50
+indication|1720,indication,Gemifloxacin,streptococcal pneumonia,pneumonia,0,1,1,8,23,25
+contraindication|65,contraindication,Modafinil,psychotic disorder,mental disorder,1,1,1,3,17,39
+contraindication|72,contraindication,Metoclopramide,cirrhosis of liver,liver disease,1,1,1,22,58,74
+contraindication|80,contraindication,Ceftazidime,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|82,contraindication,Cobalamin,potassium deficiency disease,nutritional disorder,1,1,1,5,19,31
+contraindication|105,contraindication,Lomustine,postinflammatory pulmonary fibrosis,pulmonary fibrosis,1,1,1,5,5,5
+contraindication|155,contraindication,Benzylpenicillin,perinatal necrotizing enterocolitis,necrotizing enterocolitis,1,1,1,1,1,1
+contraindication|175,contraindication,Ethinylestradiol,obstructive jaundice,cholestasis,1,1,1,4,6,6
+contraindication|191,contraindication,Telithromycin,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|193,contraindication,Dicyclomine,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|198,contraindication,Enalapril,non-histaminic angioedema,angioedema,1,1,1,1,1,1
+contraindication|239,contraindication,Cyclizine,benign prostatic hyperplasia (disease),hyperplasia,1,1,1,11,13,13
+contraindication|240,contraindication,Griseofulvin,inherited porphyria,porphyria,1,1,1,1,5,5
+contraindication|253,contraindication,Minocycline,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|266,contraindication,Cefoxitin,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|272,contraindication,Triamterene,hepatic coma,hepatic encephalopathy,1,1,1,1,1,1
+contraindication|334,contraindication,Vancomycin,agranulocytosis,leukopenia,1,1,1,2,4,8
+contraindication|350,contraindication,Primidone,autosomal dominant aplasia and myelodysplasia,aplastic anemia,0,1,1,4,10,15
+contraindication|356,contraindication,Methyltestosterone,female breast carcinoma,breast cancer,0,1,1,5,25,67
+contraindication|379,contraindication,Loteprednol etabonate,herpes simplex virus keratitis,keratitis,0,1,1,8,21,23
+contraindication|474,contraindication,Asenapine,constitutional neutropenia,neutropenia,0,1,1,2,6,12
+contraindication|488,contraindication,Indomethacin,duodenal ulcer (disease),ulcer disease,0,1,1,3,15,16
+contraindication|494,contraindication,Tenofovir,hepatitis C virus infection,hepatitis,0,1,1,8,13,15
+contraindication|544,contraindication,Sumatriptan,Prinzmetal angina,coronary artery disease,0,1,1,7,11,11
+contraindication|586,contraindication,Cefoxitin,colitis (disease),inflammatory bowel disease,1,1,1,7,17,25
+contraindication|598,contraindication,Doxepin,sleep apnea syndrome,sleep disorder,0,1,1,2,14,24
+contraindication|650,contraindication,Lindane,atopic eczema,dermatitis,1,1,1,29,78,105
+contraindication|681,contraindication,Amikacin,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|701,contraindication,Methimazole,adult idiopathic neutropenia,neutropenia,0,1,1,2,6,12
+contraindication|722,contraindication,Albendazole,idiopathic aplastic anemia,aplastic anemia,1,1,1,4,10,15
+contraindication|743,contraindication,Ciprofloxacin,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|751,contraindication,Kanamycin,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|768,contraindication,Demeclocycline,neurohypophyseal diabetes insipidus,diabetes insipidus,1,1,1,4,6,6
+contraindication|826,contraindication,Testosterone enanthate,female breast carcinoma,breast cancer,0,1,1,5,25,67
+contraindication|845,contraindication,Trimethoprim,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|900,contraindication,Benzoyl peroxide,exfoliative dermatitis,dermatitis,1,1,1,29,78,105
+contraindication|933,contraindication,Imipramine,paralytic ileus (disease),ileus,1,1,1,2,4,4
+contraindication|943,contraindication,Clonazepam,sleep apnea syndrome,sleep disorder,0,1,1,2,14,24
+contraindication|986,contraindication,Lithium carbonate,neurohypophyseal diabetes insipidus,diabetes insipidus,1,1,1,4,6,6
+contraindication|991,contraindication,Sulfamethizole,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|993,contraindication,Diazoxide,congestive heart failure,heart failure,1,1,1,4,11,13
+contraindication|1001,contraindication,Methotrexate,postinflammatory pulmonary fibrosis,interstitial lung disease,0,1,1,9,38,45
+contraindication|1046,contraindication,Danazol,female breast carcinoma,breast cancer,0,1,1,5,25,67
+contraindication|1071,contraindication,Meropenem,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|1079,contraindication,Pyridostigmine,intrinsic asthma,asthma,1,1,1,6,7,7
+contraindication|1152,contraindication,Ceftibuten,colitis (disease),gastroenteritis,1,1,1,9,25,38
+contraindication|1162,contraindication,Pantoprazole,postmenopausal osteoporosis,osteoporosis,1,1,1,5,6,7
+contraindication|1196,contraindication,Fenofibric acid,choledocholithiasis,gallstones,1,1,1,1,1,1
+contraindication|1200,contraindication,Clindamycin,atopic eczema,dermatitis,1,1,1,29,78,105
+contraindication|1210,contraindication,Cephalexin,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|1228,contraindication,Dexlansoprazole,postmenopausal osteoporosis,osteoporosis,1,1,1,5,6,7
+contraindication|1256,contraindication,Carbamazepine,adult idiopathic neutropenia,agranulocytosis,0,1,1,2,6,14
+contraindication|1285,contraindication,Tolvaptan,cirrhosis of liver,liver disease,1,1,1,22,58,74
+contraindication|1291,contraindication,Rimexolone,herpes simplex virus keratitis,viral eye infection,1,1,1,4,8,8
+contraindication|1341,contraindication,Ertapenem,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|1369,contraindication,Bupropion,schizophreniform disorder,cognitive disorder,0,1,1,5,23,34
+contraindication|1385,contraindication,Donepezil,allergic asthma,asthma,1,1,1,6,7,7
+contraindication|1504,contraindication,Torasemide,cirrhosis of liver,liver disease,1,1,1,22,58,74
+contraindication|1527,contraindication,Pyridostigmine,allergic asthma,asthma,1,1,1,6,7,7
+contraindication|1557,contraindication,Moxifloxacin,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|1584,contraindication,Amikacin,adult-onset myasthenia gravis,myasthenia gravis,1,1,1,3,3,3
+contraindication|1619,contraindication,Vorapaxar,transient ischemic attack (disease),ischemic stroke,1,1,1,5,11,11
+contraindication|1642,contraindication,Calcitriol,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|1645,contraindication,Donepezil,intrinsic asthma,asthma,1,1,1,6,7,7
+contraindication|1646,contraindication,Olanzapine,constitutional neutropenia,neutropenia,1,1,1,4,12,12
+contraindication|1657,contraindication,Bupropion,psychotic disorder,cognitive disorder,1,1,1,5,23,34
+contraindication|1664,contraindication,Guanfacine,neurotic disorder,anxiety disorder,1,1,1,5,10,13
+contraindication|1707,contraindication,Aztreonam,pyoureter,urinary tract infection,1,1,1,5,16,23
+contraindication|1708,contraindication,Methylprednisolone,herpes simplex virus keratitis,keratitis,0,1,1,8,21,23

@@ -1,0 +1,63 @@
+chance = 20.00%   files = 1
+
+========================================================================
+contraindication   n = 600
+
+  accuracy by tier
+    tier 0 exact name          30.30% [17.38-47.34]  n=    33   chance-corrected +10.30
+    tier 2 +common name        42.86% [15.82-74.95]  n=     7   chance-corrected +22.86
+    tier 3 ancestor only       18.75% [ 6.59-43.01]  n=    16   chance-corrected  -1.25
+    tier 4 not named at all    23.35% [19.99-27.08]  n=   544   chance-corrected  +3.35
+
+  too few edges to compare: tier 3 has 16, tiers 0-2 have 40, and 25 of each is the floor
+
+========================================================================
+indication   n = 600
+
+  accuracy by tier
+    tier 0 exact name          86.17% [77.76-91.74]  n=    94   chance-corrected +66.17
+    tier 2 +common name        57.14% [25.05-84.18]  n=     7   chance-corrected +37.14
+    tier 3 ancestor only       44.68% [35.04-54.74]  n=    94   chance-corrected +24.68
+    tier 4 not named at all    43.95% [39.20-48.82]  n=   405   chance-corrected +23.95
+
+  tier 3 against tiers 0-2   (the claim predicts a large gap)
+     44.68%  vs   84.16%     -39.48 points  [-51.80, -27.16]  z=-5.78  p=7.47e-09
+
+  tier 3 against tier 4      (the claim predicts no gap)
+     44.68%  vs   43.95%      +0.73 points  [-10.42, +11.88]  z=+0.13  p=0.898
+    a null with an interval 22.3 points wide, which is too loose to bound anything;
+    this group is underpowered rather than flat
+
+========================================================================
+off-label use   n = 600
+
+  accuracy by tier
+    tier 0 exact name          59.32% [46.59-70.91]  n=    59   chance-corrected +39.32
+    tier 2 +common name        25.00% [ 4.56-69.94]  n=     4   chance-corrected  +5.00
+    tier 3 ancestor only       37.50% [27.22-49.05]  n=    72   chance-corrected +17.50
+    tier 4 not named at all    31.61% [27.55-35.98]  n=   465   chance-corrected +11.61
+
+  tier 3 against tiers 0-2   (the claim predicts a large gap)
+     37.50%  vs   57.14%     -19.64 points  [-36.21,  -3.08]  z=-2.28  p=0.0225
+
+  tier 3 against tier 4      (the claim predicts no gap)
+     37.50%  vs   31.61%      +5.89 points  [ -6.07, +17.84]  z=+0.99  p=0.321
+    a null with an interval 23.9 points wide, which is too loose to bound anything;
+    this group is underpowered rather than flat
+
+========================================================================
+POOLED, RELATION AS STRATUM
+
+  tier 3 against tiers 0-2
+    odds ratio 0.273  [0.174, 0.428]   chi2=33.00  p=9.22e-09  strata=3
+    the interval sits below 1, so tier 3 differs from tiers 0-2
+
+  tier 3 against tier 4
+    odds ratio 1.104  [0.796, 1.532]   chi2=0.26  p=0.612  strata=3
+    the interval covers 1, so tier 3 is indistinguishable from tier 4 here
+
+The split that the four-box table uses holds when tier 3 differs
+from tiers 0-2 and does not differ from tier 4. Both halves have
+to be reported; the second is the one a reviewer will check.
+
+wrote <repo>/results/tier_cliff_Qwen2.5-7B-Instruct.csv
