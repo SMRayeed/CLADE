@@ -468,12 +468,4 @@ All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_glo
 | 📄 `paper/` | The paper and supplement: LaTeX sources and PDFs |
 | 🖼️ `docs/figures/` | Figures for this page |
 
-## 📝 Cite
-
-```bibtex
-@inproceedings{rayeed2027clade,
-  title     = {{CLADE}: {C}ategory-{L}evel {A}nswering from {D}eficient {E}vidence in {R}etrieval-{A}ugmented {L}anguage {M}odels},
-  author    = {Rayeed, S M and Stewart, Charles and Ma, Yao},
-  year      = {2027}
-}
-```
+---
