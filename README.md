@@ -465,7 +465,6 @@ All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_glo
 | 🗄️ `derived_data/` | PrimeKG and GloBI files the analysis reads |
 | 📊 `results/`, `results/globi/` | Every number, log and per-question answer |
 | 🧪 `tests/`, `tools/` | Fake-data tests and the result checker |
-| 📄 `paper/` | The paper and supplement: LaTeX sources and PDFs |
 | 🖼️ `docs/figures/` | Figures for this page |
 
 ---
