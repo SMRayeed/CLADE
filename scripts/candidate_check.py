@@ -62,7 +62,7 @@ it.
         --recover-csv recover_Qwen2.5-7B-Instruct_clean.csv
 
     # then on a login node: fetch candidate pages and PubMed counts
-    python3 candidate_check.py ... --fetch --pubmed --contact you@rpi.edu
+    python3 candidate_check.py ... --fetch --pubmed --contact you@example.org
 
 Everything fetched is cached, so a rerun is free and an interrupted fetch
 resumes. Needs name_tiers.py, router.py, recover.py and second_corpus.py

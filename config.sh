@@ -1,8 +1,8 @@
 # Settings for run_all.sh. Every value can also be set in the environment,
-# e.g.  ACCOUNT=PAS2136 bash run_all.sh
+# e.g.  ACCOUNT=PAS0000 bash run_all.sh
 
 # ---------------------------------------------------------------- SLURM
-ACCOUNT="${ACCOUNT:-PAS2136}"
+ACCOUNT="${ACCOUNT:-PAS0000}"
 PARTITION="${PARTITION:-cpu}"
 CPUS="${CPUS:-12}"
 MEM_PER_CPU="${MEM_PER_CPU:-12G}"
