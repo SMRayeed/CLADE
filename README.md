@@ -283,6 +283,7 @@ On GloBI, precision on family-only pages is 22–28%. Chance is 20%. So these an
 | 🔁 End to end recovery | 10.0% (Wikipedia) · 1.5% (Wikipedia + PubMed) |
 
 **What it means:** the list is almost always right. The hard parts are finding the family and choosing within it.
+Some misses are not really misses. For carboplatin, the pick is ovarian carcinoma, a better-studied family member than the graph's germ cell tumor. Moxifloxacin for Legionnaires' disease is true, but the graph does not list it.
 
 ### 6️⃣ A first fix: let the model choose the family
 
@@ -310,7 +311,6 @@ We ask 120 questions (40 per page type) with no options, and score the written a
 | Granite 3.1 8B | 0% | 45.0% | −10.0 |
 
 **What it means:** without options, models do not guess a sibling. They give the coarse family ("acute myeloid leukemia") as if it were the answer. The abstention drop points the same way in all three models, but 40 questions per group is too few for any single model to be significant.
-Some misses are not really misses. For carboplatin, the pick is ovarian carcinoma, a better-studied family member than the graph's germ cell tumor. Moxifloxacin for Legionnaires' disease is true, but the graph does not list it.
 
 ---
 
