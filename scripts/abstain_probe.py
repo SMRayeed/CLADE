@@ -212,6 +212,149 @@ class LetterScorer:
         return out
 
 
+class TextGenerator(LetterScorer):
+    """Greedy free-text answers, batched with left padding."""
+
+    def generate(self, prompts, max_new_tokens=32):
+        torch = self.torch
+        self.tok.padding_side = "left"
+        out = []
+        with torch.no_grad():
+            for b in range(0, len(prompts), self.bs):
+                chunk = [self.render(p) for p in prompts[b:b + self.bs]]
+                enc = self.tok(chunk, return_tensors="pt", padding=True,
+                               add_special_tokens=False).to(self.device)
+                gen = self.model.generate(input_ids=enc["input_ids"],
+                                          attention_mask=enc["attention_mask"],
+                                          max_new_tokens=max_new_tokens,
+                                          do_sample=False,
+                                          pad_token_id=self.tok.pad_token_id)
+                for row in gen[:, enc["input_ids"].shape[1]:]:
+                    out.append(self.tok.decode(row, skip_special_tokens=True).strip())
+        return out
+
+
+FREE_ASK = ("Answer with the name of one disease only. If the passage does "
+            "not tell you which one, answer \"" + NOTA + "\".")
+DECLINE_RE = re.compile(
+    r"not enough information|cannot (?:be )?(?:determine|determined|tell|say)|"
+    r"can't (?:tell|say|determine)|unable to (?:determine|tell)|"
+    r"does not (?:say|specify|state|mention|tell)|not (?:specified|stated|mentioned)|"
+    r"\bunknown\b|\bunclear\b", re.I)
+
+
+def score_free(answer, it):
+    """correct / decline / sibling / family / other, in that order."""
+    if any(nt.mentions(answer, x) for x in it["names"] or [it["tgt"]]):
+        return "correct"
+    if DECLINE_RE.search(answer):
+        return "decline"
+    sibs = [o for o in it["opts"] if o not in (it["tgt"], NOTA)]
+    if any(nt.mentions(answer, x) for x in sibs if len(x) >= 4):
+        return "sibling"          # a wrong member of the family
+    if any(nt.mentions(answer, x) for x in it["fam"]):
+        return "family"           # answers with the category itself
+    return "other"
+
+
+def freetext(a, items, conds):
+    """The abstention test without options. A model that has to write the
+    answer cannot pick a family member by elimination, so this checks that
+    the multiple-choice result is not an artifact of the option list."""
+    rng = random.Random(a.seed)
+    full = [it for it in items if it["n_sibling"] >= a.options - 1]
+    sel = []
+    for band, _lo, _hi in BANDS:
+        pool_ = sorted((it for it in full if it["band"] == band), key=lambda x: x["id"])
+        rng.shuffle(pool_)
+        sel += pool_[:a.freetext]
+    print(f"\nFREE TEXT   {len(sel):,} questions "
+          f"({a.freetext} per group, all-neighbor only)")
+
+    def prompt(it, c):
+        q = question_for(it["rel"], it["src"])
+        body = f"Question: {q}\n{FREE_ASK}"
+        return f"Passage:\n{it['passage']}\n\n{body}" if c == "passage" else body
+
+    cache = (a.out + ".cache.jsonl") if a.out else ""
+    done = {}
+    if cache and os.path.exists(cache):
+        with open(cache, encoding="utf-8") as fh:
+            for line in fh:
+                try:
+                    k_, v_ = json.loads(line)
+                    done[k_] = v_
+                except (ValueError, TypeError):
+                    continue
+
+    def key(it, c):
+        h = hashlib.sha1(prompt(it, c).encode("utf-8")).hexdigest()[:12]
+        return f"{it['id']}||{c}||free||{h}"
+
+    todo = [(it, c) for it in sel for c in conds if key(it, c) not in done]
+    if todo:
+        gen = TextGenerator(a.model, a.threads, a.batch_size, a.gpu, a.dtype)
+        fh = open(cache, "a", encoding="utf-8") if cache else None
+        t0 = time.time()
+        for b in range(0, len(todo), 8):
+            chunk = todo[b:b + 8]
+            ans = gen.generate([prompt(it, c) for it, c in chunk], a.max_new_tokens)
+            for (it, c), x in zip(chunk, ans):
+                done[key(it, c)] = x
+                if fh:
+                    fh.write(json.dumps([key(it, c), x]) + "\n")
+            if fh:
+                fh.flush()
+            n_ = b + len(chunk)
+            print(f"    {n_:,}/{len(todo):,}, about "
+                  f"{(len(todo) - n_) / max(1e-9, n_ / (time.time() - t0)) / 60:.0f}"
+                  f" min left", file=sys.stderr, flush=True)
+        if fh:
+            fh.close()
+
+    res = []
+    for it in sel:
+        for c in conds:
+            x = done.get(key(it, c))
+            if x is None:
+                continue
+            res.append({"id": it["id"], "relation": it["rel"], "group": it["band"],
+                        "source": it["src"], "target": it["tgt"], "condition": c,
+                        "answer": x, "outcome": score_free(x, it)})
+    outs = ("correct", "decline", "family", "sibling", "other")
+    print("    condition group       n   " + "  ".join(f"{o:>8}" for o in outs))
+    for c in conds:
+        for band, _lo, _hi in BANDS:
+            r_ = [r for r in res if r["condition"] == c and r["group"] == band]
+            if r_:
+                print(f"    {c:<9} {band:<9} {len(r_):>4}   " + "  ".join(
+                    f"{100 * sum(r['outcome'] == o for r in r_) / len(r_):7.1f}%"
+                    for o in outs))
+    if "passage" in conds and "closed" in conds:
+        idx = defaultdict(dict)
+        for r in res:
+            idx[r["id"]][r["condition"]] = r["outcome"]
+        d = {"category": [], "silent": []}
+        for i_, v in idx.items():
+            g = i_.split("|")[1]
+            if g in d and len(v) == 2:
+                d[g].append((v["passage"] == "decline") - (v["closed"] == "decline"))
+        if d["category"] and d["silent"]:
+            ma = sum(d["category"]) / len(d["category"])
+            mb = sum(d["silent"]) / len(d["silent"])
+            b_ = sorted(sum(rng.choice(d["category"]) for _ in d["category"]) / len(d["category"])
+                        - sum(rng.choice(d["silent"]) for _ in d["silent"]) / len(d["silent"])
+                        for _ in range(5000))
+            print(f"\n    decline effect, family-only minus silent: "
+                  f"{100 * (ma - mb):+.1f} points [{100 * b_[125]:+.1f}, {100 * b_[4874]:+.1f}]")
+    if a.out and res:
+        with open(a.out, "w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(res[0].keys()))
+            w.writeheader()
+            w.writerows(res)
+        print(f"\nwrote {a.out}: {len(res):,} rows (answers kept for checking by hand)")
+
+
 # ------------------------------------------------------------------ the data
 
 _BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
@@ -271,6 +414,12 @@ def main():
     ap.add_argument("--raw-passage", action="store_true",
                     help="give the model Wikipedia source markup instead of "
                          "cleaned prose (the earlier behaviour)")
+    ap.add_argument("--freetext", type=int, default=0,
+                    help="free-text check: ask N questions per group with no "
+                         "options, generate an answer, and score it by matching "
+                         "names (only questions whose four wrong options are "
+                         "all neighbors)")
+    ap.add_argument("--max-new-tokens", type=int, default=32)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--out", default="")
     a = ap.parse_args()
@@ -464,6 +613,7 @@ def main():
             "n_sibling": n_sib,
             "passage": passage,
             "names": sorted({x for x in sets[2] if len(x) >= 4}, key=len, reverse=True),
+            "fam": sorted({x for x in fam if len(x) >= 4}, key=len, reverse=True),
         })
     if a.limit:
         items = items[:a.limit]
@@ -557,6 +707,9 @@ def main():
                 print(f"  {LETTERS[i]}. {o}{mark}")
         print("\nDry run, so no model was loaded.")
         return
+
+    if a.freetext:
+        return freetext(a, items, conds)
 
     # ------------------------------------------------------------ score
     cache = (a.out + ".cache.jsonl") if a.out else ""

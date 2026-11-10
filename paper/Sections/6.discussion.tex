@@ -1,0 +1,58 @@
+% \section{Discussion}
+
+% \paragraph{Where the neural reader should hand over.}
+% The results give a precise handover point. Under resolvable insufficiency, a
+% model reading a family-only page shows \clade{}: it treats the page as license
+% to answer, with markedly lower precision than on named
+% facts. A symbolic structure can turn the same family name into a short
+% list that almost always contains the answer, but only if the right family is
+% identified. A neuro-symbolic system should therefore do three things the
+% models do not: recognize that a page names a family rather than the answer,
+% identify which family belongs to the question, and choose within it with a
+% baseline that is at least as strong as popularity.
+
+% \paragraph{A procedure that follows from the results.}
+% The findings suggest a simple decision procedure for a retrieval-augmented
+% system facing a page about the question's subject.
+% \begin{enumerate}
+% \item Check whether the page names the answer type at the required level.
+% If it does, answer from the page.
+% \item If the page names only categories, identify which category belongs to
+% the question. If none can be identified, decline.
+% \item List the category's members from the ontology and score them with
+% evidence and with a popularity prior; answer only if a candidate clearly
+% leads, and otherwise return the short list or decline.
+% \end{enumerate}
+% The models we tested skip the first two checks, which is \clade{}: a relevant
+% page is treated as permission to answer, and neither confidence nor an instruction recovers
+% step 1. Step 2 is the weakest link in our measurements and the
+% most promising target for a learned component. For step 3, any system should
+% report a popularity prior: in our data it beats the model, literature counts
+% and a standard RAG baseline.
+
+% \paragraph{Partial evidence has a type.}
+% Sufficient-context methods ask whether a page settles the answer. Our results
+% argue for also asking how it fails to. A page that names the family fails
+% differently from one that is silent or misleading: it carries usable
+% information, it weakens abstention, and it offers a symbolic route to
+% narrowing the answer. Labeling
+% this case separately would let systems route it to an ontology rather than
+% either answering or declining.
+
+
+\section{Discussion}
+
+\paragraph{Pinpointing where neural readers should hand off to symbolic tools.}
+Our findings identify a clear boundary between what a neural language model should handle directly and what it should hand off to a symbolic knowledge base. When a retrieved passage states only a coarse category (\emph{resolvable insufficiency}), language models exhibit \clade{}: they treat the relevant category mention as sufficient license to guess a specific answer, causing precision to drop from 84\%--95\% down to 45\%--59\% in medicine and 22\%--28\% in ecology. Conversely, a domain ontology can turn that exact same coarse category into a compact candidate list (median 14 items) that contains the true answer 98.5\% of the time—provided the system knows which category mention in the passage corresponds to the question.
+
+\paragraph{A practical three-step workflow for RAG systems.}
+These results point to a concrete three-step workflow for retrieval-augmented systems:
+\begin{enumerate}
+\item \textbf{Granularity check:} Determine whether the retrieved passage states an entity at the level of specificity required by the question. If it does, answer directly from the passage.
+\item \textbf{Target-category extraction:} If the passage states only coarse categories, identify which specific category mention is the object of the queried relation (filtering out incidental disease mentions on the page). If no single category can be tied to the question, abstain.
+\item \textbf{Ontology expansion and prior-aware selection:} Expand the identified category into its ontology children and score them using both specific evidence and an explicit popularity prior. Output a single answer only when one candidate clearly leads; otherwise, return the narrowed candidate list to the user or abstain.
+\end{enumerate}
+Current language models skip the first two steps entirely, and neither confidence filtering nor prompt instructions restore Step~1. Step~2—isolating the relationally relevant category from a multi-topic passage—is the primary empirical bottleneck in our experiments and represents the highest-value target for a dedicated learned extractor. For Step~3, our results show that any candidate-ranking module should benchmark against a simple entity-popularity prior, which outperforms zero-shot model scoring and raw literature co-mentions.
+
+\paragraph{Moving beyond binary context sufficiency.}
+Recent RAG evaluation frameworks ask whether a retrieved passage is sufficient or insufficient to answer a query \citep{joren2025sufficient}. Our results show that \emph{how} a passage fails to be sufficient matters just as much. A passage that mentions the right coarse family behaves completely differently from a passage that is silent or misleading: it contains genuine signal, it systematically breaks model abstention, and it provides an entry point into a symbolic hierarchy. Treating coarse evidence as its own category allows RAG systems to route partial evidence to structured ontologies instead of guessing blindly or throwing the passage away.

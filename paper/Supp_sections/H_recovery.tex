@@ -1,0 +1,116 @@
+\section{Ontology Recovery}
+\label{app:recovery}
+
+Recovery asks whether the ontology can turn a family name back into the exact answer. It has three steps: build a list of candidates, choose one, and compare with baselines that do not use the ontology.
+
+\paragraph{Facts.}
+We use all 410 PrimeKG indications and contraindications whose combined Wikipedia and PubMed text names only a MONDO family that expands to at least two diseases. A drug often has several true diseases in the same family (2.47 per list on average). We therefore count a pick as correct if it matches any disease the drug has under that relation. \Cref{tab:scoring} also gives the strict score, which accepts only the one sampled answer.
+
+\subsection{Building the List}
+
+\paragraph{Given family.}
+This list assumes we already know which family on the page belongs to the question. We start at the true disease and climb up to two levels in MONDO. Among these ancestors, we keep the ones the drug's text names. For each, we collect its descendants up to two levels down. We keep the ancestor with the smallest list, sort the list, and cap it at 64 diseases. This is an oracle: it uses the true disease to pick the family. It tells us how good the list can be at best.
+
+\paragraph{Page built.}
+This list uses only the page, as a real system would. We take all 3,182 MONDO families with two or more children as candidate family names. We index every run of up to eight words on the drug's cleaned Wikipedia page, adding singular forms of words that end in \emph{s}. Every family whose name appears in this index is a match. We drop any matched family whose own two-level list exceeds 64 diseases, and join the lists of the rest. If the joined list still exceeds 64, we mark the page as \emph{too broad}. In short:
+\begin{quote}
+\footnotesize\ttfamily
+fams = [f for f in families if name(f) in page]\\
+fams = [f for f in fams if |list(f)| <= 64]\\
+cands = union(list(f) for f in fams)\\
+if |cands| > 64: too broad
+\end{quote}
+
+\paragraph{Why page-built lists fail.}
+A drug article names many disease families that are not the answer's: other uses, side effects, warnings and conditions that often occur together. The median Wikipedia page matches five families; with PubMed it matches 17. Their union is usually too large (\cref{tab:pagebuilt}). The family that holds the answer is on the page, but the matcher cannot tell it apart from the others.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & Wikipedia & + PubMed \\
+\midrule
+Matched families per page (median) & 5 & 17 \\
+Usable lists (of 410) & 166 & 19 \\
+Lists over the 64 cap & 209 & 391 \\
+Usable list holds sampled answer & 19.8\% & 3.7\% \\
+Usable list holds any true answer & 24.6\% & 4.1\% \\
+Median usable list size & 32 & 59 \\
+End-to-end recovery (evidence pick) & 10.0\% & 1.5\% \\
+\bottomrule
+\end{tabular}
+\caption{Page-built lists from Wikipedia alone and from Wikipedia plus PubMed, over all 410 family-only facts. The remaining unusable lists match no family with two or more children.}
+\label{tab:pagebuilt}
+\end{table}
+
+\subsection{Choosing One Candidate}
+
+\paragraph{Model scores.}
+Qwen2.5-7B scores each candidate by its mean log-probability as the completion of a relation stem, such as ``\emph{X is a drug used to treat the disease called}''. In the \emph{model alone} condition the prompt has only the stem; in the \emph{model with page} condition the page comes first. The highest score is the pick.
+
+\paragraph{Evidence scores.}
+We use two outside sources. The \emph{Wikipedia reverse lookup} checks whether the candidate disease's own article names the drug (a \emph{mention}), and whether a relation keyword appears within 250 characters of that mention (a \emph{cue}). Indication keywords are \emph{treat}, \emph{therap}, \emph{indicated} and \emph{first-line}; contraindication keywords are \emph{contraindicat}, \emph{avoid}, \emph{must not}, \emph{caution}, \emph{worsen} and \emph{adverse}. The \emph{PubMed co-mention} count is the number of records that name both the drug and the candidate with a relation qualifier:
+\begin{quote}
+\footnotesize\ttfamily
+"<drug>"[tiab] AND "<cand>"[tiab] AND <q>
+\end{quote}
+where the indication qualifier \texttt{<q>} is \texttt{(treat*[tiab] OR therap*[tiab] OR efficac*[tiab])} and the contraindication qualifier is \texttt{(contraindicat*[tiab] OR adverse[tiab] OR toxicit*[tiab] OR "side effect"[tiab] OR "side effects"[tiab] OR induced[tiab])}. We strip parenthetical parts such as ``(disease)'' from MONDO labels before we query. The combined evidence score of candidate $c$ is
+\begin{equation}
+E(c)=2\cdot\mathbf{1}[\text{cue}]+\mathbf{1}[\text{mention}]+\log\bigl(1+\text{co-mentions}\bigr).
+\end{equation}
+A signal makes a pick only when one candidate has the strictly highest score; otherwise it records a tie or no signal. The \emph{evidence, then model} chooser uses $E$ when it makes a pick and falls back to the model otherwise.
+
+\paragraph{Popularity prior.}
+The popularity prior ignores the drug. It counts all PubMed records that name the candidate (\texttt{"<cand>"[tiab]}) and picks the candidate with the most. The \emph{normalized} co-mention signal divides each co-mention count by this total, which removes the popularity part.
+
+\paragraph{What each signal does.}
+\Cref{tab:signals} shows how often each signal makes a pick and how accurate those picks are. The Wikipedia lookup is accurate when it fires (50.0\%), but it fires for only 82 facts, because a disease article rarely names a specific drug. PubMed co-mentions fire often, but they are only as accurate as the popularity prior. Once we divide out popularity, accuracy falls from 35.9\% to 25.4\%. Most of the signal in co-mentions is therefore how much a disease is studied, not its link to the drug.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Signal & Picks & Ties & None & Acc./pick & Acc./all \\
+\midrule
+Wikipedia lookup & 82 & 80 & 248 & 50.0 & 10.0 \\
+PubMed co-mention & 324 & 12 & 74 & 45.4 & 35.9 \\
+Combined evidence & 327 & 14 & 69 & 44.6 & 35.6 \\
+Popularity prior & 409 & 0 & 1 & 46.9 & 46.8 \\
+Normalized PubMed & 336 & 0 & 74 & 31.0 & 25.4 \\
+\bottomrule
+\end{tabular}
+\caption{Signals inside the given-family list (410 facts, \num{8448} candidates). Accuracy (\%) counts a pick as correct if it matches any true disease of the drug.}
+\label{tab:signals}
+\end{table}
+
+\subsection{Baselines Without the Ontology}
+
+To see what the ontology adds, we replace the family list with a list of the same length that holds the sampled answer and random diseases from the same relation (never another true partner of the drug). The model scores this \emph{random list} with or without the page. \Cref{tab:scoring} compares the conditions. Under the strict score, the random list looks easier, because its wrong candidates are unrelated diseases that the model can rule out. Under the any-true-answer score, the family list catches the drug's other true diseases, and the model does about as well on it as on the random list. The family list is valuable because it is short and complete (98.5\% coverage), not because it makes the model's choice easier.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Condition & Sampled & Any true \\
+\midrule
+Model, given-family list & 18.3 & 35.9 \\
+Model + page, given-family list & 17.8 & 32.4 \\
+Model, random list & 30.5 & 34.9 \\
+Model + page, random list & 29.0 & 32.7 \\
+\bottomrule
+\end{tabular}
+\caption{Qwen2.5-7B recovery accuracy (\%) on the 410 family-only facts, scoring only the sampled answer (Sampled) or any true answer of the drug (Any true).}
+\label{tab:scoring}
+\end{table}
+
+\subsection{Examples}
+
+\Cref{tab:examples} shows evidence picks within the given-family list. When the pick misses the PrimeKG answer, it usually takes a better-studied member of the same family (\emph{ovarian carcinoma} for carboplatin) or a true use that PrimeKG does not list (\emph{Legionnaires' disease} for moxifloxacin, which is used against this pneumonia). Strict scoring against the graph counts both as wrong, so it understates how often the pick is clinically sound.
+
+\input{tables/tab_examples}

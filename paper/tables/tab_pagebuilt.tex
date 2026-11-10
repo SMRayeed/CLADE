@@ -1,0 +1,20 @@
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcc}
+\toprule
+Metric & Wikipedia Only & Wikipedia + PubMed \\
+\midrule
+Matched categories per page (median) & 5 & 17 \\
+Usable candidate lists (out of 410) & 166 & 19 \\
+Lists exceeding 64-candidate cap & 209 & 391 \\
+Usable list contains sampled answer & 19.8\% & 3.7\% \\
+Usable list contains any true answer & 24.6\% & 4.1\% \\
+Median usable list size & 32 & 59 \\
+End-to-end recovery (evidence pick) & 10.0\% & 1.5\% \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of automated page-built candidate lists extracted from Wikipedia alone versus Wikipedia plus PubMed abstracts across all 410 family-only facts.}
+\label{tab:pagebuilt}
+\end{table}

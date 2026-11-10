@@ -1,0 +1,9 @@
+# Lets main_supp.tex refer to tables and figures of main.tex (xr package).
+# Overleaf runs latexmk with this file; it builds main.tex first when its
+# .aux file is needed.
+add_cus_dep('tex', 'aux', 0, 'makeexternaldocument');
+sub makeexternaldocument {
+    if (!($root_filename eq $_[0])) {
+        system("latexmk -cd -pdf \"$_[0]\"");
+    }
+}

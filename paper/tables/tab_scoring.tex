@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcc}
+\toprule
+Scoring Condition & Exact Sampled Answer & Any True Answer \\
+\midrule
+Model on given-family list & 18.3 & 35.9 \\
+Model on given-family + passage & 17.8 & 32.4 \\
+Model on random list & 30.5 & 34.9 \\
+Model on random list + passage & 29.0 & 32.7 \\
+\bottomrule
+\end{tabular}
+\caption{Qwen2.5 7B recovery accuracy (\%) across the 410 family-only facts under strict single-target scoring versus any-true-partner scoring.}
+\label{tab:scoring}
+\end{table}

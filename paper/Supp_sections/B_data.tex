@@ -1,0 +1,100 @@
+\section{Data and Page Types}
+\label{app:data}
+
+This appendix explains how we build the two graphs, how we read the text, and how we decide whether a page names the answer, names only its family, or says nothing.
+
+\subsection{Graphs and Hierarchies}
+
+\paragraph{PrimeKG and MONDO.}
+PrimeKG has \num{8100498} rows. We keep three drug--disease relations: \num{9388} indications, \num{30675} contraindications and \num{2568} off-label uses. Each disease has a MONDO identifier. We rebuild MONDO as a table of child--parent links: \num{17801} links over \num{11788} diseases. A parent with two or more children is a \emph{family}; MONDO has \num{3182} of them. We drop parents with more than 400 descendants, such as \emph{disease} or \emph{disorder}. Naming them on a page tells the reader almost nothing, and they would turn almost every page into a family-only page.
+
+\paragraph{GloBI and its taxonomy.}
+We use the archived GloBI dump (Zenodo record 4460654), which holds \num{7822670} interaction records. We keep four relations: \emph{eats}, \emph{preys on}, \emph{parasite of} and \emph{pollinates}. Together they hold \num{3210597} records. We keep a record only when both sides are species, written as a two-word Latin name (``Genus epithet''). We drop names with ``sp.'', hybrids and numbers, because a question about a genus has no single answer. This leaves \num{457386} species-to-species edges:
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Relation & Edges & Source species \\
+\midrule
+eats & \num{235960} & \num{25637} \\
+parasite of & \num{117894} & \num{31432} \\
+preys on & \num{87678} & \num{5138} \\
+pollinates & \num{15854} & \num{2818} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+GloBI records give a taxonomic path for each taxon (species, genus, family, order, class). We build the hierarchy from these paths. Different records can give a taxon different parents, so we keep the parent seen most often. This makes the table a tree: climbing it never moves sideways. The result has \num{77852} child--parent links, and \num{8370} genera have two or more species. As in MONDO, the median family has three members.
+
+\subsection{Text Sources}
+
+\paragraph{Wikipedia.}
+For each drug, and for each consumer species in GloBI, we fetch the English Wikipedia article through the MediaWiki API. We turn the raw markup into plain prose. We remove comments, reference tags, templates (including infoboxes and citation blocks, with nested braces), tables, and file and category links. We replace each internal link with its visible text and remove bold and italic marks, HTML tags and character entities. We keep section headings as plain lines, so the text reads like the page a person sees. For GloBI we skip stubs shorter than \num{3000} characters.
+
+\paragraph{PubMed.}
+For each drug we retrieve PubMed abstracts through NCBI E-utilities. We split the query budget equally between a treatment query and an adverse-effect or contraindication query, so both relations get the same chance to appear. The drug's full text is its Wikipedia article followed by its abstracts.
+
+\subsection{How a Page Names a Fact}
+
+\paragraph{Three name sets.}
+Each answer has three nested sets of names:
+\begin{itemize}
+\item the \emph{exact name}: its primary MONDO label, or its Latin name in GloBI;
+\item \emph{alternative names}: titles of Wikipedia pages that redirect to the answer's article, which bring in synonyms, lay terms and abbreviations; in GloBI we also add the abbreviated form (\emph{A.~plantaginifolia});
+\item \emph{family names}: the labels of the answer's ancestors up to two levels above it (the MONDO parent and grandparent, or the genus and family).
+\end{itemize}
+
+\paragraph{Page type.}
+Let $T$ be the text, $N(a)$ the exact and alternative names of answer $a$, and $A_2(a)$ its family names. We assign each fact to the finest level the text matches:
+\begin{equation}
+\mathrm{type}(T,a)=
+\begin{cases}
+\text{named} & \text{if } T \text{ matches } N(a),\\
+\text{family-only} & \text{else if } T \text{ matches } A_2(a),\\
+\text{silent} & \text{otherwise.}
+\end{cases}
+\end{equation}
+
+\paragraph{Matching rule.}
+A name matches when it appears on word boundaries, ignoring case, with an optional trailing \emph{s} for simple plurals. A multi-word name matches across any run of white space. We ignore names shorter than four characters, because short acronyms match by accident.
+
+\paragraph{Chance control.}
+A family name is broader than a disease name, so it can match unrelated text more easily. To measure this, we pair each fact with three diseases from the same relation that have no link to the drug, and we run the same matcher on the same text. \Cref{tab:floor} compares the true disease with these unrelated ones on 1,800 PrimeKG facts in Wikipedia. The unrelated diseases match 0.9--1.4\% of the time at the named level and 1.8--3.3\% once family names are added. The true disease matches 6.7--19.3\% and 9.3--34.7\%. Matches therefore follow the fact, not the size of the name set.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{True disease} & \multicolumn{2}{c}{Unrelated diseases} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Relation & named & + family & named & + family \\
+\midrule
+Indication & 19.3 & 34.7 & 1.4 & 2.7 \\
+Contraindication & 6.7 & 9.3 & 0.9 & 1.8 \\
+Off-label use & 11.8 & 23.7 & 0.9 & 3.3 \\
+\bottomrule
+\end{tabular}
+\caption{Share of facts (\%) whose Wikipedia text matches the true disease or one of three unrelated diseases from the same relation (600 facts per relation; \num{1800} unrelated draws each). ``+ family'' also counts family names.}
+\label{tab:floor}
+\end{table}
+
+\subsection{Text Coverage and Closed-Book Knowledge}
+
+\paragraph{The four-box table.}
+\Cref{M-tab:boxes} in the main paper uses 1,800 PrimeKG facts (600 per relation). A fact counts as \emph{text names it} when the drug's Wikipedia article contains the exact or an alternative name. A family-only page counts as \emph{text does not name it}. To test closed-book knowledge, Qwen2.5-0.5B scores the true disease against four random diseases from the same relation. It reads a short stem, such as ``\emph{X is a drug used to treat the disease called}'', and we take the mean log-probability of each disease name after it. The highest score is the model's pick.
+
+\paragraph{Knowledge above chance.}
+On facts the text does not name, the model picks the true disease 25.1\% of the time. With five options, chance is 20\%. We correct for guessing with
+\begin{equation}
+k=\frac{\mathrm{acc}-c}{1-c}=\frac{0.251-0.200}{1-0.200}\approx 6.4\%,
+\end{equation}
+where $c$ is the chance rate. So the model truly knows only about 6\% of these facts; the rest of its correct picks are lucky guesses.
+
+\paragraph{Does a family name mean an easier fact?}
+We test whether facts written at the family level are simply easier. Qwen2.5-7B answers the same 1,800 facts closed book (\cref{tab:closedbook}).
+
+\input{tables/tab_closedbook}
+ Within each relation we build a $2\times2$ table (family-only vs.\ named, or family-only vs.\ silent; correct vs.\ wrong) and pool the three tables with the Mantel--Haenszel odds ratio (\cref{app:stats}). Family-only facts are much harder than named facts ($\mathrm{OR}=0.27$ [0.17, 0.43]) and as hard as silent facts ($\mathrm{OR}=1.10$ [0.80, 1.53]). An exact name in the text goes with 3.7 times higher odds that the model knows the fact; a family name goes with none.

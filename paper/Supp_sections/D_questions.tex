@@ -1,0 +1,106 @@
+\section{Abstention Questions and Full Results}
+\label{app:questions}
+
+This appendix shows how we build each question, how the model sees it, and how we read its answer. It then gives the full results behind \cref{M-tab:outcomes} and \cref{M-fig:forest} of the main paper.
+
+\subsection{Building the Questions}
+
+\paragraph{Sampling.}
+We sort PrimeKG facts into six cells: three page types (named, family-only, silent) times two relations (indication, contraindication). We shuffle each cell with seed 0 and take facts in order until the cell has 150 questions. We skip a fact when the drug has no text, when we cannot draw four wrong options, or when the 1,800-character page no longer shows the matched name or family. Only 106 family-only contraindications pass these checks, so we use all of them. This gives 856 questions.
+
+\paragraph{Question templates.}
+Indication questions ask: \emph{Which disease is X used to treat?} Contraindication questions ask: \emph{In patients with which disease must X not be given?}
+
+\paragraph{Wrong options.}
+Each question has five diseases and the option \emph{Not enough information to tell}, labeled A to F. We place the true disease and the decline option at random letters. We draw the four wrong options in this order:
+\begin{enumerate}
+\item \emph{siblings}: other children of the answer's MONDO parent;
+\item \emph{cousins}: other grandchildren of the answer's grandparent;
+\item \emph{random} diseases from the same relation, only if siblings and cousins run out.
+\end{enumerate}
+We never use an ancestor or descendant of the answer, or any other disease the drug has under the same relation in PrimeKG, since that option would also be correct. Because siblings and cousins share the answer's family, a page that names only the family cannot rule them out. Random diseases, however, can be ruled out by the family name alone, which makes a question easier. \Cref{tab:sib} shows that family-only questions more often have four neighborhood options than the other groups. This is why the main analysis keeps only questions whose four wrong options all come from the neighborhood (106 named, 215 family-only, 160 silent; 481 in all).
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Page type & Relation & $n$ & All-neighbor (\%) \\
+\midrule
+Named & both & 300 & 35.3 \\
+Family-only & contraindication & 106 & 83.0 \\
+Family-only & indication & 150 & 84.7 \\
+Silent & contraindication & 150 & 45.3 \\
+Silent & indication & 150 & 61.3 \\
+\bottomrule
+\end{tabular}
+\caption{Questions per group and the share whose four wrong options are all siblings or cousins of the answer in MONDO.}
+\label{tab:sib}
+\end{table}
+
+\paragraph{Windowed pages.}
+A full drug article is too long for a prompt, so we cut a window around the evidence. The page starts with the first 800 characters of the drug's cleaned text. We then add a 280-character window on each side of every mention of the answer or its family. We merge windows that overlap, join them with ellipses, and stop at 1,800 characters. A silent page has no mentions, so it is just the opening of the article. Every model sees the same page for the same question.
+
+\paragraph{Prompt.}
+Each prompt is one user turn in the model's own chat template. The closed-book prompt is the same without the passage block:
+\begin{quote}
+\footnotesize\ttfamily
+Passage:\\
+<passage>\\[2pt]
+Question: <question>\\
+Options:\\
+A. <option>\\
+\ldots\\
+F. <option>\\
+Answer with the letter of one option only.
+\end{quote}
+
+\paragraph{Reading the answer.}
+We do not generate text. We read the probability of the next token for each letter. For letter $\ell$, let $p(\ell)$ be the larger of the probabilities of ``$\ell$'' and ``\,$\ell$'' (with a leading space). We renormalize over the six letters:
+\begin{equation}
+\pi(\ell)=\frac{p(\ell)}{\sum_{m\in\{A,\dots,F\}}p(m)},
+\end{equation}
+and the model's answer is the letter with the highest $\pi$. Its confidence is that $\pi$. If the answer is \emph{Not enough information to tell}, the question counts as a decline. Precision is the share of correct answers among the questions the model does not decline.
+
+\subsection{Full Results}
+
+\paragraph{Without a page.}
+\Cref{tab:closed_full} gives closed-book outcomes on the 481 matched questions. Family-only questions already draw more wrong answers and fewer declines than silent ones in every 7--8B model. For example, Qwen2.5-7B declines 32.1\% of family-only questions and 59.4\% of silent ones before it reads anything. If we compared pages directly, part of the gap would come from these facts, not from the page. The page effect removes this part.
+
+\input{tables/tab_closed_full}
+
+\paragraph{With a page, all questions.}
+\Cref{tab:all_page} repeats \cref{M-tab:outcomes} on all 856 questions, without the neighborhood filter. The pattern is the same: family-only pages draw far more wrong answers than silent pages, with lower precision. Compared directly with the page, family-only pages give more wrong answers than silent pages by 15.6, 20.3 and 16.5 points for Qwen2.5-7B, OLMo~2 and Granite ($p=3\times10^{-6}$, $5\times10^{-5}$, $6\times10^{-5}$), and fewer declines by 28.4, 26.9 and 31.7 points ($p<10^{-7}$ each).
+
+\input{tables/tab_all_page}
+
+\paragraph{Page effects per model.}
+\Cref{tab:did_full} breaks the page effect into its parts. For each outcome it shows the mean page effect on family-only questions, the same on silent questions, and their difference with its CI and $p$-value. The pooled row is the result in the main paper. OLMo~2 and Granite each show a large drop in declines; Qwen2.5-7B shows none, because it already declines family-only questions much less often closed book (\cref{tab:closed_full}).
+
+\input{tables/tab_did_full}
+
+\paragraph{By relation.}
+\Cref{tab:byrel} splits wrong answers with the page by relation. Family-only pages give more wrong answers than silent pages for both relations in every 7--8B model. For indications, Qwen2.5-7B is wrong on 26.0\% of family-only questions and 2.2\% of silent ones. Models are more careful on contraindications and decline more of them, but the gap stays. Qwen2.5-0.5B rarely declines at all (8--21\% with a page, under 4\% closed book), so its wrong-answer rates are high everywhere.
+
+\input{tables/tab_byrel}
+
+\paragraph{Family size.}
+\Cref{tab:famsize} splits the family-only questions into thirds by the size of the named family. The pooled drop in declines is about 17--18 points for families of up to 20 members and only 6.5 points, not significant, for larger families. A short list looks answerable to the model; a long one does not.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrlr@{}}
+\toprule
+Family size & $n$ & Median & Decline effect [95\% CI] & $p$ \\
+\midrule
+$\le 10$ & 71 & 7 & $-17.3$ [$-26.2$, $-8.2$] & .001 \\
+11--20 & 69 & 16 & $-18.4$ [$-26.6$, $-10.3$] & $<$.001 \\
+$>20$ & 68 & 44 & $-6.5$ [$-15.7$, $+3.0$] & .174 \\
+\bottomrule
+\end{tabular}
+\caption{Decline effect ($\Delta$ for declines, points) by the number of members in the named family, pooled over the three 7--8B models.}
+\label{tab:famsize}
+\end{table}

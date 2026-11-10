@@ -1,0 +1,18 @@
+\section{Discussion}
+
+\paragraph{Hand-off point.}
+Our results mark a clear boundary between the language model and the ontology. On a family-only page, models take the family as license to guess. The ontology turns the same family into a short list that holds the answer, once the system knows which family on the page belongs to the question.
+
+\paragraph{A three-step workflow.}
+This suggests a simple workflow (\cref{fig:concept}). (1)~\textbf{Check the page type}, and answer from the page only if it names the answer. (2)~\textbf{Find the target family} tied to the queried relation; if none fits, abstain. (3)~\textbf{Expand and choose} with evidence and a popularity prior; answer only when one candidate clearly leads, otherwise return the list. Current models skip steps 1 and 2, and neither confidence nor instructions restore step~1. Step~2 is the main bottleneck: string matching finds the right family for 19.8\% of facts, and a model chooser raises this to 30.0\%, against a ceiling of 50.0\%. Any chooser for step~3 should beat the popularity prior.
+
+\paragraph{Beyond sufficiency.}
+Recent work asks whether a page is sufficient \citep{joren2025sufficient}; our results show that \emph{how} it falls short matters. A family-only page differs from a silent one: it carries real signal, it breaks abstention, and it points into a symbolic hierarchy. Treating it as its own case lets a RAG system send partial evidence to an ontology instead of guessing or discarding it.
+
+\section{Limitations}
+
+We study two domains and run recovery only on PrimeKG. We use multiple-choice questions with an explicit decline option, which controls the wrong options and the scoring but may differ from free-text refusals. A free-text check points the same way (Appendix~K): no model gives the exact answer from a family-only page, and 17.5--45.0\% of its answers name the family itself. We test open models up to 14B, and the page edits cover only named facts whose answer has a parent. Page-built lists rely on exact string matching. Family-only contraindications are few (106 questions).
+
+\section{Conclusion}
+
+Retrieved text often states facts at a coarser level than the question asks. We show that this \emph{resolvable insufficiency} triggers \clade{} in medicine and ecology: a family or genus name leads models to stop declining and guess, which roughly halves precision. An ontology can narrow the answer to a short list that holds it 98.5\% of the time once the right family is found, and a model that chooses the family from the page already raises end-to-end recovery from 10.0\% to 26.8\%. Finding the family more reliably and beating a popularity prior remain the key open problems for neuro-symbolic RAG.

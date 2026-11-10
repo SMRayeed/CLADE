@@ -1,0 +1,83 @@
+\section{Worked Examples}
+\label{app:cases}
+
+This appendix follows single questions through the test. Each example shows the page, the question and what each model answers, closed book and with the page. Page excerpts come from English Wikipedia (CC BY-SA 4.0); ``\dots'' marks text we leave out.
+
+\newcommand{\casebox}[1]{\leavevmode\unskip\hspace*{\fill}\par\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{\footnotesize #1}}\par\medskip}
+
+\subsection{PrimeKG}
+
+\paragraph{Moxifloxacin: a confident wrong guess.}
+\casebox{\textbf{Fact:} moxifloxacin treats \emph{Klebsiella pneumonia}.\\
+\textbf{Page type:} family-only. The page says the drug treats \emph{pneumonia}, but not which kind.\\
+\textbf{Question:} Which disease is moxifloxacin used to treat?\\
+\textbf{Options include:} Klebsiella pneumonia, Legionnaires' disease, pneumonia caused by gram negative bacteria, and other bacterial pneumonias; Not enough information to tell.}
+
+Every model answers, and every model is wrong:
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Model & Closed book & With the page (conf.) \\
+\midrule
+Qwen2.5-0.5B & gram-negative pn. & gram-negative pn. (.35) \\
+Qwen2.5-7B & Legionnaires' & Legionnaires' (.88) \\
+OLMo 2 7B & gram-negative pn. & gram-negative pn. (.86) \\
+Granite 3.1 8B & gram-negative pn. & Legionnaires' (.77) \\
+Qwen2.5-14B & Legionnaires' & gram-negative pn. (1.00) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The page tells the models that the answer is a pneumonia, and they pick a pneumonia with high confidence. None of them declines, even though the page cannot say which pneumonia is meant. A confidence threshold would keep most of these answers. Note also that \emph{Legionnaires' disease} is a real use of moxifloxacin that PrimeKG does not list: the graph counts a sound answer as wrong (\cref{app:recovery}).
+
+\paragraph{Lovastatin: the page makes one model worse.}
+\casebox{\textbf{Fact:} lovastatin treats \emph{hyperlipidemia, familial combined, LPL related}.\\
+\textbf{Page type:} family-only. The page says \emph{hyperlipidemia}.\\
+\textbf{Family in MONDO:} hyperlipidemia $\rightarrow$ familial hyperlipidemia $\rightarrow$ \{the answer, hyperlipidemia due to hepatic triglyceride lipase deficiency, familial lipoprotein lipase deficiency, \dots\}.}
+
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Model & Closed book & With the page \\
+\midrule
+Qwen2.5-0.5B & wrong sibling & wrong sibling \\
+Qwen2.5-7B & declines & \textbf{correct} (1.00) \\
+OLMo 2 7B & \textbf{correct} (.95) & wrong sibling (.54) \\
+Granite 3.1 8B & \textbf{correct} (.98) & \textbf{correct} (.86) \\
+Qwen2.5-14B & wrong sibling & wrong sibling (1.00) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Here the family name helps Qwen2.5-7B and hurts OLMo~2. OLMo~2 knows the answer closed book, but with the page it switches to \emph{hyperlipidemia due to hepatic triglyceride lipase deficiency}, a sibling. The page points to the right family, and the model then picks the wrong member. This is \clade{} in its plainest form.
+
+\subsection{GloBI}
+
+\paragraph{Named page: the answer is on the page.}
+\casebox{\textbf{Page} (\emph{Congriscus megastomus}): ``\emph{Congriscus megastomus is an eel in the family Congridae (conger/garden eels). \dots\ It is a marine, temperate-water dwelling eel which is known from Japan and the Kyushu--Palau Ridge \dots}'' The page later names the prey.\\
+\textbf{Question:} Which species does Congriscus megastomus feed on?\\
+\textbf{Options:} Ventrifossa garmani, Ventrifossa mucocephalus, Coryphaenoides zaniophorus, \emph{Hymenocephalus lethonemus} (true), Gadomus colletti, Not enough information to tell.}
+
+All three models decline closed book. With the page, Qwen2.5-7B and Granite pick the true species (confidence 1.00 and .997); OLMo~2 declines. When the page names the answer, the models use it well.
+
+\paragraph{Family-only page: the page turns declines into guesses.}
+\casebox{\textbf{Page} (\emph{Vanessa virginiensis}, American painted lady): ``\emph{The larvae feed on various Asteraceae, such as the cudweeds (genus Gnaphalium), the pussytoes (\textbf{Antennaria}), and the everlastings (Anaphalis) \dots}''\\
+\textbf{Question:} Which species does Vanessa virginiensis feed on?\\
+\textbf{Options:} Antennaria pulcherrima, \emph{Antennaria plantaginifolia} (true), Antennaria dimorpha, Antennaria lanata, Antennaria microphylla, Not enough information to tell.}
+
+Every option is an \emph{Antennaria} species, so the genus name on the page rules out none of them. Closed book, all three models decline. With the page, Qwen2.5-7B still declines, but OLMo~2 picks \emph{A.~microphylla} (.52) and Granite picks \emph{A.~pulcherrima} (.63). Both are wrong. The page did not tell them the answer; it only made the question look answerable.
+
+\paragraph{Silent page: the models abstain.}
+\casebox{\textbf{Page} (\emph{Cottunculus microps}, polar sculpin): ``\emph{\dots a species of fathead sculpin, a deepwater fish found in the North Atlantic and Arctic Oceans. \dots\ Like other members of its family, the polar sculpin has a large head, a short tapering body and a small tail. \dots}''\\
+\textbf{Question:} Which species does Cottunculus microps feed on?\\
+\textbf{True answer:} \emph{Lumpenus lampretaeformis}.}
+
+The page describes the fish but says nothing about its food. All three models decline, closed book and with the page. This is the behavior we want on a family-only page as well, unless the system hands the question to the taxonomy.
+
+\paragraph{A named page the models miss.}
+The page for \emph{Orgyia vetusta} (western tussock moth) names its food plant only by the common name \emph{toyon}, which redirects to \emph{Photinia arbutifolia}. Our matcher counts this page as named. All three models decline anyway: they do not link the common name to the Latin name in the options. Common names are a second gap between how text names a fact and how a graph stores it.

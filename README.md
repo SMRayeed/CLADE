@@ -2,7 +2,7 @@
 
 ## 🌳 CLADE: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models
 
-[![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](paper/neusym.pdf)
+[![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](paper/CLADE.pdf)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1AA874)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9%2B-2E7BE0)](#-run-it)
 [![Domains](https://img.shields.io/badge/domains-PrimeKG%20%C2%B7%20GloBI-F07537)](DATA.md)
@@ -283,6 +283,33 @@ On GloBI, precision on family-only pages is 22–28%. Chance is 20%. So these an
 | 🔁 End to end recovery | 10.0% (Wikipedia) · 1.5% (Wikipedia + PubMed) |
 
 **What it means:** the list is almost always right. The hard parts are finding the family and choosing within it.
+
+### 6️⃣ A first fix: let the model choose the family
+
+We show Qwen2.5-7B the page and the families it names (up to ten), and ask which one holds the answer. We expand only that family.
+
+| How we pick the family | List holds the answer | Any true answer |
+|---|---:|---:|
+| 🧱 All families on the page (string match) | 19.8% | 24.6% |
+| 🤖 **The model picks one** | **30.0%** | **44.9%** |
+| 1️⃣ The first family the page mentions | 25.1% | 37.3% |
+| 🎲 A random family | 13.9% | 22.0% |
+| 🔝 Ceiling: any family shown | 50.0% | 64.6% |
+
+End to end, with no oracle at any step, recovery rises from **10.0%** to **26.8%** (popularity prior) or **19.3%** (evidence).
+For half of the facts, the right family is not among the families on the page at all, so the ceiling is 50%.
+
+### 7️⃣ Free text tells the same story
+
+We ask 120 questions (40 per page type) with no options, and score the written answer by name matching.
+
+| Model | 🎯 Exact answer from a family-only page | 📁 Answers with the family name itself | 🙅 Abstention, family-only minus silent |
+|---|---:|---:|---:|
+| Qwen2.5 7B | 0% | 17.5% | −5.0 |
+| OLMo 2 7B | 0% | 20.0% | −17.5 |
+| Granite 3.1 8B | 0% | 45.0% | −10.0 |
+
+**What it means:** without options, models do not guess a sibling. They give the coarse family ("acute myeloid leukemia") as if it were the answer. The abstention drop points the same way in all three models, but 40 questions per group is too few for any single model to be significant.
 Some misses are not really misses. For carboplatin, the pick is ovarian carcinoma, a better-studied family member than the graph's germ cell tumor. Moxifloxacin for Legionnaires' disease is true, but the graph does not list it.
 
 ---
@@ -388,16 +415,16 @@ flowchart LR
 
 - 🔤 Our page check works on names. It misses an answer that the page describes in other words.
 - 🗄️ The graphs are our ground truth. They miss some true facts, so we undercount correct answers.
-- ❓ We use multiple-choice questions. Free-text answers may behave differently.
+- ❓ Our main test uses multiple-choice questions. Our free-text check is small (40 questions per group).
 - 🤖 We test open models up to 14B. We do not test large closed models.
 - 🦋 GloBI's taxonomy comes from its own records. A few species may sit under the wrong genus.
 
 ## 🔭 Future work
 
 - 🤖 Build the full handover agent and test it end to end.
-- 🔎 Improve the family finder. It is the weakest step (19.8%).
+- 🔎 Improve the family finder. A prompted model reaches 30.0%; the ceiling on Wikipedia is 50.0%.
 - 🌍 Add more domains: chemistry, genes, law.
-- 💬 Move from multiple choice to free-text answers.
+- 💬 Run the free-text check at full scale.
 - 📈 Test larger and closed models.
 
 ---
@@ -417,6 +444,11 @@ export CONTACT="you@example.org"     # for the Wikipedia User-Agent
 bash run_all.sh                      # PrimeKG
 bash globi.sh download && bash globi.sh prepare
 GLOBI_N=8000 bash globi.sh text && bash globi.sh models
+
+# 4. Two follow-up tests on the finished PrimeKG run
+bash extras.sh submit      # step-2 family chooser + free-text check (SLURM)
+bash extras.sh score       # login node: PubMed counts, end-to-end tables
+bash extras.sh report
 ```
 
 All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_globi.sh). Each step resumes if it stops.
@@ -427,12 +459,13 @@ All settings live in [`config.sh`](config.sh) and [`config_globi.sh`](config_glo
 |---|---|
 | 📜 `run_all.sh`, `pipeline.sh` | Run the PrimeKG study, step by step |
 | 🦋 `globi.sh` | Run the GloBI study, step by step |
+| ➕ `extras.sh` | The family chooser and the free-text check |
 | ⚙️ `config*.sh` | All settings: account, models, data links |
 | 🐍 `scripts/` | Analysis and model scripts |
 | 🗄️ `derived_data/` | PrimeKG and GloBI files the analysis reads |
 | 📊 `results/`, `results/globi/` | Every number, log and per-question answer |
 | 🧪 `tests/`, `tools/` | Fake-data tests and the result checker |
-| 📄 `paper/` | The paper and supplement PDFs |
+| 📄 `paper/` | The paper and supplement: LaTeX sources and PDFs |
 | 🖼️ `docs/figures/` | Figures for this page |
 
 ## 📝 Cite

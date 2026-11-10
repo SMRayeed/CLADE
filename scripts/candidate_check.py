@@ -152,6 +152,107 @@ def read_full_partners(paths, c_src, c_tgt, c_rel):
     return part
 
 
+PICK_ASK = ("The answer is one specific disease. Which of these disease "
+            "categories from the passage contains it?")
+
+
+def pick_family(a, items, children, partners, nt):
+    """Step 2 of the hand-off: of the families the page names, which one is
+    the question about? A model reads the page and picks one; three rules
+    that read no meaning are reported beside it. The chosen family is
+    expanded into the 'llm' list, which the evidence pickers then score
+    like the other lists."""
+    import random
+    from abstain_probe import LetterScorer, question_for, LETTERS
+    from recover import snippet
+
+    def covers(it, fam):
+        lst = expand(fam, children, a.expand_depth)
+        truth = partners[(it["rel"], it["src"])]
+        return (it["tgt"].lower() in {c.lower() for c in lst},
+                bool(truth & {c.lower() for c in lst}))
+
+    k = max(2, min(a.max_fams, len(LETTERS)))
+    picks = {}
+    if a.family_picks:
+        with open(a.family_picks, encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                picks[(r["source"], r["target"], r["relation"])] = r["pick"]
+        print(f"\n  read {len(picks):,} family picks from {a.family_picks}")
+    else:
+        todo = [it for it in items if len(it.get("fams") or []) >= 1]
+        prompts, nl = [], []
+        for it in todo:
+            fams = it["fams"][:k]
+            it["_shown"] = fams
+            if len(fams) == 1:
+                continue
+            page = snippet(it["text_for_pick"], fams, lead=400, win=150, cap=1800)
+            opts = "\n".join(f"{LETTERS[i]}. {f}" for i, f in enumerate(fams))
+            prompts.append(f"Passage:\n{page}\n\nQuestion: "
+                           f"{question_for(it['rel'], it['src'])}\n{PICK_ASK}\n"
+                           f"Options:\n{opts}\n"
+                           f"Answer with the letter of one option only.")
+            nl.append(len(fams))
+        multi = [it for it in todo if len(it["_shown"]) > 1]
+        print(f"\n  scoring {len(prompts):,} pages with {a.pick_model} "
+              f"({len(todo) - len(multi):,} pages name one usable family)",
+              file=sys.stderr)
+        sc = LetterScorer(a.pick_model, a.threads, a.batch_size)
+        got = sc.score(prompts, nl) if prompts else []
+        rows = []
+        for it in todo:
+            fams = it["_shown"]
+            if len(fams) == 1:
+                lp = [0.0]
+            else:
+                lp = got[multi.index(it)]
+            best = max(range(len(fams)), key=lambda i: lp[i])
+            picks[(it["src"], it["tgt"], it["rel"])] = fams[best]
+            rows.append({"source": it["src"], "target": it["tgt"],
+                         "relation": it["rel"], "n_found": len(it["fams"]),
+                         "n_shown": len(fams), "shown": json.dumps(fams),
+                         "pick": fams[best],
+                         "p_pick": round(math.exp(lp[best]), 4)})
+        with open(a.picks_out, "w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()) if rows else ["source"])
+            w.writeheader()
+            w.writerows(rows)
+        print(f"  wrote {a.picks_out}: {len(rows):,} picks")
+
+    # how often does each way of choosing land on a family that holds the answer?
+    rng = random.Random(a.seed if hasattr(a, "seed") else 0)
+    n = len(items)
+    tally = defaultdict(lambda: [0, 0])
+    for it in items:
+        fams = (it.get("fams") or [])[:k]
+        if not fams:
+            continue
+        rules = {"model": picks.get((it["src"], it["tgt"], it["rel"])),
+                 "first mentioned": fams[0],
+                 "smallest family": min(fams, key=lambda f: (
+                     len(expand(f, children, a.expand_depth)), f)),
+                 "random": rng.choice(fams)}
+        for name, f in rules.items():
+            if f:
+                t_, any_ = covers(it, f)
+                tally[name][0] += t_
+                tally[name][1] += any_
+        hit = [covers(it, f) for f in fams]
+        tally["any shown family (ceiling)"][0] += any(h[0] for h in hit)
+        tally["any shown family (ceiling)"][1] += any(h[1] for h in hit)
+    print(f"\nSTEP 2: WHICH FAMILY ON THE PAGE?   (percent of all {n:,} "
+          f"family-only edges; at most {k} families shown)")
+    print("    rule                           list holds sampled answer   any true answer")
+    for name in ("model", "first mentioned", "smallest family", "random",
+                 "any shown family (ceiling)"):
+        t_, any_ = tally[name]
+        print(f"    {name:<30} {100 * t_ / n:13.1f}%   {100 * any_ / n:13.1f}%")
+    for it in items:
+        f = picks.get((it["src"], it["tgt"], it["rel"]))
+        it["llm"] = sorted(expand(f, children, a.expand_depth))[:a.max_candidates] if f else None
+
+
 def main():
     ap = argparse.ArgumentParser(
         description=__doc__,
@@ -194,6 +295,18 @@ def main():
     ap.add_argument("--rps", type=float, default=0.0)
     ap.add_argument("--contact", default="")
     ap.add_argument("--limit", type=int, default=0)
+    # step 2 of the hand-off: which family on the page holds the answer?
+    ap.add_argument("--pick-model", default="",
+                    help="score the families found on the page with this model "
+                         "and write --picks-out (compute node; no network)")
+    ap.add_argument("--picks-out", default="family_picks.csv")
+    ap.add_argument("--family-picks", default="",
+                    help="a --picks-out file; adds 'llm' lists (the chosen "
+                         "family, expanded) next to the oracle and page lists")
+    ap.add_argument("--max-fams", type=int, default=10,
+                    help="families offered to the model, at most 10 (letters A-J)")
+    ap.add_argument("--threads", type=int, default=0)
+    ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--out", default="candidate_check.csv")
     a = ap.parse_args()
 
@@ -276,6 +389,15 @@ def main():
             union |= expand(p, children, a.expand_depth)
         it["page_cats"] = len(found)
         it["page_usable"] = len(usable)
+        # the usable families in the order the page first mentions them
+        clean = clean_wikitext(text).lower()
+        pos = {}
+        for p in usable:
+            m = re.search(r"\b" + r"\W+".join(map(re.escape, cat_toks[p])) + r"s?\b",
+                          clean)
+            pos[p] = m.start() if m else len(clean)
+        it["fams"] = sorted(usable, key=lambda p: (pos[p], p))
+        it["text_for_pick"] = text
         if len(union) > a.max_set:
             it["page"] = None
             broad += 1
@@ -310,13 +432,21 @@ def main():
     print("\n  The oracle row is what recover.py assumed. The page row is what a")
     print("  system that does not know the answer actually gets.")
 
+    # ------------------------------------------- step 2: choose the family
+    if a.pick_model or a.family_picks:
+        pick_family(a, items, children, partners, nt)
+        list_stats("llm", "llm")
+        if a.pick_model and not a.family_picks:
+            return
+
     # --------------------------------------------------------------- fetch
     want_oracle = a.pubmed_mode in ("oracle", "both")
     want_page = a.pubmed_mode in ("page", "both")
     all_cands = set()
     pairs = set()
     for it in items:
-        for key, want in (("oracle", want_oracle), ("page", want_page)):
+        for key, want in (("oracle", want_oracle), ("page", want_page),
+                          ("llm", want_page)):
             lst = it.get(key) or []
             all_cands.update(lst)
             if want:
@@ -451,7 +581,7 @@ def main():
 
     print(f"\n{'=' * 78}\nCHOOSING FROM THE CANDIDATE'S END")
     records = []
-    for mode in ("oracle", "page"):
+    for mode in ("oracle", "page", "llm"):
         sel = [it for it in items if it.get(mode)]
         if not sel:
             continue
@@ -520,6 +650,18 @@ def main():
             print(f"    evidence-narrowed list: {set_n:,} edges, median size "
                   f"{statistics.median(set_sizes):.0f}, contains a true "
                   f"answer {100 * set_hit / set_n:5.1f}%")
+
+    # ------------------------------------- end to end, with no oracle at all
+    if any(it.get("llm") for it in items):
+        n = len(items)
+        print(f"\n{'=' * 78}\nEND TO END, NO ORACLE   ({n:,} family-only edges; "
+              f"a fact with no usable list counts as a miss)")
+        print("    list built from    signal      right over all edges")
+        for mode in ("page", "llm"):
+            for s_ in ("combined", "popular"):
+                ok = sum(int((it.get(f"_rec_{mode}") or {}).get(f"correct_{s_}", 0))
+                         for it in items)
+                print(f"    {mode:<18} {s_:<11} {100 * ok / n:6.1f}%")
 
     # ------------------------------------------- recover.py, rescored fairly
     if a.recover_csv:

@@ -1,0 +1,98 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+  fetching 128 at about 3 per second ...
+    articles 8/128    articles 16/128    articles 24/128    articles 32/128    articles 40/128    articles 48/128    articles 56/128    articles 64/128    articles 72/128    articles 80/128    articles 88/128    articles 96/128    articles 104/128    articles 112/128    articles 120/128    articles 128/128                                          16 requests, 0 throttle events, 0 unrecoverable
+    100/1,880, about 7 min left
+    200/1,880, about 7 min left
+    300/1,880, about 6 min left
+    400/1,880, about 6 min left
+    500/1,880, about 5 min left
+    600/1,880, about 5 min left
+    700/1,880, about 5 min left
+    800/1,880, about 4 min left
+    900/1,880, about 4 min left
+    1,000/1,880, about 4 min left
+    1,100/1,880, about 3 min left
+    1,200/1,880, about 3 min left
+    1,300/1,880, about 2 min left
+    1,400/1,880, about 2 min left
+    1,500/1,880, about 1 min left
+    1,600/1,880, about 1 min left
+    1,700/1,880, about 1 min left
+    1,800/1,880, about 0 min left
+  1,880 requests, 0 unrecoverable
+
+410 family-only edges, the same set recover.py scores
+  3,182 ontology categories can be read off a page
+
+HOW GOOD IS THE LIST?   (percent of all family-only edges)
+  oracle  usable lists  410 of 410   contains the sampled answer  98.5%   any true answer  99.5%   size median   14  mean  20.6
+  page    usable lists  166 of 410   contains the sampled answer  19.8%   any true answer  24.6%   size median   32  mean  31.6
+  209 page-built lists exceeded 64 candidates and count as too broad
+  categories found per page: median 5, usable after the size cap: median 5
+
+  The oracle row is what recover.py assumed. The page row is what a
+  system that does not know the answer actually gets.
+
+  read 375 family picks from family_picks_Qwen2.5-7B-Instruct.csv
+
+STEP 2: WHICH FAMILY ON THE PAGE?   (percent of all 410 family-only edges; at most 10 families shown)
+    rule                           list holds sampled answer   any true answer
+    model                                   30.0%            44.9%
+    first mentioned                         25.1%            37.3%
+    smallest family                          7.8%            13.2%
+    random                                  13.9%            22.0%
+    any shown family (ceiling)              50.0%            64.6%
+  llm     usable lists  375 of 410   contains the sampled answer  30.0%   any true answer  44.9%   size median   12  mean  15.7
+
+CANDIDATE ARTICLES   2,459 distinct, 2,331 cached
+
+PUBMED PAIR COUNTS   14,862 queries, 12,982 cached
+
+==============================================================================
+CHOOSING FROM THE CANDIDATE'S END
+
+  ORACLE lists   410 edges, 8,448 candidates
+    candidates with a Wikipedia article         48.0%
+    candidates whose article names the drug      3.9%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          82      80        248       50.0% (sampled only  26.8%)    10.0%
+    pubmed       324      12         74       45.4% (sampled only  20.4%)    35.9%
+    combined     327      14         69       44.6% (sampled only  20.2%)    35.6%
+    popular      409       0          1       46.9% (sampled only  25.7%)    46.8%
+    pubmed_norm  336       0         74       31.0% (sampled only  19.0%)    25.4%
+    evidence-narrowed list: 341 edges, median size 4, contains a true answer  68.9%
+
+  PAGE lists   166 edges, 5,241 candidates
+    candidates with a Wikipedia article         44.8%
+    candidates whose article names the drug      3.2%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          28      36        102       10.7% (sampled only   7.1%)     1.8%
+    pubmed       130      13         23       30.0% (sampled only   6.9%)    23.5%
+    combined     130      13         23       31.5% (sampled only   7.7%)    24.7%
+    popular      166       0          0       22.3% (sampled only   7.2%)    22.3%
+    pubmed_norm  143       0         23       14.7% (sampled only   7.0%)    12.7%
+    evidence-narrowed list: 143 edges, median size 5, contains a true answer  47.6%
+
+  LLM lists   375 edges, 5,882 candidates
+    candidates with a Wikipedia article         37.8%
+    candidates whose article names the drug      4.0%
+    candidates with a PubMed count fetched     100.0%
+    signal     picks    ties   no signal   right when it picks      right over all edges
+    wiki          65      57        253       13.8% (sampled only   7.7%)     2.4%
+    pubmed       288       9         78       32.6% (sampled only  10.4%)    25.1%
+    combined     288      10         77       27.4% (sampled only   9.0%)    21.1%
+    popular      373       1          1       29.5% (sampled only  10.2%)    29.3%
+    pubmed_norm  297       0         78       15.2% (sampled only   7.4%)    12.0%
+    evidence-narrowed list: 298 edges, median size 3, contains a true answer  41.9%
+
+==============================================================================
+END TO END, NO ORACLE   (410 family-only edges; a fact with no usable list counts as a miss)
+    list built from    signal      right over all edges
+    page               combined      10.0%
+    page               popular        9.0%
+    llm                combined      19.3%
+    llm                popular       26.8%
+
+wrote /users/PAS2136/rayees/clade/results/candidate_check_llm.csv: 951 rows

@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & PrimeKG & GloBI \\
+\midrule
+Source records & 8,100,498 & 7,822,670 \\
+\midrule
+\multirow{4}{*}{Edges} & indication 9,388 & eats 235,960 \\
+ & contraind.\ 30,675 & preys on 87,678 \\
+ & off-label 2,568 & parasite of 117,894 \\
+ & & pollinates 15,854 \\
+\midrule
+Hierarchy & MONDO & GloBI taxonomy \\
+\quad child--parent links & 17,801 & 77,852 \\
+\quad families, $\ge$2 members & 3,182 & 8,370 \\
+\quad median / max size & 3 / 150 & 3 / 315 \\
+\midrule
+Text & Wiki.\ + PubMed & Wikipedia \\
+\quad sources with text & 574 drugs & 5,425 species \\
+\quad facts measured & 3,444 & 23,694 \\
+Questions & 856 & 900 \\
+\bottomrule
+\end{tabular}
+\caption{Data for both domains. PrimeKG links drugs to diseases, and MONDO groups diseases into families. GloBI links species to species, and its taxonomy groups species into genera. A \emph{family} is a parent with two or more children. \emph{Facts measured} are edges we check for a mention of the answer.}
+\label{tab:data}
+\end{table}

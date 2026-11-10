@@ -1,0 +1,74 @@
+\section{Three Fixes}
+\label{app:fixes}
+
+This appendix gives the per-model numbers behind \cref{M-fig:fixes} of the main paper.
+
+\paragraph{Confidence.}
+A simple guard is to answer only when the model is confident. \Cref{tab:conf} shows, for each model and page type, how many questions the model answers, its precision, its mean confidence on right and on wrong answers, and the AUROC (\cref{app:stats}). On named pages, right answers carry clearly more confidence than wrong ones, and AUROC is 0.73--0.87. On family-only pages the two are close, and AUROC drops to 0.59--0.72. The wrong guesses are confident: Qwen2.5-14B puts a mean probability of 0.99 on its wrong family-only answers. In GloBI the drop is larger, from 0.82--0.86 on named pages to 0.52--0.68.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Model & Page & Ans. & Prec. & Conf.\,R & Conf.\,W & AUROC \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{PrimeKG}} \\
+Qwen2.5-0.5B & named & 97 & 84.5 & .83 & .49 & .85 \\
+ & family & 194 & 38.1 & .71 & .60 & .64 \\
+Qwen2.5-7B & named & 80 & 95.0 & .98 & 1.00 & .73 \\
+ & family & 96 & 59.4 & .98 & .90 & .72 \\
+OLMo 2 7B & named & 98 & 83.7 & .97 & .75 & .86 \\
+ & family & 176 & 45.5 & .89 & .77 & .71 \\
+Granite 3.1 8B & named & 85 & 90.6 & .95 & .71 & .87 \\
+ & family & 122 & 53.3 & .90 & .82 & .66 \\
+Qwen2.5-14B & named & 75 & 96.0 & .99 & .92 & .77 \\
+ & family & 89 & 58.4 & .98 & .99 & .59 \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{GloBI}} \\
+Qwen2.5-7B & named & 167 & 94.6 & .98 & .90 & .82 \\
+ & family & 18 & 27.8 & .94 & .89 & .55 \\
+OLMo 2 7B & named & 231 & 84.4 & .94 & .69 & .86 \\
+ & family & 138 & 26.8 & .76 & .62 & .68 \\
+Granite 3.1 8B & named & 188 & 89.4 & .94 & .75 & .86 \\
+ & family & 46 & 21.7 & .75 & .74 & .52 \\
+\bottomrule
+\end{tabular}
+\caption{Confidence of answers with the page. Ans.\ is the number of questions answered (not declined); Conf.\,R and Conf.\,W are the mean confidence of right and wrong answers.}
+\label{tab:conf}
+\end{table}
+
+\paragraph{Scale.}
+Within Qwen2.5, a larger model is more precise on named pages: 84.5\% at 0.5B, 95.0\% at 7B and 96.0\% at 14B. On family-only pages, precision rises from 38.1\% to 59.4\% between 0.5B and 7B and then stops: the 14B model reaches 58.4\%. The 14B model gives 14.7 points more wrong answers on family-only pages than on silent ones ($p=6\times10^{-6}$). Like the 7B model, it already declines family-only questions less often closed book, so its page effect does not differ between the groups ($+5.3$ points, $p=0.29$). A larger model reads named pages better but still guesses from a family name.
+
+\paragraph{Instruction.}
+We add one sentence to the prompt with the page:
+\begin{quote}
+\small\emph{If the passage names only a broad category of diseases and does not say which specific disease is meant, answer with the letter of ``Not enough information to tell.}
+\end{quote} \Cref{tab:instr} shows the result. The models react very differently. OLMo~2 declines far more on every page type, including named pages (from 7.5\% to 27.4\%). Granite barely reacts. Qwen2.5-7B declines somewhat more. Pooled over the three models, the instruction raises declines by 15.2 points on family-only pages, but also by 14.0 on silent pages and 9.1 on named pages, where it costs 6.3 points of correct answers. Precision on family-only pages stays low (47.9--64.9\%). The instruction makes the models more cautious everywhere, but it does not teach them to tell a family name from an answer.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{Declines} & \multicolumn{2}{c}{Precision} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+Model & Page & base & instr. & base & instr. \\
+\midrule
+Qwen2.5-7B & named & 24.5 & 29.2 & 95.0 & 94.7 \\
+ & family & 55.4 & 64.2 & 59.4 & 64.9 \\
+ & silent & 83.8 & 88.1 & 84.6 & 89.5 \\
+OLMo 2 7B & named & 7.5 & 27.4 & 83.7 & 89.6 \\
+ & family & 18.1 & 56.3 & 45.5 & 47.9 \\
+ & silent & 45.0 & 85.6 & 55.7 & 60.9 \\
+Granite 3.1 8B & named & 19.8 & 22.6 & 90.6 & 91.5 \\
+ & family & 43.3 & 41.9 & 53.3 & 53.6 \\
+ & silent & 75.0 & 71.9 & 60.0 & 55.6 \\
+\bottomrule
+\end{tabular}
+\caption{Declines and precision (\%) with the page, without (base) and with (instr.) the instruction to decline on a broad category.}
+\label{tab:instr}
+\end{table}

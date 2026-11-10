@@ -1,0 +1,244 @@
+id,relation,group,source,target,condition,answer,outcome
+contraindication|named|Erlotinib|pulmonary fibrosis,contraindication,named,Erlotinib,pulmonary fibrosis,passage,Not enough information to tell.,decline
+contraindication|named|Erlotinib|pulmonary fibrosis,contraindication,named,Erlotinib,pulmonary fibrosis,closed,Not enough information to tell,decline
+contraindication|named|Capecitabine|dihydropyrimidine dehydrogenase deficiency,contraindication,named,Capecitabine,dihydropyrimidine dehydrogenase deficiency,passage,Not enough information to tell.,decline
+contraindication|named|Capecitabine|dihydropyrimidine dehydrogenase deficiency,contraindication,named,Capecitabine,dihydropyrimidine dehydrogenase deficiency,closed,Not enough information to tell,decline
+contraindication|named|Cefixime|Clostridium difficile colitis,contraindication,named,Cefixime,Clostridium difficile colitis,passage,Not enough information to tell.,decline
+contraindication|named|Cefixime|Clostridium difficile colitis,contraindication,named,Cefixime,Clostridium difficile colitis,closed,Not enough information to tell,decline
+contraindication|named|Budesonide|tuberculosis,contraindication,named,Budesonide,tuberculosis,passage,Pulmonary tuberculosis.,correct
+contraindication|named|Budesonide|tuberculosis,contraindication,named,Budesonide,tuberculosis,closed,Not enough information to tell,decline
+indication|named|Betamethasone|psoriasis,indication,named,Betamethasone,psoriasis,passage,Rheumatoid arthritis,other
+indication|named|Betamethasone|psoriasis,indication,named,Betamethasone,psoriasis,closed,Not enough information to tell,decline
+contraindication|named|Ceftriaxone|Clostridium difficile colitis,contraindication,named,Ceftriaxone,Clostridium difficile colitis,passage,Anaphylaxis,other
+contraindication|named|Ceftriaxone|Clostridium difficile colitis,contraindication,named,Ceftriaxone,Clostridium difficile colitis,closed,Not enough information to tell,decline
+contraindication|named|Acetylcysteine|asthma,contraindication,named,Acetylcysteine,asthma,passage,Not enough information to tell.,decline
+contraindication|named|Acetylcysteine|asthma,contraindication,named,Acetylcysteine,asthma,closed,Not enough information to tell,decline
+indication|named|Praziquantel|schistosomiasis,indication,named,Praziquantel,schistosomiasis,passage,Schistosomiasis,correct
+indication|named|Praziquantel|schistosomiasis,indication,named,Praziquantel,schistosomiasis,closed,Not enough information to tell,decline
+indication|named|Rabeprazole|Zollinger-Ellison syndrome,indication,named,Rabeprazole,Zollinger-Ellison syndrome,passage,Gastroesophageal reflux disease (GERD),other
+indication|named|Rabeprazole|Zollinger-Ellison syndrome,indication,named,Rabeprazole,Zollinger-Ellison syndrome,closed,Not enough information to tell,decline
+indication|named|Chlorpromazine|psychotic disorder,indication,named,Chlorpromazine,psychotic disorder,passage,schizophrenia,other
+indication|named|Chlorpromazine|psychotic disorder,indication,named,Chlorpromazine,psychotic disorder,closed,Schizophrenia,other
+contraindication|named|Cephalexin|Clostridium difficile colitis,contraindication,named,Cephalexin,Clostridium difficile colitis,passage,Not enough information to tell.,decline
+contraindication|named|Cephalexin|Clostridium difficile colitis,contraindication,named,Cephalexin,Clostridium difficile colitis,closed,Not enough information to tell,decline
+indication|named|Doxorubicin|ovarian cancer,indication,named,Doxorubicin,ovarian cancer,passage,breast cancer,other
+indication|named|Doxorubicin|ovarian cancer,indication,named,Doxorubicin,ovarian cancer,closed,Not enough information to tell,decline
+indication|named|Calcium chloride|cardiac arrest,indication,named,Calcium chloride,cardiac arrest,passage,Not enough information to tell.,decline
+indication|named|Calcium chloride|cardiac arrest,indication,named,Calcium chloride,cardiac arrest,closed,Not enough information to tell,decline
+contraindication|named|Tadalafil|priapism,contraindication,named,Tadalafil,priapism,passage,Nitrovasodilators such as nitroglycerin.,other
+contraindication|named|Tadalafil|priapism,contraindication,named,Tadalafil,priapism,closed,Guillain-Barré syndrome,other
+indication|named|Lindane|scabies,indication,named,Lindane,scabies,passage,Lindane is used to treat lice and scabies.,correct
+indication|named|Lindane|scabies,indication,named,Lindane,scabies,closed,Not enough information to tell,decline
+contraindication|named|Albendazole|pancytopenia,contraindication,named,Albendazole,pancytopenia,passage,Not enough information to tell.,decline
+contraindication|named|Albendazole|pancytopenia,contraindication,named,Albendazole,pancytopenia,closed,Not enough information to tell,decline
+indication|named|Aurothioglucose|rheumatoid arthritis,indication,named,Aurothioglucose,rheumatoid arthritis,passage,Rheumatoid arthritis,correct
+indication|named|Aurothioglucose|rheumatoid arthritis,indication,named,Aurothioglucose,rheumatoid arthritis,closed,Not enough information to tell,decline
+indication|named|Octreotide|acromegaly,indication,named,Octreotide,acromegaly,passage,Acromegaly,correct
+indication|named|Octreotide|acromegaly,indication,named,Octreotide,acromegaly,closed,Not enough information to tell,decline
+indication|named|Itraconazole|coccidioidomycosis,indication,named,Itraconazole,coccidioidomycosis,passage,Aspergillosis,other
+indication|named|Itraconazole|coccidioidomycosis,indication,named,Itraconazole,coccidioidomycosis,closed,Histoplasmosis,other
+indication|named|Ferric maltol|iron deficiency anemia,indication,named,Ferric maltol,iron deficiency anemia,passage,Iron deficiency,other
+indication|named|Ferric maltol|iron deficiency anemia,indication,named,Ferric maltol,iron deficiency anemia,closed,Not enough information to tell,decline
+contraindication|named|Dexamethasone|hyperglycemia,contraindication,named,Dexamethasone,hyperglycemia,passage,Not enough information to tell.,decline
+contraindication|named|Dexamethasone|hyperglycemia,contraindication,named,Dexamethasone,hyperglycemia,closed,Not enough information to tell,decline
+contraindication|named|Aztreonam|Clostridium difficile colitis,contraindication,named,Aztreonam,Clostridium difficile colitis,passage,Clostridioides difficile infection.,correct
+contraindication|named|Aztreonam|Clostridium difficile colitis,contraindication,named,Aztreonam,Clostridium difficile colitis,closed,Not enough information to tell,decline
+contraindication|named|Fluticasone propionate|osteoporosis,contraindication,named,Fluticasone propionate,osteoporosis,passage,Not enough information to tell.,decline
+contraindication|named|Fluticasone propionate|osteoporosis,contraindication,named,Fluticasone propionate,osteoporosis,closed,Pneumonia,other
+contraindication|named|Cefadroxil|Clostridium difficile colitis,contraindication,named,Cefadroxil,Clostridium difficile colitis,passage,Clostridium difficile infection.,correct
+contraindication|named|Cefadroxil|Clostridium difficile colitis,contraindication,named,Cefadroxil,Clostridium difficile colitis,closed,Not enough information to tell,decline
+indication|named|Dapsone|leprosy,indication,named,Dapsone,leprosy,passage,Leprosy,correct
+indication|named|Dapsone|leprosy,indication,named,Dapsone,leprosy,closed,Pneumocystis jirovecii pneumonia (PCP),other
+contraindication|named|Midodrine|thyrotoxicosis,contraindication,named,Midodrine,thyrotoxicosis,passage,Not enough information to tell.,decline
+contraindication|named|Midodrine|thyrotoxicosis,contraindication,named,Midodrine,thyrotoxicosis,closed,Not enough information to tell,decline
+contraindication|named|Enalapril|angioedema,contraindication,named,Enalapril,angioedema,passage,Not enough information to tell.,decline
+contraindication|named|Enalapril|angioedema,contraindication,named,Enalapril,angioedema,closed,Not enough information to tell,decline
+contraindication|named|Midodrine|hyperthyroidism,contraindication,named,Midodrine,hyperthyroidism,passage,Not enough information to tell.,decline
+contraindication|named|Midodrine|hyperthyroidism,contraindication,named,Midodrine,hyperthyroidism,closed,Not enough information to tell,decline
+indication|named|Meloxicam|rheumatoid arthritis,indication,named,Meloxicam,rheumatoid arthritis,passage,Osteoarthritis,other
+indication|named|Meloxicam|rheumatoid arthritis,indication,named,Meloxicam,rheumatoid arthritis,closed,Not enough information to tell,decline
+contraindication|named|Piroxicam|acute liver failure,contraindication,named,Piroxicam,acute liver failure,passage,Not enough information to tell.,decline
+contraindication|named|Piroxicam|acute liver failure,contraindication,named,Piroxicam,acute liver failure,closed,Not enough information to tell,decline
+indication|named|Pregabalin|postherpetic neuralgia,indication,named,Pregabalin,postherpetic neuralgia,passage,"Epilepsy, neuropathic pain, fibromyalgia, restless legs syndrome, opioid withdrawal, generalized anxiety disorder (GAD), and postherp",other
+indication|named|Pregabalin|postherpetic neuralgia,indication,named,Pregabalin,postherpetic neuralgia,closed,Not enough information to tell,decline
+indication|named|Linezolid|streptococcal infection,indication,named,Linezolid,streptococcal infection,passage,Methicillin-resistant Staphylococcus aureus (MRSA),other
+indication|named|Linezolid|streptococcal infection,indication,named,Linezolid,streptococcal infection,closed,"Linezolid is used to treat a number of bacterial infections, including but not limited to, certain types of pneumonia (such as Mycoplasma pneumoniae",other
+contraindication|named|Tioguanine|cholestasis,contraindication,named,Tioguanine,cholestasis,passage,Not enough information to tell.,decline
+contraindication|named|Tioguanine|cholestasis,contraindication,named,Tioguanine,cholestasis,closed,Not enough information to tell,decline
+indication|named|Triamcinolone|tendinitis,indication,named,Triamcinolone,tendinitis,passage,Rheumatic disorders,other
+indication|named|Triamcinolone|tendinitis,indication,named,Triamcinolone,tendinitis,closed,Not enough information to tell,decline
+indication|named|Nabumetone|rheumatoid arthritis,indication,named,Nabumetone,rheumatoid arthritis,passage,Rheumatoid arthritis,correct
+indication|named|Nabumetone|rheumatoid arthritis,indication,named,Nabumetone,rheumatoid arthritis,closed,Not enough information to tell,decline
+contraindication|named|Methyltestosterone|prostate cancer,contraindication,named,Methyltestosterone,prostate cancer,passage,Prostate cancer.,correct
+contraindication|named|Methyltestosterone|prostate cancer,contraindication,named,Methyltestosterone,prostate cancer,closed,Not enough information to tell,decline
+contraindication|named|Oxacillin|Clostridium difficile colitis,contraindication,named,Oxacillin,Clostridium difficile colitis,passage,Not enough information to tell.,decline
+contraindication|named|Oxacillin|Clostridium difficile colitis,contraindication,named,Oxacillin,Clostridium difficile colitis,closed,Staphylococcus aureus,other
+indication|named|Pazopanib|soft tissue sarcoma,indication,named,Pazopanib,soft tissue sarcoma,passage,Renal cell carcinoma,other
+indication|named|Pazopanib|soft tissue sarcoma,indication,named,Pazopanib,soft tissue sarcoma,closed,Not enough information to tell,decline
+indication|named|Acyclovir|herpes zoster,indication,named,Acyclovir,herpes zoster,passage,Herpes simplex virus infections,other
+indication|named|Acyclovir|herpes zoster,indication,named,Acyclovir,herpes zoster,closed,Herpes,other
+contraindication|named|Ceftriaxone|hemolytic anemia,contraindication,named,Ceftriaxone,hemolytic anemia,passage,Anaphylaxis to penicillin,other
+contraindication|named|Ceftriaxone|hemolytic anemia,contraindication,named,Ceftriaxone,hemolytic anemia,closed,Not enough information to tell,decline
+indication|category|Tioguanine|acute myeloid leukemia with t(8;21)(q22;q22) translocation,indication,category,Tioguanine,acute myeloid leukemia with t(8;21)(q22;q22) translocation,passage,"acute myeloid leukemia (AML), acute lymphocytic leukemia (ALL), and chronic myeloid leukemia (CML)",family
+indication|category|Tioguanine|acute myeloid leukemia with t(8;21)(q22;q22) translocation,indication,category,Tioguanine,acute myeloid leukemia with t(8;21)(q22;q22) translocation,closed,Not enough information to tell,decline
+indication|category|Norepinephrine|intrinsic asthma,indication,category,Norepinephrine,intrinsic asthma,passage,Not enough information to tell.,decline
+indication|category|Norepinephrine|intrinsic asthma,indication,category,Norepinephrine,intrinsic asthma,closed,Not enough information to tell,decline
+indication|category|Ethinylestradiol|postmenopausal osteoporosis,indication,category,Ethinylestradiol,postmenopausal osteoporosis,passage,Not enough information to tell.,decline
+indication|category|Ethinylestradiol|postmenopausal osteoporosis,indication,category,Ethinylestradiol,postmenopausal osteoporosis,closed,Not enough information to tell,decline
+contraindication|category|Metoprolol|parapsoriasis,contraindication,category,Metoprolol,parapsoriasis,passage,Not enough information to tell.,decline
+contraindication|category|Metoprolol|parapsoriasis,contraindication,category,Metoprolol,parapsoriasis,closed,Not enough information to tell,decline
+indication|category|Procyclidine|blepharospasm,indication,category,Procyclidine,blepharospasm,passage,Dystonia,other
+indication|category|Procyclidine|blepharospasm,indication,category,Procyclidine,blepharospasm,closed,Not enough information to tell,decline
+indication|category|Amitriptyline|neurotic disorder,indication,category,Amitriptyline,neurotic disorder,passage,Major depressive disorder.,other
+indication|category|Amitriptyline|neurotic disorder,indication,category,Amitriptyline,neurotic disorder,closed,Not enough information to tell,decline
+contraindication|category|Methyltestosterone|female breast carcinoma,contraindication,category,Methyltestosterone,female breast carcinoma,passage,Breast cancer in women.,family
+contraindication|category|Methyltestosterone|female breast carcinoma,contraindication,category,Methyltestosterone,female breast carcinoma,closed,Not enough information to tell,decline
+indication|category|Theophylline|allergic asthma,indication,category,Theophylline,allergic asthma,passage,Chronic obstructive pulmonary disease (COPD),other
+indication|category|Theophylline|allergic asthma,indication,category,Theophylline,allergic asthma,closed,Theophylline is used to treat asthma and chronic obstructive pulmonary disease (COPD). It is a bronchodilator that relaxes muscles,family
+indication|category|Azlocillin|urinary tract infection (disease),indication,category,Azlocillin,urinary tract infection (disease),passage,Pulmonary infections,other
+indication|category|Azlocillin|urinary tract infection (disease),indication,category,Azlocillin,urinary tract infection (disease),closed,Not enough information to tell,decline
+contraindication|category|Calcifediol|arteriosclerosis obliterans,contraindication,category,Calcifediol,arteriosclerosis obliterans,passage,Not enough information to tell.,decline
+contraindication|category|Calcifediol|arteriosclerosis obliterans,contraindication,category,Calcifediol,arteriosclerosis obliterans,closed,Not enough information to tell,decline
+indication|category|Bortezomib|B-cell neoplasm,indication,category,Bortezomib,B-cell neoplasm,passage,multiple myeloma,other
+indication|category|Bortezomib|B-cell neoplasm,indication,category,Bortezomib,B-cell neoplasm,closed,Multiple myeloma,other
+indication|category|Montelukast|intrinsic asthma,indication,category,Montelukast,intrinsic asthma,passage,Asthma,family
+indication|category|Montelukast|intrinsic asthma,indication,category,Montelukast,intrinsic asthma,closed,Not enough information to tell,decline
+contraindication|category|Dexlansoprazole|postmenopausal osteoporosis,contraindication,category,Dexlansoprazole,postmenopausal osteoporosis,passage,Clostridioides difficile infection.,other
+contraindication|category|Dexlansoprazole|postmenopausal osteoporosis,contraindication,category,Dexlansoprazole,postmenopausal osteoporosis,closed,Not enough information to tell,decline
+contraindication|category|Azlocillin|pyoureter,contraindication,category,Azlocillin,pyoureter,passage,Not enough information to tell.,decline
+contraindication|category|Azlocillin|pyoureter,contraindication,category,Azlocillin,pyoureter,closed,Not enough information to tell,decline
+indication|category|Tazarotene|acne (disease),indication,category,Tazarotene,acne (disease),passage,Acne,other
+indication|category|Tazarotene|acne (disease),indication,category,Tazarotene,acne (disease),closed,Not enough information to tell,decline
+contraindication|category|Sulfamethizole|pyoureter,contraindication,category,Sulfamethizole,pyoureter,passage,Not enough information to tell,decline
+contraindication|category|Sulfamethizole|pyoureter,contraindication,category,Sulfamethizole,pyoureter,closed,Not enough information to tell,decline
+indication|category|Ammonium lactate|occupational dermatitis,indication,category,Ammonium lactate,occupational dermatitis,passage,Keratosis pilaris.,other
+indication|category|Ammonium lactate|occupational dermatitis,indication,category,Ammonium lactate,occupational dermatitis,closed,Not enough information to tell,decline
+indication|category|Pemetrexed|non-small cell lung carcinoma (disease),indication,category,Pemetrexed,non-small cell lung carcinoma (disease),passage,Malignant pleural mesothelioma,other
+indication|category|Pemetrexed|non-small cell lung carcinoma (disease),indication,category,Pemetrexed,non-small cell lung carcinoma (disease),closed,Pemetrexed is used to treat non-small cell lung cancer and certain types of mesothelioma. It is not used to treat a specific disease outside,family
+contraindication|category|Tamoxifen|cerebral infarction,contraindication,category,Tamoxifen,cerebral infarction,passage,Not enough information to tell.,decline
+contraindication|category|Tamoxifen|cerebral infarction,contraindication,category,Tamoxifen,cerebral infarction,closed,Not enough information to tell,decline
+indication|category|Cefazolin|streptococcal pneumonia,indication,category,Cefazolin,streptococcal pneumonia,passage,Cellulitis,other
+indication|category|Cefazolin|streptococcal pneumonia,indication,category,Cefazolin,streptococcal pneumonia,closed,Staph Infection,other
+indication|category|Brompheniramine|urticaria (disease),indication,category,Brompheniramine,urticaria (disease),passage,Allergic rhinitis,other
+indication|category|Brompheniramine|urticaria (disease),indication,category,Brompheniramine,urticaria (disease),closed,Allergies,other
+indication|category|Cefprozil|infectious otitis media,indication,category,Cefprozil,infectious otitis media,passage,pharyngitis,other
+indication|category|Cefprozil|infectious otitis media,indication,category,Cefprozil,infectious otitis media,closed,Not enough information to tell,decline
+contraindication|category|Sulfisoxazole|idiopathic aplastic anemia,contraindication,category,Sulfisoxazole,idiopathic aplastic anemia,passage,Not enough information to tell.,decline
+contraindication|category|Sulfisoxazole|idiopathic aplastic anemia,contraindication,category,Sulfisoxazole,idiopathic aplastic anemia,closed,Not enough information to tell,decline
+indication|category|Orciprenaline|intrinsic asthma,indication,category,Orciprenaline,intrinsic asthma,passage,Asthma,family
+indication|category|Orciprenaline|intrinsic asthma,indication,category,Orciprenaline,intrinsic asthma,closed,Not enough information to tell,decline
+contraindication|category|Cefotetan|pyoureter,contraindication,category,Cefotetan,pyoureter,passage,Not enough information to tell.,decline
+contraindication|category|Cefotetan|pyoureter,contraindication,category,Cefotetan,pyoureter,closed,Not enough information to tell,decline
+indication|category|Griseofulvin|dermatophytosis of groin and perianal area,indication,category,Griseofulvin,dermatophytosis of groin and perianal area,passage,Dermatophytoses (ringworm),other
+indication|category|Griseofulvin|dermatophytosis of groin and perianal area,indication,category,Griseofulvin,dermatophytosis of groin and perianal area,closed,Not enough information to tell,decline
+contraindication|category|Tolvaptan|cirrhosis of liver,contraindication,category,Tolvaptan,cirrhosis of liver,passage,liver disease,family
+contraindication|category|Tolvaptan|cirrhosis of liver,contraindication,category,Tolvaptan,cirrhosis of liver,closed,Not enough information to tell,decline
+indication|category|Megestrol acetate|endometrial carcinoma (disease),indication,category,Megestrol acetate,endometrial carcinoma (disease),passage,Endometrial cancer.,family
+indication|category|Megestrol acetate|endometrial carcinoma (disease),indication,category,Megestrol acetate,endometrial carcinoma (disease),closed,Not enough information to tell,decline
+indication|category|Erlotinib|non-small cell lung carcinoma (disease),indication,category,Erlotinib,non-small cell lung carcinoma (disease),passage,Pancreatic cancer.,other
+indication|category|Erlotinib|non-small cell lung carcinoma (disease),indication,category,Erlotinib,non-small cell lung carcinoma (disease),closed,Lung cancer,family
+"indication|category|Ipratropium|COPD, severe early onset",indication,category,Ipratropium,"COPD, severe early onset",passage,Chronic obstructive pulmonary disease (COPD),family
+"indication|category|Ipratropium|COPD, severe early onset",indication,category,Ipratropium,"COPD, severe early onset",closed,Ipratropium is used to treat bronchospasm associated with asthma and chronic obstructive pulmonary disease (COPD). It is also used to,family
+indication|category|Magnesium hydroxide|peptic esophagitis,indication,category,Magnesium hydroxide,peptic esophagitis,passage,Not enough information to tell.,decline
+indication|category|Magnesium hydroxide|peptic esophagitis,indication,category,Magnesium hydroxide,peptic esophagitis,closed,Not enough information to tell,decline
+contraindication|category|Ethinylestradiol|obstructive jaundice,contraindication,category,Ethinylestradiol,obstructive jaundice,passage,Cholestasis of pregnancy,family
+contraindication|category|Ethinylestradiol|obstructive jaundice,contraindication,category,Ethinylestradiol,obstructive jaundice,closed,Not enough information to tell,decline
+contraindication|category|Meclocycline|pyoureter,contraindication,category,Meclocycline,pyoureter,passage,Liver and kidney damage.,other
+contraindication|category|Meclocycline|pyoureter,contraindication,category,Meclocycline,pyoureter,closed,Not enough information to tell,decline
+contraindication|category|Modafinil|psychotic disorder,contraindication,category,Modafinil,psychotic disorder,passage,Not enough information to tell.,decline
+contraindication|category|Modafinil|psychotic disorder,contraindication,category,Modafinil,psychotic disorder,closed,Not enough information to tell,decline
+indication|category|Gemcitabine|non-small cell lung carcinoma (disease),indication,category,Gemcitabine,non-small cell lung carcinoma (disease),passage,Gemcitabine is used to treat pancreatic cancer.,other
+indication|category|Gemcitabine|non-small cell lung carcinoma (disease),indication,category,Gemcitabine,non-small cell lung carcinoma (disease),closed,"Gemcitabine is used to treat several types of cancer, including pancreatic cancer, non-small cell lung cancer, bladder cancer, breast cancer, and others.",family
+indication|category|Dactinomycin|rhabdomyosarcoma (disease),indication,category,Dactinomycin,rhabdomyosarcoma (disease),passage,Wilms tumor,other
+indication|category|Dactinomycin|rhabdomyosarcoma (disease),indication,category,Dactinomycin,rhabdomyosarcoma (disease),closed,Not enough information to tell,decline
+indication|category|Sertraline|phobic disorder,indication,category,Sertraline,phobic disorder,passage,"Sertraline is used to treat major depressive disorder, generalized anxiety disorder, social anxiety disorder, obsessive–compulsive disorder (OCD), panic disorder,",sibling
+indication|category|Sertraline|phobic disorder,indication,category,Sertraline,phobic disorder,closed,Not enough information to tell,decline
+contraindication|category|Griseofulvin|inherited porphyria,contraindication,category,Griseofulvin,inherited porphyria,passage,Liver failure.,other
+contraindication|category|Griseofulvin|inherited porphyria,contraindication,category,Griseofulvin,inherited porphyria,closed,Not enough information to tell,decline
+contraindication|category|Pyridostigmine|allergic asthma,contraindication,category,Pyridostigmine,allergic asthma,passage,Not enough information to tell.,decline
+contraindication|category|Pyridostigmine|allergic asthma,contraindication,category,Pyridostigmine,allergic asthma,closed,Myasthenia Gravis,other
+indication|category|Resorcinol|acne (disease),indication,category,Resorcinol,acne (disease),passage,Not enough information to tell,decline
+indication|category|Resorcinol|acne (disease),indication,category,Resorcinol,acne (disease),closed,Not enough information to tell,decline
+contraindication|silent|Ferric maltol|iron metabolism disease,contraindication,silent,Ferric maltol,iron metabolism disease,passage,Hereditary hemochromatosis.,other
+contraindication|silent|Ferric maltol|iron metabolism disease,contraindication,silent,Ferric maltol,iron metabolism disease,closed,Not enough information to tell,decline
+indication|silent|Calcium acetate|hypercalcemia disease,indication,silent,Calcium acetate,hypercalcemia disease,passage,Not enough information to tell,decline
+indication|silent|Calcium acetate|hypercalcemia disease,indication,silent,Calcium acetate,hypercalcemia disease,closed,Not enough information to tell,decline
+indication|silent|Phylloquinone|phosphorus metabolism disease,indication,silent,Phylloquinone,phosphorus metabolism disease,passage,Vitamin K deficiency,other
+indication|silent|Phylloquinone|phosphorus metabolism disease,indication,silent,Phylloquinone,phosphorus metabolism disease,closed,Not enough information to tell,decline
+contraindication|silent|Metoprolol|adrenal gland cancer,contraindication,silent,Metoprolol,adrenal gland cancer,passage,Not enough information to tell.,decline
+contraindication|silent|Metoprolol|adrenal gland cancer,contraindication,silent,Metoprolol,adrenal gland cancer,closed,Not enough information to tell,decline
+indication|silent|Nicotine|pellagra,indication,silent,Nicotine,pellagra,passage,Not enough information to tell.,decline
+indication|silent|Nicotine|pellagra,indication,silent,Nicotine,pellagra,closed,Nicotine is not used to treat any disease. Nicotine is an addictive substance found in tobacco products and is often used in nicotine replacement therapies (NRTs,other
+contraindication|silent|Telmisartan|liver failure,contraindication,silent,Telmisartan,liver failure,passage,Not enough information to tell.,decline
+contraindication|silent|Telmisartan|liver failure,contraindication,silent,Telmisartan,liver failure,closed,Not enough information to tell,decline
+indication|silent|Perazine|anxiety,indication,silent,Perazine,anxiety,passage,schizophrenia,other
+indication|silent|Perazine|anxiety,indication,silent,Perazine,anxiety,closed,Not enough information to tell,decline
+contraindication|silent|Perazine|familial visceral myopathy,contraindication,silent,Perazine,familial visceral myopathy,passage,Not enough information to tell.,decline
+contraindication|silent|Perazine|familial visceral myopathy,contraindication,silent,Perazine,familial visceral myopathy,closed,Not enough information to tell,decline
+indication|silent|Tadalafil|psychologic dyspareunia,indication,silent,Tadalafil,psychologic dyspareunia,passage,Benign prostatic hyperplasia.,other
+indication|silent|Tadalafil|psychologic dyspareunia,indication,silent,Tadalafil,psychologic dyspareunia,closed,Erectile dysfunction,other
+indication|silent|Benzatropine|hemiparkinsonism-hemiatrophy syndrome,indication,silent,Benzatropine,hemiparkinsonism-hemiatrophy syndrome,passage,Parkinsonism,other
+indication|silent|Benzatropine|hemiparkinsonism-hemiatrophy syndrome,indication,silent,Benzatropine,hemiparkinsonism-hemiatrophy syndrome,closed,Not enough information to tell,decline
+contraindication|silent|Meloxicam|diabetic ketoacidosis,contraindication,silent,Meloxicam,diabetic ketoacidosis,passage,Not enough information to tell.,decline
+contraindication|silent|Meloxicam|diabetic ketoacidosis,contraindication,silent,Meloxicam,diabetic ketoacidosis,closed,Not enough information to tell,decline
+"indication|silent|Lisdexamfetamine|attention deficit hyperactivity disorder, inattentive type",indication,silent,Lisdexamfetamine,"attention deficit hyperactivity disorder, inattentive type",passage,Attention deficit hyperactivity disorder (ADHD),other
+"indication|silent|Lisdexamfetamine|attention deficit hyperactivity disorder, inattentive type",indication,silent,Lisdexamfetamine,"attention deficit hyperactivity disorder, inattentive type",closed,Not enough information to tell,decline
+contraindication|silent|Ambenonium|allergic asthma,contraindication,silent,Ambenonium,allergic asthma,passage,Not enough information to tell.,decline
+contraindication|silent|Ambenonium|allergic asthma,contraindication,silent,Ambenonium,allergic asthma,closed,Not enough information to tell,decline
+contraindication|silent|Hydrocortisone acetate|esophagitis (disease),contraindication,silent,Hydrocortisone acetate,esophagitis (disease),passage,Addison's disease.,other
+contraindication|silent|Hydrocortisone acetate|esophagitis (disease),contraindication,silent,Hydrocortisone acetate,esophagitis (disease),closed,Not enough information to tell,decline
+indication|silent|Ergotamine|migraine disorder,indication,silent,Ergotamine,migraine disorder,passage,Ergotamine is used to treat acute migraines.,other
+indication|silent|Ergotamine|migraine disorder,indication,silent,Ergotamine,migraine disorder,closed,Not enough information to tell,decline
+indication|silent|Levothyroxine|familial hyperlipidemia,indication,silent,Levothyroxine,familial hyperlipidemia,passage,Hypothyroidism,other
+indication|silent|Levothyroxine|familial hyperlipidemia,indication,silent,Levothyroxine,familial hyperlipidemia,closed,Not enough information to tell,decline
+indication|silent|Pralatrexate|mature T-cell and NK-cell non-Hodgkin lymphoma,indication,silent,Pralatrexate,mature T-cell and NK-cell non-Hodgkin lymphoma,passage,Peripheral T-cell Lymphoma (PTCL),other
+indication|silent|Pralatrexate|mature T-cell and NK-cell non-Hodgkin lymphoma,indication,silent,Pralatrexate,mature T-cell and NK-cell non-Hodgkin lymphoma,closed,Not enough information to tell,decline
+indication|silent|Amlodipine|hypertensive disorder,indication,silent,Amlodipine,hypertensive disorder,passage,coronary artery disease (CAD),other
+indication|silent|Amlodipine|hypertensive disorder,indication,silent,Amlodipine,hypertensive disorder,closed,High blood pressure (hypertension),other
+indication|silent|Flurandrenolide|primary cutaneous T-cell non-Hodgkin lymphoma,indication,silent,Flurandrenolide,primary cutaneous T-cell non-Hodgkin lymphoma,passage,Not enough information to tell,decline
+indication|silent|Flurandrenolide|primary cutaneous T-cell non-Hodgkin lymphoma,indication,silent,Flurandrenolide,primary cutaneous T-cell non-Hodgkin lymphoma,closed,Not enough information to tell,decline
+indication|silent|Doxycycline|chlamydia trachomatis infectious disease,indication,silent,Doxycycline,chlamydia trachomatis infectious disease,passage,Not enough information to tell.,decline
+indication|silent|Doxycycline|chlamydia trachomatis infectious disease,indication,silent,Doxycycline,chlamydia trachomatis infectious disease,closed,"Doxycycline is used to treat a variety of bacterial infections, including:
+
+1. Lyme disease
+2. Urinary tract infections (UTIs)",other
+contraindication|silent|Triprolidine|inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency,contraindication,silent,Triprolidine,inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency,passage,Not enough information to tell.,decline
+contraindication|silent|Triprolidine|inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency,contraindication,silent,Triprolidine,inherited isolated adrenal insufficiency due to partial CYP11A1 deficiency,closed,Not enough information to tell,decline
+contraindication|silent|Amoxapine|benign prostatic hyperplasia (disease),contraindication,silent,Amoxapine,benign prostatic hyperplasia (disease),passage,Not enough information to tell.,decline
+contraindication|silent|Amoxapine|benign prostatic hyperplasia (disease),contraindication,silent,Amoxapine,benign prostatic hyperplasia (disease),closed,Not enough information to tell,decline
+indication|silent|Diphenylpyraline|urticaria (disease),indication,silent,Diphenylpyraline,urticaria (disease),passage,Allergies,other
+indication|silent|Diphenylpyraline|urticaria (disease),indication,silent,Diphenylpyraline,urticaria (disease),closed,Not enough information to tell,decline
+indication|silent|Dichlorophen|open-angle glaucoma,indication,silent,Dichlorophen,open-angle glaucoma,passage,Cestodes.,other
+indication|silent|Dichlorophen|open-angle glaucoma,indication,silent,Dichlorophen,open-angle glaucoma,closed,Not enough information to tell,decline
+indication|silent|Prednisone|actinic keratosis (disease),indication,silent,Prednisone,actinic keratosis (disease),passage,Asthma,other
+indication|silent|Prednisone|actinic keratosis (disease),indication,silent,Prednisone,actinic keratosis (disease),closed,Not enough information to tell,decline
+contraindication|silent|Testosterone cypionate|hypertensive disorder,contraindication,silent,Testosterone cypionate,hypertensive disorder,passage,Not enough information to tell.,decline
+contraindication|silent|Testosterone cypionate|hypertensive disorder,contraindication,silent,Testosterone cypionate,hypertensive disorder,closed,Not enough information to tell,decline
+contraindication|silent|Itraconazole|nephrocalcinosis,contraindication,silent,Itraconazole,nephrocalcinosis,passage,Not enough information to tell.,decline
+contraindication|silent|Itraconazole|nephrocalcinosis,contraindication,silent,Itraconazole,nephrocalcinosis,closed,Not enough information to tell,decline
+indication|silent|Metamfetamine|obesity disorder,indication,silent,Metamfetamine,obesity disorder,passage,Attention deficit hyperactivity disorder (ADHD),other
+indication|silent|Metamfetamine|obesity disorder,indication,silent,Metamfetamine,obesity disorder,closed,Not enough information to tell,decline
+indication|silent|Cisapride|esophagitis (disease),indication,silent,Cisapride,esophagitis (disease),passage,Gastrointestinal disorders,other
+indication|silent|Cisapride|esophagitis (disease),indication,silent,Cisapride,esophagitis (disease),closed,Not enough information to tell,decline
+indication|silent|Acetylcysteine|AL amyloidosis,indication,silent,Acetylcysteine,AL amyloidosis,passage,Not enough information to tell.,decline
+indication|silent|Acetylcysteine|AL amyloidosis,indication,silent,Acetylcysteine,AL amyloidosis,closed,Not enough information to tell,decline
+contraindication|silent|Terfenadine|coronary atherosclerosis,contraindication,silent,Terfenadine,coronary atherosclerosis,passage,Cardiac arrhythmia caused by QT interval prolongation.,other
+contraindication|silent|Terfenadine|coronary atherosclerosis,contraindication,silent,Terfenadine,coronary atherosclerosis,closed,Not enough information to tell,decline
+indication|silent|Butacaine|overactive bladder (disease),indication,silent,Butacaine,overactive bladder (disease),passage,Not enough information to tell,decline
+indication|silent|Butacaine|overactive bladder (disease),indication,silent,Butacaine,overactive bladder (disease),closed,Butacaine is a local anesthetic used to temporarily numb an area of the body for procedures or surgeries. It is not specifically used to treat a disease but,other
+indication|silent|Bimatoprost|hypertrichosis (disease),indication,silent,Bimatoprost,hypertrichosis (disease),passage,Glaucoma,other
+indication|silent|Bimatoprost|hypertrichosis (disease),indication,silent,Bimatoprost,hypertrichosis (disease),closed,Glaucoma,other
+contraindication|silent|Megestrol acetate|diabetes mellitus (disease),contraindication,silent,Megestrol acetate,diabetes mellitus (disease),passage,Not enough information to tell.,decline
+contraindication|silent|Megestrol acetate|diabetes mellitus (disease),contraindication,silent,Megestrol acetate,diabetes mellitus (disease),closed,Not enough information to tell,decline
+contraindication|silent|Tacrine|allergic asthma,contraindication,silent,Tacrine,allergic asthma,passage,Not enough information to tell.,decline
+contraindication|silent|Tacrine|allergic asthma,contraindication,silent,Tacrine,allergic asthma,closed,Huntington's disease,other
+contraindication|silent|Temsirolimus|embryonal carcinoma of the central nervous system,contraindication,silent,Temsirolimus,embryonal carcinoma of the central nervous system,passage,Not enough information to tell.,decline
+contraindication|silent|Temsirolimus|embryonal carcinoma of the central nervous system,contraindication,silent,Temsirolimus,embryonal carcinoma of the central nervous system,closed,Not enough information to tell,decline
+indication|silent|Ribavirin|respiratory syncytial virus infectious disease,indication,silent,Ribavirin,respiratory syncytial virus infectious disease,passage,Not enough information to tell,decline
+indication|silent|Ribavirin|respiratory syncytial virus infectious disease,indication,silent,Ribavirin,respiratory syncytial virus infectious disease,closed,"Riba-virin is used to treat several viral infections, including hepatitis C, respiratory syncytial virus (RSV) infections in certain high-risk patients",other
+indication|silent|Magnesium carbonate|esophagitis (disease),indication,silent,Magnesium carbonate,esophagitis (disease),passage,Not enough information to tell.,decline
+indication|silent|Magnesium carbonate|esophagitis (disease),indication,silent,Magnesium carbonate,esophagitis (disease),closed,Not enough information to tell,decline
+indication|silent|Caffeine|migraine disorder,indication,silent,Caffeine,migraine disorder,passage,Not enough information to tell.,decline
+indication|silent|Caffeine|migraine disorder,indication,silent,Caffeine,migraine disorder,closed,Not enough information to tell,decline
+indication|silent|Prednisolone|precursor T-cell acute lymphoblastic leukemia,indication,silent,Prednisolone,precursor T-cell acute lymphoblastic leukemia,passage,Rheumatoid arthritis,other
+indication|silent|Prednisolone|precursor T-cell acute lymphoblastic leukemia,indication,silent,Prednisolone,precursor T-cell acute lymphoblastic leukemia,closed,Not enough information to tell,decline

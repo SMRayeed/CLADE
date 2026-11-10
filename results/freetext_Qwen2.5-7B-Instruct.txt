@@ -1,0 +1,62 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+loading Qwen/Qwen2.5-7B-Instruct on cpu, 36 threads ...
+
+856 questions (5 options plus 'Not enough information to tell')
+  24 category edges skipped: the cleaned passage no longer shows the family (replaced by other edges where available)
+  30 named edges skipped: the cleaned passage no longer shows the target (replaced by other edges where available)
+
+  group      relation               questions   all-sibling options
+  named      contraindication             150     29.3%
+  named      indication                   150     37.3%
+  category   contraindication             106     81.1%
+  category   indication                   150     84.0%
+  silent     contraindication             150     44.7%
+  silent     indication                   150     60.7%
+
+  'all-sibling' is the share of questions whose distractors are all from the
+  target's own category. Where siblings run out, random targets fill in, which
+  makes those questions easier by elimination.
+
+FREE TEXT   120 questions (40 per group, all-neighbor only)
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<01:40,  3.35it/s]Loading weights:  15%|█▌        | 52/339 [00:00<00:01, 162.60it/s]Loading weights:  24%|██▎       | 80/339 [00:05<00:21, 12.28it/s] Loading weights:  28%|██▊       | 96/339 [00:10<00:34,  6.98it/s]Loading weights:  31%|███▏      | 106/339 [00:12<00:38,  6.12it/s]Loading weights:  33%|███▎      | 113/339 [00:14<00:41,  5.48it/s]Loading weights:  35%|███▍      | 118/339 [00:18<00:55,  3.98it/s]Loading weights:  37%|███▋      | 124/339 [00:22<01:09,  3.10it/s]Loading weights:  40%|████      | 136/339 [00:23<00:50,  4.04it/s]Loading weights:  41%|████      | 138/339 [00:25<01:03,  3.15it/s]Loading weights:  44%|████▎     | 148/339 [00:26<00:47,  4.06it/s]Loading weights:  44%|████▍     | 150/339 [00:27<00:51,  3.67it/s]Loading weights:  47%|████▋     | 160/339 [00:32<00:59,  3.02it/s]Loading weights:  51%|█████     | 172/339 [00:34<00:45,  3.63it/s]Loading weights:  54%|█████▎    | 182/339 [00:36<00:39,  3.96it/s]Loading weights:  54%|█████▍    | 184/339 [00:39<00:58,  2.63it/s]Loading weights:  58%|█████▊    | 196/339 [00:42<00:45,  3.13it/s]Loading weights:  58%|█████▊    | 197/339 [00:43<00:45,  3.10it/s]Loading weights:  58%|█████▊    | 198/339 [00:45<00:59,  2.36it/s]Loading weights:  61%|██████▏   | 208/339 [00:47<00:42,  3.10it/s]Loading weights:  62%|██████▏   | 209/339 [00:49<00:55,  2.36it/s]Loading weights:  65%|██████▍   | 220/339 [00:53<00:50,  2.36it/s]Loading weights:  68%|██████▊   | 232/339 [00:55<00:30,  3.49it/s]Loading weights:  69%|██████▉   | 234/339 [00:58<00:43,  2.42it/s]Loading weights:  72%|███████▏  | 244/339 [00:59<00:27,  3.51it/s]Loading weights:  72%|███████▏  | 245/339 [00:59<00:27,  3.44it/s]Loading weights:  73%|███████▎  | 246/339 [01:01<00:40,  2.32it/s]Loading weights:  76%|███████▌  | 256/339 [01:03<00:24,  3.32it/s]Loading weights:  78%|███████▊  | 266/339 [01:06<00:19,  3.67it/s]Loading weights:  79%|███████▉  | 268/339 [01:08<00:25,  2.77it/s]Loading weights:  82%|████████▏ | 278/339 [01:10<00:17,  3.47it/s]Loading weights:  83%|████████▎ | 280/339 [01:11<00:19,  2.96it/s]Loading weights:  83%|████████▎ | 281/339 [01:11<00:19,  3.01it/s]Loading weights:  83%|████████▎ | 282/339 [01:13<00:23,  2.47it/s]Loading weights:  85%|████████▍ | 288/339 [01:13<00:15,  3.37it/s]Loading weights:  86%|████████▌ | 292/339 [01:15<00:16,  2.81it/s]Loading weights:  87%|████████▋ | 294/339 [01:16<00:13,  3.31it/s]Loading weights:  90%|████████▉ | 304/339 [01:23<00:19,  1.80it/s]Loading weights:  93%|█████████▎| 316/339 [01:24<00:06,  3.29it/s]Loading weights:  94%|█████████▍| 318/339 [01:25<00:07,  2.85it/s]Loading weights:  96%|█████████▌| 324/339 [01:26<00:04,  3.48it/s]Loading weights:  97%|█████████▋| 328/339 [01:27<00:02,  3.68it/s]Loading weights: 100%|██████████| 339/339 [01:27<00:00,  3.88it/s]
+    8/240, about 12 min left
+    16/240, about 11 min left
+    24/240, about 11 min left
+    32/240, about 12 min left
+    40/240, about 11 min left
+    48/240, about 11 min left
+    56/240, about 11 min left
+    64/240, about 11 min left
+    72/240, about 10 min left
+    80/240, about 10 min left
+    88/240, about 9 min left
+    96/240, about 8 min left
+    104/240, about 8 min left
+    112/240, about 7 min left
+    120/240, about 7 min left
+    128/240, about 7 min left
+    136/240, about 6 min left
+    144/240, about 6 min left
+    152/240, about 5 min left
+    160/240, about 5 min left
+    168/240, about 4 min left
+    176/240, about 4 min left
+    184/240, about 3 min left
+    192/240, about 3 min left
+    200/240, about 2 min left
+    208/240, about 2 min left
+    216/240, about 1 min left
+    224/240, about 1 min left
+    232/240, about 0 min left
+    240/240, about 0 min left
+    condition group       n    correct   decline    family   sibling     other
+    passage   named       40      20.0%     47.5%      0.0%      0.0%     32.5%
+    passage   category    40       0.0%     42.5%     17.5%      0.0%     40.0%
+    passage   silent      40       0.0%     52.5%      0.0%      0.0%     47.5%
+    closed    named       40       7.5%     80.0%      0.0%      0.0%     12.5%
+    closed    category    40       0.0%     72.5%     10.0%      0.0%     17.5%
+    closed    silent      40       0.0%     77.5%      0.0%      0.0%     22.5%
+
+    decline effect, family-only minus silent: -5.0 points [-25.0, +15.0]
+
+wrote freetext_Qwen2.5-7B-Instruct.csv: 240 rows (answers kept for checking by hand)

@@ -1,0 +1,27 @@
+  ancestors from mondo_child_parent.csv: child=child parent=parent -> 17,801 rows, 11,788 children
+
+  scoring 338 pages with Qwen/Qwen2.5-7B-Instruct (37 pages name one usable family)
+loading Qwen/Qwen2.5-7B-Instruct on cpu, 36 threads ...
+
+410 family-only edges, the same set recover.py scores
+  3,182 ontology categories can be read off a page
+
+HOW GOOD IS THE LIST?   (percent of all family-only edges)
+  oracle  usable lists  410 of 410   contains the sampled answer  98.5%   any true answer  99.5%   size median   14  mean  20.6
+  page    usable lists  166 of 410   contains the sampled answer  19.8%   any true answer  24.6%   size median   32  mean  31.6
+  209 page-built lists exceeded 64 candidates and count as too broad
+  categories found per page: median 5, usable after the size cap: median 5
+
+  The oracle row is what recover.py assumed. The page row is what a
+  system that does not know the answer actually gets.
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:18<1:45:29, 18.73s/it]Loading weights:   9%|▉         | 30/339 [00:21<02:41,  1.91it/s] Loading weights:  12%|█▏        | 40/339 [00:22<01:58,  2.52it/s]Loading weights:  15%|█▌        | 52/339 [00:22<01:16,  3.74it/s]Loading weights:  18%|█▊        | 62/339 [00:24<01:03,  4.34it/s]Loading weights:  19%|█▉        | 64/339 [00:24<01:04,  4.28it/s]Loading weights:  22%|██▏       | 76/339 [00:29<01:15,  3.48it/s]Loading weights:  23%|██▎       | 77/339 [00:30<01:23,  3.12it/s]Loading weights:  26%|██▌       | 88/339 [00:32<01:05,  3.82it/s]Loading weights:  26%|██▋       | 89/339 [00:32<01:08,  3.64it/s]Loading weights:  27%|██▋       | 90/339 [00:35<01:48,  2.29it/s]Loading weights:  29%|██▉       | 100/339 [00:35<00:57,  4.19it/s]Loading weights:  30%|███       | 102/339 [00:37<01:20,  2.96it/s]Loading weights:  32%|███▏      | 108/339 [00:39<01:14,  3.09it/s]Loading weights:  33%|███▎      | 113/339 [00:39<00:54,  4.15it/s]Loading weights:  34%|███▍      | 115/339 [00:43<01:40,  2.24it/s]Loading weights:  37%|███▋      | 124/339 [00:46<01:32,  2.32it/s]Loading weights:  40%|████      | 136/339 [00:48<00:56,  3.59it/s]Loading weights:  40%|████      | 137/339 [00:48<00:56,  3.56it/s]Loading weights:  44%|████▎     | 148/339 [00:51<00:54,  3.53it/s]Loading weights:  44%|████▍     | 150/339 [00:51<00:50,  3.76it/s]Loading weights:  45%|████▍     | 151/339 [00:52<00:58,  3.20it/s]Loading weights:  47%|████▋     | 160/339 [00:56<01:07,  2.63it/s]Loading weights:  51%|█████     | 172/339 [00:59<00:48,  3.43it/s]Loading weights:  54%|█████▎    | 182/339 [01:01<00:40,  3.84it/s]Loading weights:  54%|█████▍    | 184/339 [01:04<01:01,  2.50it/s]Loading weights:  58%|█████▊    | 196/339 [01:07<00:46,  3.06it/s]Loading weights:  58%|█████▊    | 197/339 [01:08<00:46,  3.03it/s]Loading weights:  58%|█████▊    | 198/339 [01:09<01:01,  2.30it/s]Loading weights:  61%|██████▏   | 208/339 [01:12<00:42,  3.06it/s]Loading weights:  62%|██████▏   | 209/339 [01:14<00:55,  2.33it/s]Loading weights:  65%|██████▍   | 220/339 [01:18<00:50,  2.35it/s]Loading weights:  68%|██████▊   | 232/339 [01:20<00:30,  3.48it/s]Loading weights:  69%|██████▉   | 234/339 [01:23<00:43,  2.41it/s]Loading weights:  72%|███████▏  | 244/339 [01:24<00:27,  3.51it/s]Loading weights:  72%|███████▏  | 245/339 [01:24<00:27,  3.44it/s]Loading weights:  73%|███████▎  | 246/339 [01:26<00:40,  2.32it/s]Loading weights:  76%|███████▌  | 256/339 [01:28<00:24,  3.32it/s]Loading weights:  78%|███████▊  | 266/339 [01:30<00:19,  3.71it/s]Loading weights:  79%|███████▉  | 268/339 [01:35<00:33,  2.14it/s]Loading weights:  83%|████████▎ | 280/339 [01:36<00:17,  3.31it/s]Loading weights:  83%|████████▎ | 281/339 [01:36<00:17,  3.34it/s]Loading weights:  83%|████████▎ | 282/339 [01:37<00:19,  2.87it/s]Loading weights:  85%|████████▍ | 288/339 [01:38<00:14,  3.51it/s]Loading weights:  86%|████████▌ | 292/339 [01:40<00:16,  2.93it/s]Loading weights:  90%|████████▉ | 304/339 [01:48<00:17,  2.00it/s]Loading weights:  93%|█████████▎| 316/339 [01:49<00:06,  3.32it/s]Loading weights:  94%|█████████▎| 317/339 [01:50<00:07,  2.78it/s]Loading weights:  96%|█████████▌| 324/339 [01:51<00:04,  3.53it/s]Loading weights:  97%|█████████▋| 328/339 [01:52<00:02,  3.71it/s]Loading weights: 100%|██████████| 339/339 [01:52<00:00,  3.02it/s]
+  wrote family_picks_Qwen2.5-7B-Instruct.csv: 375 picks
+
+STEP 2: WHICH FAMILY ON THE PAGE?   (percent of all 410 family-only edges; at most 10 families shown)
+    rule                           list holds sampled answer   any true answer
+    model                                   30.0%            44.9%
+    first mentioned                         25.1%            37.3%
+    smallest family                          7.8%            13.2%
+    random                                  13.9%            22.0%
+    any shown family (ceiling)              50.0%            64.6%
+  llm     usable lists  375 of 410   contains the sampled answer  30.0%   any true answer  44.9%   size median   12  mean  15.7

@@ -1,0 +1,28 @@
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{llccc}
+\toprule
+Model & Group & Correct & Wrong & Declines \\
+\midrule
+\multirow{3}{*}{Qwen2.5 7B} & named & 60.4 & 17.9 & 21.7 \\
+ & family-only & 35.3 & 32.6 & 32.1 \\
+ & silent & 25.0 & 15.6 & 59.4 \\
+\midrule
+\multirow{3}{*}{OLMo 2 7B} & named & 65.1 & 31.1 & 3.8 \\
+ & family-only & 36.7 & 56.7 & 6.5 \\
+ & silent & 37.5 & 51.2 & 11.2 \\
+\midrule
+\multirow{3}{*}{Granite 3.1 8B} & named & 50.9 & 24.5 & 24.5 \\
+ & family-only & 33.0 & 33.0 & 34.0 \\
+ & silent & 26.2 & 26.2 & 47.5 \\
+\midrule
+\multirow{3}{*}{Qwen2.5 0.5B} & named & 39.6 & 56.6 & 3.8 \\
+ & family-only & 30.2 & 69.8 & 0.0 \\
+ & silent & 28.7 & 68.8 & 2.5 \\
+\bottomrule
+\end{tabular}
+\caption{Closed-book outcomes (\%) on the 481 neighborhood-matched questions (106 named, 215 family-only, and 160 silent) when no passage is provided.}
+\label{tab:closed_full}
+\end{table}
