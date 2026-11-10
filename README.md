@@ -2,7 +2,7 @@
 
 ## 🌳 CLADE: Category-Level Answering from Deficient Evidence in Retrieval-Augmented Language Models
 
-[![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](paper/CLADE.pdf)
+[![Venue](https://img.shields.io/badge/NeusymBridge-AAAI%202027-7B5BD6)](https://neusymbridge.github.io/index.html)
 [![License: MIT](https://img.shields.io/badge/license-MIT-1AA874)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9%2B-2E7BE0)](#-run-it)
 [![Domains](https://img.shields.io/badge/domains-PrimeKG%20%C2%B7%20GloBI-F07537)](DATA.md)
